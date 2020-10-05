@@ -4834,13 +4834,20 @@ var $;
                 flex: {
                     wrap: "wrap",
                 },
+                justifyContent: 'space-between',
             },
             Title: {
                 textShadow: '0 0 0 currentColor',
                 padding: [rem(.5), rem(.75)],
+                flex: {
+                    basis: rem(24),
+                },
             },
             Tag: {
                 padding: [rem(.5), rem(.75)],
+                flex: {
+                    basis: rem(16),
+                },
             },
             Descr: {
                 padding: [rem(.5), rem(.75)],
