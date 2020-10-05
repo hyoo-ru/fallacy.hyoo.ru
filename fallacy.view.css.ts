@@ -24,6 +24,13 @@ namespace $.$$ {
 			padding: [ rem(1.25), rem(1.5) ],
 		},
 
+		Feedback: {
+			padding: [ rem(.75), rem(1.5) ],
+			flex: {
+				grow: 1,
+			},
+		},
+
 	} )
 
 }

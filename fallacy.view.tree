@@ -15,6 +15,10 @@ $hyoo_fallacy $mol_book2
 						<= All $mol_link
 							arg * filter null
 							title @ \Все
+			foot /
+				<= Feedback $mol_link
+					uri \https://github.com/hyoo-ru/fallacy.hyoo.ru/issues
+					title @ \Ошибки? Правки? Предложения?
 	Content!id $mol_page
 		title <= content_title!id \
 		tools /
