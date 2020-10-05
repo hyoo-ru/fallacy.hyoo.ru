@@ -24,16 +24,22 @@ namespace $.$$ {
 			flex: {
 				wrap: "wrap",
 			},
+			justifyContent: 'space-between',
 		},
 
 		Title: {
 			textShadow: '0 0 0 currentColor',
 			padding: [ rem(.5), rem(.75) ],
+			flex: {
+				basis: rem(24),
+			},
 		},
 
 		Tag: {
-			// color: $mol_theme.shade,
 			padding: [ rem(.5), rem(.75) ],
+			flex: {
+				basis: rem(16),
+			},
 		},
 
 		Descr: {
