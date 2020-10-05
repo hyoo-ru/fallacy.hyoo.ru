@@ -1,0 +1,23 @@
+$hyoo_fallacy_card $mol_list
+	minimal_height 144
+	tags *
+	fallacy *
+		tags /string
+		title \
+		descr \
+		sample \
+	highlight \
+	rows /
+		<= Main $mol_view
+			sub /
+				<= Title $mol_dimmer
+					haystack <= title
+					needle <= highlight
+				<= Tag $mol_paragraph
+					sub / <= tag \
+		<= Descr $mol_dimmer
+			haystack <= descr \
+			needle <= highlight
+		<= Sample $mol_dimmer
+			haystack <= sample \
+			needle <= highlight
