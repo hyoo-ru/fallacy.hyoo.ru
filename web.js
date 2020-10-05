@@ -6808,6 +6808,12 @@ var $;
             obj.rows = () => this.filters();
             return obj;
         }
+        Feedback() {
+            const obj = new this.$.$mol_link();
+            obj.uri = () => "https://github.com/hyoo-ru/fallacy.hyoo.ru/issues";
+            obj.title = () => this.$.$mol_locale.text('$hyoo_fallacy_Feedback_title');
+            return obj;
+        }
         Menu() {
             const obj = new this.$.$mol_page();
             obj.title = () => this.$.$mol_locale.text('$hyoo_fallacy_Menu_title');
@@ -6817,6 +6823,9 @@ var $;
             ];
             obj.body = () => [
                 this.Filters()
+            ];
+            obj.foot = () => [
+                this.Feedback()
             ];
             return obj;
         }
@@ -6893,6 +6902,9 @@ var $;
     ], $hyoo_fallacy.prototype, "Filters", null);
     __decorate([
         $.$mol_mem
+    ], $hyoo_fallacy.prototype, "Feedback", null);
+    __decorate([
+        $.$mol_mem
     ], $hyoo_fallacy.prototype, "Menu", null);
     __decorate([
         $.$mol_mem
@@ -6932,6 +6944,12 @@ var $;
             },
             Cards_empty: {
                 padding: [rem(1.25), rem(1.5)],
+            },
+            Feedback: {
+                padding: [rem(.75), rem(1.5)],
+                flex: {
+                    grow: 1,
+                },
             },
         });
     })($$ = $.$$ || ($.$$ = {}));

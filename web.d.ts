@@ -2362,6 +2362,7 @@ declare namespace $ {
         All(): $$.$mol_link;
         filters(): readonly any[];
         Filters(): $$.$mol_list;
+        Feedback(): $$.$mol_link;
         Menu(): $$.$mol_page;
         content_title(id: any): string;
         search(val?: any): any;
