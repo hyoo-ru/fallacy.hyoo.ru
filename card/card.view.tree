@@ -15,6 +15,9 @@ $hyoo_fallacy_card $mol_list
 					needle <= highlight
 				<= Tag $mol_paragraph
 					sub / <= tag \
+				<= Selected $mol_check_box
+					checked?val <=> selected?val false
+					hint @ \Находится ли в отобранном
 		<= Descr $mol_dimmer
 			haystack <= descr \
 			needle <= highlight

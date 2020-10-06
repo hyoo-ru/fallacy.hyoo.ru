@@ -15,6 +15,9 @@ $hyoo_fallacy $mol_book2
 						<= All $mol_link
 							arg * filter null
 							title @ \Все
+						<= Selected $mol_link
+							arg * filter \selected
+							title @ \Отобранное
 			foot /
 				<= Feedback $mol_link
 					uri \https://github.com/hyoo-ru/fallacy.hyoo.ru/issues
@@ -35,6 +38,7 @@ $hyoo_fallacy $mol_book2
 		title <= filter_title!id \
 	Card!id $hyoo_fallacy_card
 		tags <= tags
+		selected?val <=> fallacy_selected!id?val false
 		fallacy <= fallacy!id *
 			tags /string
 			title \

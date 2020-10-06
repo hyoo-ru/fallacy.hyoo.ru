@@ -17,11 +17,17 @@ namespace $.$$ {
 			return this.$.$mol_state_arg.value( 'search' , next ) ?? ''
 		}
 
+		selected( next? : string[] ) {
+			const str = next && ( next.join('~') || null )
+			return this.$.$mol_state_arg.value( 'selected' , str )?.split( '~' ) ?? []
+		}
+
 		@ $mol_mem
 		filters() {
 			return [
 				this.All(),
-				... Object.keys( this.tags() ).map( tag => this.Filter( tag ) )
+				... Object.keys( this.tags() ).map( tag => this.Filter( tag ) ),
+				this.Selected(),
 			]
 		}
 
@@ -37,6 +43,20 @@ namespace $.$$ {
 			return this.fallacies()[ id ]
 		}
 
+		fallacy_selected( id : string, next?: boolean ) {
+			
+			let selected = this.selected()
+			
+			if( next === undefined ) {
+				return selected.includes( id )
+			} else {
+				selected = selected.filter( id2 => id2 !== id )
+				if( next ) selected = [ ... selected , id ]
+				this.selected( selected )
+				return next
+			}
+		}
+
 		@ $mol_mem
 		fallacies_filtered() {
 
@@ -45,18 +65,28 @@ namespace $.$$ {
 			const filter = this.filter()
 			const search = this.search()
 			
-			let ids = Object.keys( all ) as ( keyof typeof all )[]
-			
-			ids = ids.filter( id => {
-				
-				const fallacy = all[ id ]
+			let ids: string[]
 
-				if( filter ) {
-					if( !fallacy.tags.includes( filter ) ) return false
-				}
+			if( filter === 'selected' ) {
+
+				ids = this.selected()
+
+			} else {
+
+				ids = Object.keys( all ) as ( keyof typeof all )[]
 				
-				return true
-			} )
+				ids = ids.filter( id => {
+					
+					const fallacy = all[ id ]
+
+					if( filter ) {
+						if( !fallacy.tags.includes( filter ) ) return false
+					}
+					
+					return true
+				} )
+
+			}
 			
 			ids = ids.filter( $mol_match_text( search , id => [
 				all[id].title,
