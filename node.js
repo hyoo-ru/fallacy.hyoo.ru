@@ -4732,247 +4732,6 @@ var $;
 "use strict";
 var $;
 (function ($) {
-    class $hyoo_fallacy_card extends $.$mol_list {
-        minimal_height() {
-            return 144;
-        }
-        tags() {
-            return {};
-        }
-        fallacy() {
-            return {
-                tags: [],
-                title: "",
-                descr: "",
-                sample: ""
-            };
-        }
-        highlight() {
-            return "";
-        }
-        rows() {
-            return [
-                this.Main(),
-                this.Descr(),
-                this.Sample()
-            ];
-        }
-        Title() {
-            const obj = new this.$.$mol_dimmer();
-            obj.haystack = () => this.title();
-            obj.needle = () => this.highlight();
-            return obj;
-        }
-        tag() {
-            return "";
-        }
-        Tag() {
-            const obj = new this.$.$mol_paragraph();
-            obj.sub = () => [
-                this.tag()
-            ];
-            return obj;
-        }
-        Main() {
-            const obj = new this.$.$mol_view();
-            obj.sub = () => [
-                this.Title(),
-                this.Tag()
-            ];
-            return obj;
-        }
-        descr() {
-            return "";
-        }
-        Descr() {
-            const obj = new this.$.$mol_dimmer();
-            obj.haystack = () => this.descr();
-            obj.needle = () => this.highlight();
-            return obj;
-        }
-        sample() {
-            return "";
-        }
-        Sample() {
-            const obj = new this.$.$mol_dimmer();
-            obj.haystack = () => this.sample();
-            obj.needle = () => this.highlight();
-            return obj;
-        }
-    }
-    __decorate([
-        $.$mol_mem
-    ], $hyoo_fallacy_card.prototype, "Title", null);
-    __decorate([
-        $.$mol_mem
-    ], $hyoo_fallacy_card.prototype, "Tag", null);
-    __decorate([
-        $.$mol_mem
-    ], $hyoo_fallacy_card.prototype, "Main", null);
-    __decorate([
-        $.$mol_mem
-    ], $hyoo_fallacy_card.prototype, "Descr", null);
-    __decorate([
-        $.$mol_mem
-    ], $hyoo_fallacy_card.prototype, "Sample", null);
-    $.$hyoo_fallacy_card = $hyoo_fallacy_card;
-})($ || ($ = {}));
-//card.view.tree.js.map
-;
-"use strict";
-var $;
-(function ($) {
-    var $$;
-    (function ($$) {
-        const { rem, px } = $.$mol_style_unit;
-        $.$mol_style_define($$.$hyoo_fallacy_card, {
-            padding: rem(.75),
-            flex: {
-                basis: rem(30),
-            },
-            box: {
-                shadow: [{
-                        x: 0,
-                        y: px(1),
-                        blur: 0,
-                        spread: 0,
-                        color: $.$mol_theme.line,
-                    }],
-            },
-            Main: {
-                flex: {
-                    wrap: "wrap",
-                },
-                justifyContent: 'space-between',
-            },
-            Title: {
-                textShadow: '0 0 0 currentColor',
-                padding: [rem(.5), rem(.75)],
-                flex: {
-                    basis: rem(24),
-                },
-            },
-            Tag: {
-                padding: [rem(.5), rem(.75)],
-                flex: {
-                    basis: rem(16),
-                },
-            },
-            Descr: {
-                padding: [rem(.5), rem(.75)],
-            },
-            Sample: {
-                padding: [rem(.5), rem(.75)],
-                font: {
-                    style: 'italic',
-                },
-            },
-        });
-    })($$ = $.$$ || ($.$$ = {}));
-})($ || ($ = {}));
-//card.view.css.js.map
-;
-"use strict";
-var $;
-(function ($) {
-    var $$;
-    (function ($$) {
-        class $hyoo_fallacy_card extends $.$hyoo_fallacy_card {
-            title() {
-                return this.fallacy().title;
-            }
-            tag() {
-                var _a, _b;
-                return (_b = (_a = this.tags()[this.fallacy().tags[0]]) === null || _a === void 0 ? void 0 : _a.title) !== null && _b !== void 0 ? _b : '';
-            }
-            descr() {
-                return this.fallacy().descr;
-            }
-            sample() {
-                return this.fallacy().sample;
-            }
-        }
-        $$.$hyoo_fallacy_card = $hyoo_fallacy_card;
-    })($$ = $.$$ || ($.$$ = {}));
-})($ || ($ = {}));
-//card.view.js.map
-;
-"use strict";
-var $;
-(function ($) {
-    class $mol_plugin extends $.$mol_view {
-        dom_node(next) {
-            const node = next || $.$mol_owning_get(this, $.$mol_view).dom_node();
-            $.$mol_dom_render_attributes(node, this.attr_static());
-            const events = this.event();
-            for (let event_name in events) {
-                node.addEventListener(event_name, $.$mol_fiber_root(events[event_name]), { passive: false });
-            }
-            return node;
-        }
-        attr_static() {
-            return {};
-        }
-        event() {
-            return {};
-        }
-        render() {
-            this.dom_node_actual();
-        }
-    }
-    __decorate([
-        $.$mol_mem
-    ], $mol_plugin.prototype, "dom_node", null);
-    $.$mol_plugin = $mol_plugin;
-})($ || ($ = {}));
-//plugin.js.map
-;
-"use strict";
-var $;
-(function ($) {
-    class $mol_theme_auto extends $.$mol_plugin {
-        attr() {
-            return {
-                mol_theme: this.theme()
-            };
-        }
-        theme() {
-            return "";
-        }
-    }
-    $.$mol_theme_auto = $mol_theme_auto;
-})($ || ($ = {}));
-//auto.view.tree.js.map
-;
-"use strict";
-var $;
-(function ($) {
-    function $mol_lights(next) {
-        var _a;
-        return (_a = this.$.$mol_state_local.value('$mol_lights', next)) !== null && _a !== void 0 ? _a : $.$mol_dom_context.matchMedia('(prefers-color-scheme: light)').matches;
-    }
-    $.$mol_lights = $mol_lights;
-})($ || ($ = {}));
-//lights.js.map
-;
-"use strict";
-var $;
-(function ($) {
-    var $$;
-    (function ($$) {
-        class $mol_theme_auto extends $.$mol_theme_auto {
-            theme() {
-                return this.$.$mol_lights() ? '$mol_theme_light' : '$mol_theme_dark';
-            }
-        }
-        $$.$mol_theme_auto = $mol_theme_auto;
-    })($$ = $.$$ || ($.$$ = {}));
-})($ || ($ = {}));
-//auto.view.js.map
-;
-"use strict";
-var $;
-(function ($) {
     class $mol_button_typed extends $.$mol_button {
     }
     $.$mol_button_typed = $mol_button_typed;
@@ -5091,22 +4850,6 @@ var $;
     })($$ = $.$$ || ($.$$ = {}));
 })($ || ($ = {}));
 //check.view.js.map
-;
-"use strict";
-var $;
-(function ($) {
-    class $mol_check_icon extends $.$mol_check {
-    }
-    $.$mol_check_icon = $mol_check_icon;
-})($ || ($ = {}));
-//icon.view.tree.js.map
-;
-"use strict";
-var $;
-(function ($) {
-    $.$mol_style_attach("mol/check/icon/icon.view.css", "[mol_check_icon][mol_check_checked] {\n\tcolor: var(--mol_theme_focus);\n}\n");
-})($ || ($ = {}));
-//icon.view.css.js.map
 ;
 "use strict";
 var $;
@@ -5277,6 +5020,316 @@ var $;
 var $;
 (function ($) {
     $.$mol_style_attach("mol/icon/icon.view.css", "[mol_icon] {\n\tfill: currentColor;\n\tstroke: none;\n\twidth: 1em;\n\theight: 1em;\n\tflex: 0 0 auto;\n\tvertical-align: top;\n\twill-change: transform;\n\tmargin: .25em 0;\n\tdisplay: inline-block;\n}\n");
+})($ || ($ = {}));
+//icon.view.css.js.map
+;
+"use strict";
+var $;
+(function ($) {
+    class $mol_icon_tick extends $.$mol_icon {
+        path() {
+            return "M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z";
+        }
+    }
+    $.$mol_icon_tick = $mol_icon_tick;
+})($ || ($ = {}));
+//tick.view.tree.js.map
+;
+"use strict";
+var $;
+(function ($) {
+    class $mol_check_box extends $.$mol_check {
+        Icon() {
+            const obj = new this.$.$mol_icon_tick();
+            return obj;
+        }
+    }
+    __decorate([
+        $.$mol_mem
+    ], $mol_check_box.prototype, "Icon", null);
+    $.$mol_check_box = $mol_check_box;
+})($ || ($ = {}));
+//box.view.tree.js.map
+;
+"use strict";
+var $;
+(function ($) {
+    $.$mol_style_attach("mol/check/box/box.view.css", "[mol_check_box_icon] {\n\tborder-radius: var(--mol_skin_round);\n\tbox-shadow: inset 0 0 0 1px var(--mol_theme_line);\n}\n\n[mol_check]:not([mol_check_checked]) > [mol_check_box_icon] {\n\tfill: transparent;\n}\n\n[mol_check]:not([disabled]) > [mol_check_box_icon] {\n\tbackground: var(--mol_theme_field);\n\tcolor: var(--mol_theme_text);\n}\n\n[mol_check_box_title] {\n\tmargin-left: .25rem;\n}\n");
+})($ || ($ = {}));
+//box.view.css.js.map
+;
+"use strict";
+var $;
+(function ($) {
+    class $hyoo_fallacy_card extends $.$mol_list {
+        minimal_height() {
+            return 144;
+        }
+        tags() {
+            return {};
+        }
+        fallacy() {
+            return {
+                tags: [],
+                title: "",
+                descr: "",
+                sample: ""
+            };
+        }
+        highlight() {
+            return "";
+        }
+        rows() {
+            return [
+                this.Main(),
+                this.Descr(),
+                this.Sample()
+            ];
+        }
+        Title() {
+            const obj = new this.$.$mol_dimmer();
+            obj.haystack = () => this.title();
+            obj.needle = () => this.highlight();
+            return obj;
+        }
+        tag() {
+            return "";
+        }
+        Tag() {
+            const obj = new this.$.$mol_paragraph();
+            obj.sub = () => [
+                this.tag()
+            ];
+            return obj;
+        }
+        selected(val) {
+            if (val !== undefined)
+                return val;
+            return false;
+        }
+        Selected() {
+            const obj = new this.$.$mol_check_box();
+            obj.checked = (val) => this.selected(val);
+            obj.hint = () => this.$.$mol_locale.text('$hyoo_fallacy_card_Selected_hint');
+            return obj;
+        }
+        Main() {
+            const obj = new this.$.$mol_view();
+            obj.sub = () => [
+                this.Title(),
+                this.Tag(),
+                this.Selected()
+            ];
+            return obj;
+        }
+        descr() {
+            return "";
+        }
+        Descr() {
+            const obj = new this.$.$mol_dimmer();
+            obj.haystack = () => this.descr();
+            obj.needle = () => this.highlight();
+            return obj;
+        }
+        sample() {
+            return "";
+        }
+        Sample() {
+            const obj = new this.$.$mol_dimmer();
+            obj.haystack = () => this.sample();
+            obj.needle = () => this.highlight();
+            return obj;
+        }
+    }
+    __decorate([
+        $.$mol_mem
+    ], $hyoo_fallacy_card.prototype, "Title", null);
+    __decorate([
+        $.$mol_mem
+    ], $hyoo_fallacy_card.prototype, "Tag", null);
+    __decorate([
+        $.$mol_mem
+    ], $hyoo_fallacy_card.prototype, "selected", null);
+    __decorate([
+        $.$mol_mem
+    ], $hyoo_fallacy_card.prototype, "Selected", null);
+    __decorate([
+        $.$mol_mem
+    ], $hyoo_fallacy_card.prototype, "Main", null);
+    __decorate([
+        $.$mol_mem
+    ], $hyoo_fallacy_card.prototype, "Descr", null);
+    __decorate([
+        $.$mol_mem
+    ], $hyoo_fallacy_card.prototype, "Sample", null);
+    $.$hyoo_fallacy_card = $hyoo_fallacy_card;
+})($ || ($ = {}));
+//card.view.tree.js.map
+;
+"use strict";
+var $;
+(function ($) {
+    var $$;
+    (function ($$) {
+        const { rem, px } = $.$mol_style_unit;
+        $.$mol_style_define($$.$hyoo_fallacy_card, {
+            padding: rem(.75),
+            flex: {
+                basis: rem(30),
+            },
+            box: {
+                shadow: [{
+                        x: 0,
+                        y: px(1),
+                        blur: 0,
+                        spread: 0,
+                        color: $.$mol_theme.line,
+                    }],
+            },
+            Main: {
+                flex: {
+                    wrap: "wrap",
+                },
+                justifyContent: 'space-between',
+            },
+            Title: {
+                textShadow: '0 0 0 currentColor',
+                padding: [rem(.5), rem(.75)],
+                flex: {
+                    basis: rem(24),
+                },
+            },
+            Tag: {
+                padding: [rem(.5), rem(.75)],
+                flex: {
+                    basis: rem(16),
+                },
+            },
+            Descr: {
+                padding: [rem(.5), rem(.75)],
+            },
+            Sample: {
+                padding: [rem(.5), rem(.75)],
+                font: {
+                    style: 'italic',
+                },
+            },
+        });
+    })($$ = $.$$ || ($.$$ = {}));
+})($ || ($ = {}));
+//card.view.css.js.map
+;
+"use strict";
+var $;
+(function ($) {
+    var $$;
+    (function ($$) {
+        class $hyoo_fallacy_card extends $.$hyoo_fallacy_card {
+            title() {
+                return this.fallacy().title;
+            }
+            tag() {
+                var _a, _b;
+                return (_b = (_a = this.tags()[this.fallacy().tags[0]]) === null || _a === void 0 ? void 0 : _a.title) !== null && _b !== void 0 ? _b : '';
+            }
+            descr() {
+                return this.fallacy().descr;
+            }
+            sample() {
+                return this.fallacy().sample;
+            }
+        }
+        $$.$hyoo_fallacy_card = $hyoo_fallacy_card;
+    })($$ = $.$$ || ($.$$ = {}));
+})($ || ($ = {}));
+//card.view.js.map
+;
+"use strict";
+var $;
+(function ($) {
+    class $mol_plugin extends $.$mol_view {
+        dom_node(next) {
+            const node = next || $.$mol_owning_get(this, $.$mol_view).dom_node();
+            $.$mol_dom_render_attributes(node, this.attr_static());
+            const events = this.event();
+            for (let event_name in events) {
+                node.addEventListener(event_name, $.$mol_fiber_root(events[event_name]), { passive: false });
+            }
+            return node;
+        }
+        attr_static() {
+            return {};
+        }
+        event() {
+            return {};
+        }
+        render() {
+            this.dom_node_actual();
+        }
+    }
+    __decorate([
+        $.$mol_mem
+    ], $mol_plugin.prototype, "dom_node", null);
+    $.$mol_plugin = $mol_plugin;
+})($ || ($ = {}));
+//plugin.js.map
+;
+"use strict";
+var $;
+(function ($) {
+    class $mol_theme_auto extends $.$mol_plugin {
+        attr() {
+            return {
+                mol_theme: this.theme()
+            };
+        }
+        theme() {
+            return "";
+        }
+    }
+    $.$mol_theme_auto = $mol_theme_auto;
+})($ || ($ = {}));
+//auto.view.tree.js.map
+;
+"use strict";
+var $;
+(function ($) {
+    function $mol_lights(next) {
+        var _a;
+        return (_a = this.$.$mol_state_local.value('$mol_lights', next)) !== null && _a !== void 0 ? _a : $.$mol_dom_context.matchMedia('(prefers-color-scheme: light)').matches;
+    }
+    $.$mol_lights = $mol_lights;
+})($ || ($ = {}));
+//lights.js.map
+;
+"use strict";
+var $;
+(function ($) {
+    var $$;
+    (function ($$) {
+        class $mol_theme_auto extends $.$mol_theme_auto {
+            theme() {
+                return this.$.$mol_lights() ? '$mol_theme_light' : '$mol_theme_dark';
+            }
+        }
+        $$.$mol_theme_auto = $mol_theme_auto;
+    })($$ = $.$$ || ($.$$ = {}));
+})($ || ($ = {}));
+//auto.view.js.map
+;
+"use strict";
+var $;
+(function ($) {
+    class $mol_check_icon extends $.$mol_check {
+    }
+    $.$mol_check_icon = $mol_check_icon;
+})($ || ($ = {}));
+//icon.view.tree.js.map
+;
+"use strict";
+var $;
+(function ($) {
+    $.$mol_style_attach("mol/check/icon/icon.view.css", "[mol_check_icon][mol_check_checked] {\n\tcolor: var(--mol_theme_focus);\n}\n");
 })($ || ($ = {}));
 //icon.view.css.js.map
 ;
@@ -6608,6 +6661,7 @@ var $;
         Card(id) {
             const obj = new this.$.$hyoo_fallacy_card();
             obj.tags = () => this.tags();
+            obj.selected = (val) => this.fallacy_selected(id, val);
             obj.fallacy = () => this.fallacy(id);
             obj.highlight = () => this.search();
             return obj;
@@ -7016,9 +7070,18 @@ var $;
             obj.title = () => this.$.$mol_locale.text('$hyoo_fallacy_All_title');
             return obj;
         }
+        Selected() {
+            const obj = new this.$.$mol_link();
+            obj.arg = () => ({
+                filter: "selected"
+            });
+            obj.title = () => this.$.$mol_locale.text('$hyoo_fallacy_Selected_title');
+            return obj;
+        }
         filters() {
             return [
-                this.All()
+                this.All(),
+                this.Selected()
             ];
         }
         Filters() {
@@ -7085,6 +7148,11 @@ var $;
         filter_title(id) {
             return "";
         }
+        fallacy_selected(id, val) {
+            if (val !== undefined)
+                return val;
+            return false;
+        }
         fallacy(id) {
             return {
                 tags: [],
@@ -7117,6 +7185,9 @@ var $;
     ], $hyoo_fallacy.prototype, "All", null);
     __decorate([
         $.$mol_mem
+    ], $hyoo_fallacy.prototype, "Selected", null);
+    __decorate([
+        $.$mol_mem
     ], $hyoo_fallacy.prototype, "Filters", null);
     __decorate([
         $.$mol_mem
@@ -7136,6 +7207,9 @@ var $;
     __decorate([
         $.$mol_mem_key
     ], $hyoo_fallacy.prototype, "Cards", null);
+    __decorate([
+        $.$mol_mem_key
+    ], $hyoo_fallacy.prototype, "fallacy_selected", null);
     $.$hyoo_fallacy = $hyoo_fallacy;
 })($ || ($ = {}));
 //fallacy.view.tree.js.map
@@ -7194,10 +7268,16 @@ var $;
                 var _a;
                 return (_a = this.$.$mol_state_arg.value('search', next)) !== null && _a !== void 0 ? _a : '';
             }
+            selected(next) {
+                var _a, _b;
+                const str = next && (next.join('~') || null);
+                return (_b = (_a = this.$.$mol_state_arg.value('selected', str)) === null || _a === void 0 ? void 0 : _a.split('~')) !== null && _b !== void 0 ? _b : [];
+            }
             filters() {
                 return [
                     this.All(),
-                    ...Object.keys(this.tags()).map(tag => this.Filter(tag))
+                    ...Object.keys(this.tags()).map(tag => this.Filter(tag)),
+                    this.Selected(),
                 ];
             }
             filter_arg(tag) {
@@ -7209,19 +7289,38 @@ var $;
             fallacy(id) {
                 return this.fallacies()[id];
             }
+            fallacy_selected(id, next) {
+                let selected = this.selected();
+                if (next === undefined) {
+                    return selected.includes(id);
+                }
+                else {
+                    selected = selected.filter(id2 => id2 !== id);
+                    if (next)
+                        selected = [...selected, id];
+                    this.selected(selected);
+                    return next;
+                }
+            }
             fallacies_filtered() {
                 const all = this.fallacies();
                 const filter = this.filter();
                 const search = this.search();
-                let ids = Object.keys(all);
-                ids = ids.filter(id => {
-                    const fallacy = all[id];
-                    if (filter) {
-                        if (!fallacy.tags.includes(filter))
-                            return false;
-                    }
-                    return true;
-                });
+                let ids;
+                if (filter === 'selected') {
+                    ids = this.selected();
+                }
+                else {
+                    ids = Object.keys(all);
+                    ids = ids.filter(id => {
+                        const fallacy = all[id];
+                        if (filter) {
+                            if (!fallacy.tags.includes(filter))
+                                return false;
+                        }
+                        return true;
+                    });
+                }
                 ids = ids.filter($.$mol_match_text(search, id => [
                     all[id].title,
                     all[id].descr,

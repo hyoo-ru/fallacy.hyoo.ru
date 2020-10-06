@@ -103,33 +103,6 @@ $mol_dimmer $mol_paragraph
 		sub /
 			<= string!id \
 
-$hyoo_fallacy_card $mol_list
-	minimal_height 144
-	tags *
-	fallacy *
-		tags /string
-		title \
-		descr \
-		sample \
-	highlight \
-	rows /
-		<= Main $mol_view
-			sub /
-				<= Title $mol_dimmer
-					haystack <= title
-					needle <= highlight
-				<= Tag $mol_paragraph
-					sub / <= tag \
-		<= Descr $mol_dimmer
-			haystack <= descr \
-			needle <= highlight
-		<= Sample $mol_dimmer
-			haystack <= sample \
-			needle <= highlight
-
-$mol_theme_auto $mol_plugin
-	attr * mol_theme <= theme \
-
 $mol_button_typed $mol_button
 
 $mol_button_minor $mol_button_typed
@@ -146,8 +119,6 @@ $mol_check $mol_button_minor
 			<= Title $mol_view
 				sub /
 					<= title \
-
-$mol_check_icon $mol_check
 
 $mol_svg $mol_view
 	dom_name \svg
@@ -176,6 +147,43 @@ $mol_icon $mol_svg_root
 	sub /
 		<= Path $mol_svg_path
 			geometry <= path \
+
+$mol_icon_tick $mol_icon path \M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z
+
+$mol_check_box $mol_check
+	Icon $mol_icon_tick
+
+$hyoo_fallacy_card $mol_list
+	minimal_height 144
+	tags *
+	fallacy *
+		tags /string
+		title \
+		descr \
+		sample \
+	highlight \
+	rows /
+		<= Main $mol_view
+			sub /
+				<= Title $mol_dimmer
+					haystack <= title
+					needle <= highlight
+				<= Tag $mol_paragraph
+					sub / <= tag \
+				<= Selected $mol_check_box
+					checked?val <=> selected?val false
+					hint @ \Находится ли в отобранном
+		<= Descr $mol_dimmer
+			haystack <= descr \
+			needle <= highlight
+		<= Sample $mol_dimmer
+			haystack <= sample \
+			needle <= highlight
+
+$mol_theme_auto $mol_plugin
+	attr * mol_theme <= theme \
+
+$mol_check_icon $mol_check
 
 $mol_icon_brightness_6 $mol_icon path \M12,18V6C15.31,6 18,8.69 18,12C18,15.31 15.31,18 12,18M20,15.31L23.31,12L20,8.69V4H15.31L12,0.69L8.69,4H4V8.69L0.69,12L4,15.31V20H8.69L12,23.31L15.31,20H20V15.31Z
 
@@ -361,6 +369,9 @@ $hyoo_fallacy $mol_book2
 						<= All $mol_link
 							arg * filter null
 							title @ \Все
+						<= Selected $mol_link
+							arg * filter \selected
+							title @ \Отобранное
 			foot /
 				<= Feedback $mol_link
 					uri \https://github.com/hyoo-ru/fallacy.hyoo.ru/issues
@@ -381,6 +392,7 @@ $hyoo_fallacy $mol_book2
 		title <= filter_title!id \
 	Card!id $hyoo_fallacy_card
 		tags <= tags
+		selected?val <=> fallacy_selected!id?val false
 		fallacy <= fallacy!id *
 			tags /string
 			title \

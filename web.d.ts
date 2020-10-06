@@ -1434,73 +1434,6 @@ declare namespace $.$$ {
 }
 
 declare namespace $ {
-    class $hyoo_fallacy_card extends $mol_list {
-        minimal_height(): number;
-        tags(): {};
-        fallacy(): {
-            tags: readonly string[];
-            title: string;
-            descr: string;
-            sample: string;
-        };
-        highlight(): string;
-        rows(): readonly any[];
-        Title(): $$.$mol_dimmer;
-        tag(): string;
-        Tag(): $$.$mol_paragraph;
-        Main(): $mol_view;
-        descr(): string;
-        Descr(): $$.$mol_dimmer;
-        sample(): string;
-        Sample(): $$.$mol_dimmer;
-    }
-}
-
-declare namespace $.$$ {
-}
-
-declare namespace $.$$ {
-    class $hyoo_fallacy_card extends $.$hyoo_fallacy_card {
-        title(): string;
-        tag(): any;
-        descr(): string;
-        sample(): string;
-    }
-}
-
-declare namespace $ {
-    class $mol_plugin extends $mol_view {
-        dom_node(next?: Element): Element;
-        attr_static(): {
-            [key: string]: string | number | boolean;
-        };
-        event(): {
-            [key: string]: (event: Event) => void;
-        };
-        render(): void;
-    }
-}
-
-declare namespace $ {
-    class $mol_theme_auto extends $mol_plugin {
-        attr(): {
-            mol_theme: string;
-        };
-        theme(): string;
-    }
-}
-
-declare namespace $ {
-    function $mol_lights(this: $mol_ambient_context, next?: boolean): boolean;
-}
-
-declare namespace $.$$ {
-    class $mol_theme_auto extends $.$mol_theme_auto {
-        theme(): "$mol_theme_light" | "$mol_theme_dark";
-    }
-}
-
-declare namespace $ {
     class $mol_button_typed extends $mol_button {
     }
 }
@@ -1548,14 +1481,6 @@ declare namespace $.$$ {
         sub(): any[];
         label(): readonly any[];
     }
-}
-
-declare namespace $ {
-    class $mol_check_icon extends $mol_check {
-    }
-}
-
-declare namespace $ {
 }
 
 declare namespace $ {
@@ -1624,6 +1549,98 @@ declare namespace $ {
         sub(): readonly any[];
         path(): string;
         Path(): $mol_svg_path;
+    }
+}
+
+declare namespace $ {
+}
+
+declare namespace $ {
+    class $mol_icon_tick extends $mol_icon {
+        path(): string;
+    }
+}
+
+declare namespace $ {
+    class $mol_check_box extends $mol_check {
+        Icon(): $mol_icon_tick;
+    }
+}
+
+declare namespace $ {
+}
+
+declare namespace $ {
+    class $hyoo_fallacy_card extends $mol_list {
+        minimal_height(): number;
+        tags(): {};
+        fallacy(): {
+            tags: readonly string[];
+            title: string;
+            descr: string;
+            sample: string;
+        };
+        highlight(): string;
+        rows(): readonly any[];
+        Title(): $$.$mol_dimmer;
+        tag(): string;
+        Tag(): $$.$mol_paragraph;
+        selected(val?: any): any;
+        Selected(): $mol_check_box;
+        Main(): $mol_view;
+        descr(): string;
+        Descr(): $$.$mol_dimmer;
+        sample(): string;
+        Sample(): $$.$mol_dimmer;
+    }
+}
+
+declare namespace $.$$ {
+}
+
+declare namespace $.$$ {
+    class $hyoo_fallacy_card extends $.$hyoo_fallacy_card {
+        title(): string;
+        tag(): any;
+        descr(): string;
+        sample(): string;
+    }
+}
+
+declare namespace $ {
+    class $mol_plugin extends $mol_view {
+        dom_node(next?: Element): Element;
+        attr_static(): {
+            [key: string]: string | number | boolean;
+        };
+        event(): {
+            [key: string]: (event: Event) => void;
+        };
+        render(): void;
+    }
+}
+
+declare namespace $ {
+    class $mol_theme_auto extends $mol_plugin {
+        attr(): {
+            mol_theme: string;
+        };
+        theme(): string;
+    }
+}
+
+declare namespace $ {
+    function $mol_lights(this: $mol_ambient_context, next?: boolean): boolean;
+}
+
+declare namespace $.$$ {
+    class $mol_theme_auto extends $.$mol_theme_auto {
+        theme(): "$mol_theme_light" | "$mol_theme_dark";
+    }
+}
+
+declare namespace $ {
+    class $mol_check_icon extends $mol_check {
     }
 }
 
@@ -2366,6 +2383,7 @@ declare namespace $ {
         Lights(): $$.$mol_lights_toggle;
         Sources(): $mol_link_source;
         All(): $$.$mol_link;
+        Selected(): $$.$mol_link;
         filters(): readonly any[];
         Filters(): $$.$mol_list;
         Feedback(): $$.$mol_link;
@@ -2379,6 +2397,7 @@ declare namespace $ {
         Cards(id: any): $$.$mol_list;
         filter_arg(id: any): {};
         filter_title(id: any): string;
+        fallacy_selected(id: any, val?: any): any;
         fallacy(id: any): {
             tags: readonly string[];
             title: string;
@@ -2396,13 +2415,15 @@ declare namespace $.$$ {
         pages(): $mol_page[];
         filter(): string;
         search(next?: string): string;
+        selected(next?: string[]): string[];
         filters(): $mol_link[];
         filter_arg(tag: string): {
             filter: string;
         };
         filter_title(tag: string): any;
         fallacy(id: string): any;
-        fallacies_filtered(): ("select" | "circle" | "emotion" | "after" | "force" | "ridicule" | "dummy" | "social" | "yourself" | "personality" | "shape" | "genetics" | "diversion" | "question" | "ambiguity" | "analogy" | "contradiction" | "matryoshka" | "certitude" | "episode" | "wish" | "result" | "slip" | "possible" | "proofer" | "falsifiability" | "subjective" | "exception" | "crowd" | "galileo" | "celeprity" | "anonymous" | "complexity" | "tradition" | "novelty" | "nature" | "binary" | "compromise" | "evil" | "perfect" | "partial" | "induction" | "association" | "typical" | "bore")[];
+        fallacy_selected(id: string, next?: boolean): boolean;
+        fallacies_filtered(): string[];
         cards(): $hyoo_fallacy_card[];
         content_title(filter: string): any;
     }
