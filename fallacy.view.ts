@@ -105,5 +105,10 @@ namespace $.$$ {
 			return this.tags()[ filter ]?.title ?? super.title()
 		}
 
+		search_focus( event : KeyboardEvent ) {
+			const el = this.Search().Suggest().Filter().focused( true )
+			event.preventDefault()
+		}
+
 	}
 }

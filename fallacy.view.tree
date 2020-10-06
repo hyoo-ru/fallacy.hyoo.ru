@@ -2,6 +2,10 @@ $hyoo_fallacy $mol_book2
 	title @ \Некорректные доводы
 	plugins /
 		<= Theme $mol_theme_auto
+		<= Hotkey $mol_hotkey
+			mod_ctrl true
+			key *
+				F?event <=> search_focus?event null
 	pages /
 		<= Menu $mol_page
 			title @ \Типы софизмов
