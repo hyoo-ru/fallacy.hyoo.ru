@@ -6783,6 +6783,14 @@ var $;
                     title: this.$.$mol_locale.text('$hyoo_fallacy_fallacies_typical_title'),
                     descr: this.$.$mol_locale.text('$hyoo_fallacy_fallacies_typical_descr'),
                     sample: this.$.$mol_locale.text('$hyoo_fallacy_fallacies_typical_sample')
+                },
+                bore: {
+                    tags: [
+                        "emotion"
+                    ],
+                    title: this.$.$mol_locale.text('$hyoo_fallacy_fallacies_bore_title'),
+                    descr: this.$.$mol_locale.text('$hyoo_fallacy_fallacies_bore_descr'),
+                    sample: this.$.$mol_locale.text('$hyoo_fallacy_fallacies_bore_sample')
                 }
             };
         }

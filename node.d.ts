@@ -2342,6 +2342,12 @@ declare namespace $ {
                 descr: string;
                 sample: string;
             };
+            bore: {
+                tags: readonly any[];
+                title: string;
+                descr: string;
+                sample: string;
+            };
         };
         Theme(): $$.$mol_theme_auto;
         Lights(): $$.$mol_lights_toggle;
@@ -2383,7 +2389,7 @@ declare namespace $.$$ {
         };
         filter_title(tag: string): any;
         fallacy(id: string): any;
-        fallacies_filtered(): ("circle" | "select" | "emotion" | "after" | "force" | "ridicule" | "dummy" | "social" | "yourself" | "personality" | "shape" | "genetics" | "diversion" | "question" | "ambiguity" | "analogy" | "contradiction" | "matryoshka" | "certitude" | "episode" | "wish" | "result" | "slip" | "possible" | "proofer" | "falsifiability" | "subjective" | "exception" | "crowd" | "galileo" | "celeprity" | "anonymous" | "complexity" | "tradition" | "novelty" | "nature" | "binary" | "compromise" | "evil" | "perfect" | "partial" | "induction" | "association" | "typical")[];
+        fallacies_filtered(): ("circle" | "select" | "emotion" | "after" | "force" | "ridicule" | "dummy" | "social" | "yourself" | "personality" | "shape" | "genetics" | "diversion" | "question" | "ambiguity" | "analogy" | "contradiction" | "matryoshka" | "certitude" | "episode" | "wish" | "result" | "slip" | "possible" | "proofer" | "falsifiability" | "subjective" | "exception" | "crowd" | "galileo" | "celeprity" | "anonymous" | "complexity" | "tradition" | "novelty" | "nature" | "binary" | "compromise" | "evil" | "perfect" | "partial" | "induction" | "association" | "typical" | "bore")[];
         cards(): $hyoo_fallacy_card[];
         content_title(filter: string): any;
     }
