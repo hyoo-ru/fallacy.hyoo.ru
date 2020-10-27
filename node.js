@@ -7058,6 +7058,14 @@ var $;
                     title: this.$.$mol_locale.text('$hyoo_fallacy_fallacies_purism_title'),
                     descr: this.$.$mol_locale.text('$hyoo_fallacy_fallacies_purism_descr'),
                     sample: this.$.$mol_locale.text('$hyoo_fallacy_fallacies_purism_sample')
+                },
+                dress: {
+                    tags: [
+                        "emotion"
+                    ],
+                    title: this.$.$mol_locale.text('$hyoo_fallacy_fallacies_dress_title'),
+                    descr: this.$.$mol_locale.text('$hyoo_fallacy_fallacies_dress_descr'),
+                    sample: this.$.$mol_locale.text('$hyoo_fallacy_fallacies_dress_sample')
                 }
             };
         }
