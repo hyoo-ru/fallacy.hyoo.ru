@@ -6207,6 +6207,7 @@ var $;
             obj.value = (val) => this.filter_pattern(val);
             obj.hint = () => this.filter_hint();
             obj.submit = (event) => this.submit(event);
+            obj.enabled = () => this.enabled();
             return obj;
         }
         Trigger_icon() {
@@ -6298,6 +6299,9 @@ var $;
             if (event !== undefined)
                 return event;
             return null;
+        }
+        enabled() {
+            return true;
         }
     }
     __decorate([
@@ -6531,6 +6535,9 @@ var $;
                 return event;
             return null;
         }
+        enabled() {
+            return true;
+        }
         Suggest() {
             const obj = new this.$.$mol_select();
             obj.value = (val) => this.suggest_selected(val);
@@ -6542,6 +6549,7 @@ var $;
             obj.Trigger_icon = () => null;
             obj.submit = (event) => this.submit(event);
             obj.No_options = () => null;
+            obj.enabled = () => this.enabled();
             return obj;
         }
         Clear_icon() {
