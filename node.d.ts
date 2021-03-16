@@ -2361,6 +2361,12 @@ declare namespace $ {
                 descr: string;
                 sample: string;
             };
+            sniper: {
+                tags: readonly any[];
+                title: string;
+                descr: string;
+                sample: string;
+            };
         };
         Theme(): $$.$mol_theme_auto;
         search_focus(event?: any): any;

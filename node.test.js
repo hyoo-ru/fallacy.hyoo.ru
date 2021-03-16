@@ -6862,6 +6862,14 @@ var $;
                     title: this.$.$mol_locale.text('$hyoo_fallacy_fallacies_dress_title'),
                     descr: this.$.$mol_locale.text('$hyoo_fallacy_fallacies_dress_descr'),
                     sample: this.$.$mol_locale.text('$hyoo_fallacy_fallacies_dress_sample')
+                },
+                sniper: {
+                    tags: [
+                        "content"
+                    ],
+                    title: this.$.$mol_locale.text('$hyoo_fallacy_fallacies_sniper_title'),
+                    descr: this.$.$mol_locale.text('$hyoo_fallacy_fallacies_sniper_descr'),
+                    sample: this.$.$mol_locale.text('$hyoo_fallacy_fallacies_sniper_sample')
                 }
             };
         }
