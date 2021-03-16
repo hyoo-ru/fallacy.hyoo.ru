@@ -106,7 +106,7 @@ namespace $.$$ {
 		}
 
 		search_focus( event : KeyboardEvent ) {
-			const el = this.Search().Suggest().Filter().focused( true )
+			const el = this.Search().Query().focused( true )
 			event.preventDefault()
 		}
 
