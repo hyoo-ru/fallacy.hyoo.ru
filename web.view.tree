@@ -324,7 +324,7 @@ $hyoo_fallacy $mol_book2
 							title @ \Все
 						<= Selected $mol_link
 							arg * filter \selected
-							title @ \Отобранное
+							title @ \📌Отобранное
 			foot /
 				<= Feedback $mol_link
 					uri \https://github.com/hyoo-ru/fallacy.hyoo.ru/issues
