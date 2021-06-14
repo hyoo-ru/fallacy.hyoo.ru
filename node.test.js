@@ -3152,6 +3152,9 @@ var $;
     (function ($$) {
         const { per, rem, px } = $.$mol_style_unit;
         $.$mol_style_define($$.$mol_scroll, {
+            overflow: 'auto',
+        });
+        $.$mol_style_define($$.$mol_scroll, {
             display: 'flex',
             overflow: 'overlay',
             flex: {
@@ -3923,7 +3926,7 @@ var $;
                 flex: {
                     grow: 1000,
                     shrink: 1,
-                    basis: per(50),
+                    basis: 'auto',
                 },
             },
             Tools: {
