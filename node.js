@@ -7263,7 +7263,7 @@ var $;
                     basis: rem(60),
                 },
                 Body: {
-                    padding: rem(.75),
+                    padding: 0,
                 },
             },
             Cards_empty: {
