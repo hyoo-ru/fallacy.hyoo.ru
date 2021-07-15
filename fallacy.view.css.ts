@@ -17,7 +17,7 @@ namespace $.$$ {
 			},
 			
 			Body: {
-				padding: rem(.75),
+				padding: 0,
 			},
 
 		},
