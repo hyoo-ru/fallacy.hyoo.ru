@@ -10,14 +10,16 @@ namespace $.$$ {
 			},
 		},
 
-		Filters: {
-			padding: rem(.75),
-		},
-
 		Content: {
+			
 			flex: {
 				basis: rem(60),
 			},
+			
+			Body: {
+				padding: 0,
+			},
+
 		},
 
 		Cards_empty: {
