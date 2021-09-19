@@ -2427,7 +2427,10 @@ var $;
         }
         dom_node_actual() {
             const node = this.dom_node();
-            $.$mol_dom_render_styles(node, { minHeight: this.minimal_height() });
+            $.$mol_dom_render_styles(node, {
+                minHeight: this.minimal_height(),
+                minWidth: this.minimal_width(),
+            });
             const attr = this.attr();
             const style = this.style();
             const fields = this.field();
@@ -3002,6 +3005,9 @@ var $;
                 })));
             }
             minimal_height() {
+                return this.$.$mol_print.active() ? null : 0;
+            }
+            minimal_width() {
                 return this.$.$mol_print.active() ? null : 0;
             }
         }
@@ -3713,7 +3719,6 @@ var $;
                     basis: per(100),
                 },
                 margin: 0,
-                padding: $.$mol_gap.block,
             },
             Foot: {
                 display: 'flex',
@@ -4261,10 +4266,13 @@ var $;
                 return this.$.$mol_window.size().width;
             }
             minimal_width() {
+                return this.letter_width();
+            }
+            row_width() {
                 return Math.max(Math.min(this.width_limit(), this.maximal_width()), this.letter_width());
             }
             minimal_height() {
-                return Math.max(1, Math.ceil(this.maximal_width() / this.minimal_width())) * this.line_height();
+                return Math.max(1, Math.ceil(this.maximal_width() / this.row_width())) * this.line_height();
             }
         }
         __decorate([
@@ -4272,7 +4280,7 @@ var $;
         ], $mol_paragraph.prototype, "maximal_width", null);
         __decorate([
             $.$mol_mem
-        ], $mol_paragraph.prototype, "minimal_width", null);
+        ], $mol_paragraph.prototype, "row_width", null);
         __decorate([
             $.$mol_mem
         ], $mol_paragraph.prototype, "minimal_height", null);
@@ -5784,6 +5792,11 @@ var $;
         }
         sub() {
             return [
+                this.Anchor()
+            ];
+        }
+        sub_visible() {
+            return [
                 this.Anchor(),
                 this.Bubble()
             ];
@@ -5871,7 +5884,7 @@ var $;
                 this.focused();
                 return next;
             }
-            sub() {
+            sub_visible() {
                 return [
                     this.Anchor(),
                     ...this.showed() ? [this.Bubble()] : [],
