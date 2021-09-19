@@ -4,12 +4,6 @@ namespace $.$$ {
 
 	$mol_style_define( $hyoo_fallacy , {
 
-		Menu: {
-			flex: {
-				basis: rem(20),
-			},
-		},
-
 		Content: {
 			
 			flex: {
