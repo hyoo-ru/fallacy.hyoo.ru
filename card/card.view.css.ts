@@ -6,10 +6,6 @@ namespace $.$$ {
 
 		padding: rem(.75),
 
-		flex: {
-			basis: rem(30),
-		},
-
 		box: {
 			shadow: [{
 				x: 0,
