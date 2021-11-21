@@ -4,17 +4,21 @@ namespace $.$$ {
 
 	$mol_style_define( $hyoo_fallacy , {
 
+		Filters: {
+			padding: $mol_gap.block,
+		},
+
 		Content: {
 			
 			flex: {
 				basis: rem(60),
-			},
+			},	
 			
 			Body: {
 				padding: 0,
-			},
+			},	
 
-		},
+		},	
 
 		Cards_empty: {
 			padding: [ rem(1.25), rem(1.5) ],
