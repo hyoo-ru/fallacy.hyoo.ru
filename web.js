@@ -3632,7 +3632,14 @@ var $;
                 next = $.$mol_dom_context.location.href;
             }
             else if (!/^about:srcdoc/.test(next)) {
-                history.replaceState(history.state, $.$mol_dom_context.document.title, next);
+                new $.$mol_after_frame(() => {
+                    const next = this.href();
+                    const prev = $.$mol_dom_context.location.href;
+                    if (next === prev)
+                        return;
+                    const history = $.$mol_dom_context.history;
+                    history.replaceState(history.state, $.$mol_dom_context.document.title, next);
+                });
             }
             if ($.$mol_dom_context.parent !== $.$mol_dom_context.self) {
                 $.$mol_dom_context.parent.postMessage(['hashchange', next], '*');
@@ -6928,6 +6935,14 @@ var $;
                     title: this.$.$mol_locale.text('$hyoo_fallacy_fallacies_sniper_title'),
                     descr: this.$.$mol_locale.text('$hyoo_fallacy_fallacies_sniper_descr'),
                     sample: this.$.$mol_locale.text('$hyoo_fallacy_fallacies_sniper_sample')
+                },
+                conviction: {
+                    tags: [
+                        "person"
+                    ],
+                    title: this.$.$mol_locale.text('$hyoo_fallacy_fallacies_conviction_title'),
+                    descr: this.$.$mol_locale.text('$hyoo_fallacy_fallacies_conviction_descr'),
+                    sample: this.$.$mol_locale.text('$hyoo_fallacy_fallacies_conviction_sample')
                 }
             };
         }
@@ -7138,6 +7153,9 @@ var $;
     (function ($$) {
         const { rem } = $.$mol_style_unit;
         $.$mol_style_define($$.$hyoo_fallacy, {
+            Filters: {
+                padding: $.$mol_gap.block,
+            },
             Content: {
                 flex: {
                     basis: rem(60),

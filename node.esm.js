@@ -7102,6 +7102,14 @@ var $;
                     title: this.$.$mol_locale.text('$hyoo_fallacy_fallacies_sniper_title'),
                     descr: this.$.$mol_locale.text('$hyoo_fallacy_fallacies_sniper_descr'),
                     sample: this.$.$mol_locale.text('$hyoo_fallacy_fallacies_sniper_sample')
+                },
+                conviction: {
+                    tags: [
+                        "person"
+                    ],
+                    title: this.$.$mol_locale.text('$hyoo_fallacy_fallacies_conviction_title'),
+                    descr: this.$.$mol_locale.text('$hyoo_fallacy_fallacies_conviction_descr'),
+                    sample: this.$.$mol_locale.text('$hyoo_fallacy_fallacies_conviction_sample')
                 }
             };
         }
@@ -7312,6 +7320,9 @@ var $;
     (function ($$) {
         const { rem } = $.$mol_style_unit;
         $.$mol_style_define($$.$hyoo_fallacy, {
+            Filters: {
+                padding: $.$mol_gap.block,
+            },
             Content: {
                 flex: {
                     basis: rem(60),
