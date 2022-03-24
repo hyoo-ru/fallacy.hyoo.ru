@@ -5326,6 +5326,7 @@ var $;
                 },
             },
             Tag: {
+                color: $mol_theme.shade,
                 padding: [rem(.5), rem(.75)],
                 flex: {
                     basis: rem(16),
