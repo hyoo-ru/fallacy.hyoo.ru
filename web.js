@@ -2016,7 +2016,8 @@ var $;
                 if ((error_shower.get(error) ?? this) !== this)
                     return node;
                 try {
-                    node.innerText = '\xA0\xA0' + (error.message || error) + '\xA0\xA0';
+                    const message = error.message || error;
+                    node.innerText = message.replace(/^|$/mg, '\xA0\xA0');
                 }
                 catch { }
                 error_shower.set(error, this);
@@ -3394,7 +3395,7 @@ var $;
                     weight: 'normal',
                 },
                 flex: {
-                    grow: 1000,
+                    grow: 1,
                     shrink: 1,
                     basis: 'auto',
                 },
@@ -3402,7 +3403,7 @@ var $;
             Tools: {
                 flex: {
                     basis: 'auto',
-                    grow: 0,
+                    grow: 1000,
                     shrink: 1,
                 },
                 display: 'flex',
