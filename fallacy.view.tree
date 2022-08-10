@@ -56,7 +56,7 @@ $hyoo_fallacy $mol_book2
 		content * title @ \📊 Манипуляция контентом
 		reference * title @ \🎅 Сомнительная ссылка
 	fallacies *
-		- zero *
+		zero *
 			tags /
 			title @ \🚫 Зеро
 			descr @ \Аргумент, не содержащий софизмов.
