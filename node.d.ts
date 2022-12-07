@@ -120,7 +120,7 @@ declare namespace $ {
         static toString(): string;
         destructor(): void;
         toString(): string;
-        toJSON(): string;
+        toJSON(): any;
     }
 }
 
