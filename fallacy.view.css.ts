@@ -4,10 +4,6 @@ namespace $.$$ {
 
 	$mol_style_define( $hyoo_fallacy , {
 
-		Filters: {
-			padding: $mol_gap.block,
-		},
-
 		Content: {
 			
 			flex: {
