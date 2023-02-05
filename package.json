@@ -142,7 +142,6 @@
     "$mol_svg_path",
     "$mol_theme_auto",
     "$mol_lights",
-    "$mol_media",
     "$mol_hotkey",
     "$mol_lights_toggle",
     "$mol_check_icon",
