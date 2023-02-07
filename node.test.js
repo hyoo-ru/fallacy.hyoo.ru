@@ -4413,6 +4413,9 @@ var $;
         width_limit() {
             return +Infinity;
         }
+        row_width() {
+            return 0;
+        }
         sub() {
             return [
                 this.title()
