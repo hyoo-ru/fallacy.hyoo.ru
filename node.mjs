@@ -6488,6 +6488,9 @@ var $;
                 return event;
             return null;
         }
+        submit_with_ctrl() {
+            return false;
+        }
         submit(event) {
             if (event !== undefined)
                 return event;
@@ -6495,6 +6498,7 @@ var $;
         }
         Submit() {
             const obj = new this.$.$mol_hotkey();
+            obj.mod_ctrl = () => this.submit_with_ctrl();
             obj.key = () => ({
                 enter: (event) => this.submit(event)
             });
