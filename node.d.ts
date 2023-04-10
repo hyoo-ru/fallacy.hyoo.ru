@@ -1161,7 +1161,7 @@ declare namespace $ {
     class $mol_fetch_response extends $mol_object2 {
         readonly native: Response;
         constructor(native: Response);
-        status(): "success" | "unknown" | "inform" | "redirect" | "wrong" | "failed";
+        status(): "unknown" | "success" | "inform" | "redirect" | "wrong" | "failed";
         code(): number;
         message(): string;
         headers(): Headers;
@@ -1191,8 +1191,8 @@ declare namespace $ {
 }
 
 declare namespace $ {
-    function $mol_huggingface_run(this: $, space: string, method: string | number, ...data: readonly any[]): readonly string[];
-    function $mol_huggingface_async(space: string, method: number, ...data: readonly any[]): Promise<[string]> & {
+    function $mol_huggingface_run(this: $, space: string, method: string | number, ...data: readonly any[]): any[] | readonly string[];
+    function $mol_huggingface_async(space: string, method: number, ...data: readonly any[]): Promise<any[]> & {
         destructor: () => void;
     };
 }
@@ -1210,7 +1210,7 @@ declare namespace $ {
         static lang(next?: string): string;
         static source(lang: string): any;
         static texts(lang: string, next?: $mol_locale_dict): $mol_locale_dict;
-        static text(key: string): {} | null;
+        static text(key: string): string;
         static warn(key: string): null;
     }
 }
@@ -1992,7 +1992,7 @@ declare namespace $ {
 declare namespace $ {
     class $mol_lights_toggle extends $mol_check_icon {
         Icon(): $mol_icon_brightness_6;
-        hint(): {} | null;
+        hint(): string;
         checked(val?: any): boolean;
         Lights_icon(): $mol_icon_brightness_6;
         lights(val?: any): boolean;
@@ -2013,7 +2013,7 @@ declare namespace $ {
 
 declare namespace $ {
     class $mol_link_source extends $mol_link {
-        hint(): {} | null;
+        hint(): string;
         sub(): readonly any[];
         Icon(): $mol_icon_github_circle;
     }
@@ -2195,7 +2195,7 @@ declare namespace $ {
         nav_focused(component?: any): any;
         Nav(): $$.$mol_nav;
         suggests_showed(val?: any): boolean;
-        hint(): {} | null;
+        hint(): string;
         submit(event?: any): any;
         enabled(): boolean;
         keyboard(): string;
@@ -2233,7 +2233,7 @@ declare namespace $ {
 
 declare namespace $ {
     class $hyoo_fallacy extends $mol_book2 {
-        title(): {} | null;
+        title(): string;
         plugins(): readonly any[];
         pages(): readonly any[];
         Content(id: any): $mol_page;
@@ -2241,315 +2241,315 @@ declare namespace $ {
         Card(id: any): $$.$hyoo_fallacy_card;
         tags(): {
             person: {
-                title: {} | null;
+                title: string;
             };
             emotion: {
-                title: {} | null;
+                title: string;
             };
             logic: {
-                title: {} | null;
+                title: string;
             };
             content: {
-                title: {} | null;
+                title: string;
             };
             reference: {
-                title: {} | null;
+                title: string;
             };
         };
         fallacies(): {
             force: {
                 tags: readonly any[];
-                title: {} | null;
-                descr: {} | null;
-                sample: {} | null;
+                title: string;
+                descr: string;
+                sample: string;
             };
             ridicule: {
                 tags: readonly any[];
-                title: {} | null;
-                descr: {} | null;
-                sample: {} | null;
+                title: string;
+                descr: string;
+                sample: string;
             };
             dummy: {
                 tags: readonly any[];
-                title: {} | null;
-                descr: {} | null;
-                sample: {} | null;
+                title: string;
+                descr: string;
+                sample: string;
             };
             social: {
                 tags: readonly any[];
-                title: {} | null;
-                descr: {} | null;
-                sample: {} | null;
+                title: string;
+                descr: string;
+                sample: string;
             };
             yourself: {
                 tags: readonly any[];
-                title: {} | null;
-                descr: {} | null;
-                sample: {} | null;
+                title: string;
+                descr: string;
+                sample: string;
             };
             personality: {
                 tags: readonly any[];
-                title: {} | null;
-                descr: {} | null;
-                sample: {} | null;
+                title: string;
+                descr: string;
+                sample: string;
             };
             shape: {
                 tags: readonly any[];
-                title: {} | null;
-                descr: {} | null;
-                sample: {} | null;
+                title: string;
+                descr: string;
+                sample: string;
             };
             genetics: {
                 tags: readonly any[];
-                title: {} | null;
-                descr: {} | null;
-                sample: {} | null;
+                title: string;
+                descr: string;
+                sample: string;
             };
             diversion: {
                 tags: readonly any[];
-                title: {} | null;
-                descr: {} | null;
-                sample: {} | null;
+                title: string;
+                descr: string;
+                sample: string;
             };
             question: {
                 tags: readonly any[];
-                title: {} | null;
-                descr: {} | null;
-                sample: {} | null;
+                title: string;
+                descr: string;
+                sample: string;
             };
             ambiguity: {
                 tags: readonly any[];
-                title: {} | null;
-                descr: {} | null;
-                sample: {} | null;
+                title: string;
+                descr: string;
+                sample: string;
             };
             analogy: {
                 tags: readonly any[];
-                title: {} | null;
-                descr: {} | null;
-                sample: {} | null;
+                title: string;
+                descr: string;
+                sample: string;
             };
             contradiction: {
                 tags: readonly any[];
-                title: {} | null;
-                descr: {} | null;
-                sample: {} | null;
+                title: string;
+                descr: string;
+                sample: string;
             };
             circle: {
                 tags: readonly any[];
-                title: {} | null;
-                descr: {} | null;
-                sample: {} | null;
+                title: string;
+                descr: string;
+                sample: string;
             };
             matryoshka: {
                 tags: readonly any[];
-                title: {} | null;
-                descr: {} | null;
-                sample: {} | null;
+                title: string;
+                descr: string;
+                sample: string;
             };
             certitude: {
                 tags: readonly any[];
-                title: {} | null;
-                descr: {} | null;
-                sample: {} | null;
+                title: string;
+                descr: string;
+                sample: string;
             };
             episode: {
                 tags: readonly any[];
-                title: {} | null;
-                descr: {} | null;
-                sample: {} | null;
+                title: string;
+                descr: string;
+                sample: string;
             };
             wish: {
                 tags: readonly any[];
-                title: {} | null;
-                descr: {} | null;
-                sample: {} | null;
+                title: string;
+                descr: string;
+                sample: string;
             };
             result: {
                 tags: readonly any[];
-                title: {} | null;
-                descr: {} | null;
-                sample: {} | null;
+                title: string;
+                descr: string;
+                sample: string;
             };
             slip: {
                 tags: readonly any[];
-                title: {} | null;
-                descr: {} | null;
-                sample: {} | null;
+                title: string;
+                descr: string;
+                sample: string;
             };
             possible: {
                 tags: readonly any[];
-                title: {} | null;
-                descr: {} | null;
-                sample: {} | null;
+                title: string;
+                descr: string;
+                sample: string;
             };
             after: {
                 tags: readonly any[];
-                title: {} | null;
-                descr: {} | null;
-                sample: {} | null;
+                title: string;
+                descr: string;
+                sample: string;
             };
             proofer: {
                 tags: readonly any[];
-                title: {} | null;
-                descr: {} | null;
-                sample: {} | null;
+                title: string;
+                descr: string;
+                sample: string;
             };
             falsifiability: {
                 tags: readonly any[];
-                title: {} | null;
-                descr: {} | null;
-                sample: {} | null;
+                title: string;
+                descr: string;
+                sample: string;
             };
             subjective: {
                 tags: readonly any[];
-                title: {} | null;
-                descr: {} | null;
-                sample: {} | null;
+                title: string;
+                descr: string;
+                sample: string;
             };
             exception: {
                 tags: readonly any[];
-                title: {} | null;
-                descr: {} | null;
-                sample: {} | null;
+                title: string;
+                descr: string;
+                sample: string;
             };
             crowd: {
                 tags: readonly any[];
-                title: {} | null;
-                descr: {} | null;
-                sample: {} | null;
+                title: string;
+                descr: string;
+                sample: string;
             };
             galileo: {
                 tags: readonly any[];
-                title: {} | null;
-                descr: {} | null;
-                sample: {} | null;
+                title: string;
+                descr: string;
+                sample: string;
             };
             celeprity: {
                 tags: readonly any[];
-                title: {} | null;
-                descr: {} | null;
-                sample: {} | null;
+                title: string;
+                descr: string;
+                sample: string;
             };
             anonymous: {
                 tags: readonly any[];
-                title: {} | null;
-                descr: {} | null;
-                sample: {} | null;
+                title: string;
+                descr: string;
+                sample: string;
             };
             complexity: {
                 tags: readonly any[];
-                title: {} | null;
-                descr: {} | null;
-                sample: {} | null;
+                title: string;
+                descr: string;
+                sample: string;
             };
             tradition: {
                 tags: readonly any[];
-                title: {} | null;
-                descr: {} | null;
-                sample: {} | null;
+                title: string;
+                descr: string;
+                sample: string;
             };
             novelty: {
                 tags: readonly any[];
-                title: {} | null;
-                descr: {} | null;
-                sample: {} | null;
+                title: string;
+                descr: string;
+                sample: string;
             };
             nature: {
                 tags: readonly any[];
-                title: {} | null;
-                descr: {} | null;
-                sample: {} | null;
+                title: string;
+                descr: string;
+                sample: string;
             };
             emotion: {
                 tags: readonly any[];
-                title: {} | null;
-                descr: {} | null;
-                sample: {} | null;
+                title: string;
+                descr: string;
+                sample: string;
             };
             binary: {
                 tags: readonly any[];
-                title: {} | null;
-                descr: {} | null;
-                sample: {} | null;
+                title: string;
+                descr: string;
+                sample: string;
             };
             compromise: {
                 tags: readonly any[];
-                title: {} | null;
-                descr: {} | null;
-                sample: {} | null;
+                title: string;
+                descr: string;
+                sample: string;
             };
             evil: {
                 tags: readonly any[];
-                title: {} | null;
-                descr: {} | null;
-                sample: {} | null;
+                title: string;
+                descr: string;
+                sample: string;
             };
             perfect: {
                 tags: readonly any[];
-                title: {} | null;
-                descr: {} | null;
-                sample: {} | null;
+                title: string;
+                descr: string;
+                sample: string;
             };
             partial: {
                 tags: readonly any[];
-                title: {} | null;
-                descr: {} | null;
-                sample: {} | null;
+                title: string;
+                descr: string;
+                sample: string;
             };
             induction: {
                 tags: readonly any[];
-                title: {} | null;
-                descr: {} | null;
-                sample: {} | null;
+                title: string;
+                descr: string;
+                sample: string;
             };
             select: {
                 tags: readonly any[];
-                title: {} | null;
-                descr: {} | null;
-                sample: {} | null;
+                title: string;
+                descr: string;
+                sample: string;
             };
             association: {
                 tags: readonly any[];
-                title: {} | null;
-                descr: {} | null;
-                sample: {} | null;
+                title: string;
+                descr: string;
+                sample: string;
             };
             typical: {
                 tags: readonly any[];
-                title: {} | null;
-                descr: {} | null;
-                sample: {} | null;
+                title: string;
+                descr: string;
+                sample: string;
             };
             bore: {
                 tags: readonly any[];
-                title: {} | null;
-                descr: {} | null;
-                sample: {} | null;
+                title: string;
+                descr: string;
+                sample: string;
             };
             purism: {
                 tags: readonly any[];
-                title: {} | null;
-                descr: {} | null;
-                sample: {} | null;
+                title: string;
+                descr: string;
+                sample: string;
             };
             dress: {
                 tags: readonly any[];
-                title: {} | null;
-                descr: {} | null;
-                sample: {} | null;
+                title: string;
+                descr: string;
+                sample: string;
             };
             sniper: {
                 tags: readonly any[];
-                title: {} | null;
-                descr: {} | null;
-                sample: {} | null;
+                title: string;
+                descr: string;
+                sample: string;
             };
             conviction: {
                 tags: readonly any[];
-                title: {} | null;
-                descr: {} | null;
-                sample: {} | null;
+                title: string;
+                descr: string;
+                sample: string;
             };
         };
         Theme(): $$.$mol_theme_auto;
@@ -2567,7 +2567,7 @@ declare namespace $ {
         search(val?: any): string;
         Search(): $$.$mol_search;
         cards(id: any): readonly any[];
-        empty_label(): {} | null;
+        empty_label(): string;
         Cards_empty(): $mol_view;
         Cards(id: any): $$.$mol_list;
         filter_arg(id: any): {};
