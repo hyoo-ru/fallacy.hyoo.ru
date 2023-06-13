@@ -7627,4 +7627,5 @@ var $;
 })($ || ($ = {}));
 //hyoo/fallacy/fallacy.view.css.ts
 
+export default $
 //# sourceMappingURL=web.js.map

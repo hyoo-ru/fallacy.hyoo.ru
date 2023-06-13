@@ -8203,4 +8203,5 @@ var $;
 })($ || ($ = {}));
 //hyoo/fallacy/fallacy.view.css.ts
 
+export default $
 //# sourceMappingURL=node.js.map
