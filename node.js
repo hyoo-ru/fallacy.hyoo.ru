@@ -3472,815 +3472,6 @@ var $;
 "use strict";
 var $;
 (function ($) {
-    class $mol_storage extends $mol_object2 {
-        static native() {
-            return null;
-        }
-        static persisted(next) {
-            return false;
-        }
-        static estimate() {
-            return 0;
-        }
-        static dir() {
-            return null;
-        }
-    }
-    __decorate([
-        $mol_mem
-    ], $mol_storage, "native", null);
-    __decorate([
-        $mol_mem
-    ], $mol_storage, "persisted", null);
-    $.$mol_storage = $mol_storage;
-})($ || ($ = {}));
-//mol/storage/storage.node.ts
-;
-"use strict";
-var $;
-(function ($) {
-    class $mol_state_local extends $mol_object {
-        static 'native()';
-        static native() {
-            if (this['native()'])
-                return this['native()'];
-            check: try {
-                const native = $mol_dom_context.localStorage;
-                if (!native)
-                    break check;
-                native.setItem('', '');
-                native.removeItem('');
-                return this['native()'] = native;
-            }
-            catch (error) {
-                console.warn(error);
-            }
-            return this['native()'] = {
-                getItem(key) {
-                    return this[':' + key];
-                },
-                setItem(key, value) {
-                    this[':' + key] = value;
-                },
-                removeItem(key) {
-                    this[':' + key] = void 0;
-                }
-            };
-        }
-        static changes(next) { return next; }
-        static value(key, next) {
-            this.changes();
-            if (next === void 0)
-                return JSON.parse(this.native().getItem(key) || 'null');
-            if (next === null) {
-                this.native().removeItem(key);
-            }
-            else {
-                this.native().setItem(key, JSON.stringify(next));
-                this.$.$mol_storage.persisted(true);
-            }
-            return next;
-        }
-        prefix() { return ''; }
-        value(key, next) {
-            return $mol_state_local.value(this.prefix() + '.' + key, next);
-        }
-    }
-    __decorate([
-        $mol_mem
-    ], $mol_state_local, "changes", null);
-    __decorate([
-        $mol_mem_key
-    ], $mol_state_local, "value", null);
-    $.$mol_state_local = $mol_state_local;
-})($ || ($ = {}));
-//mol/state/local/local.ts
-;
-"use strict";
-//mol/charset/encoding/encoding.ts
-;
-"use strict";
-var $;
-(function ($) {
-    const decoders = {};
-    function $mol_charset_decode(buffer, encoding = 'utf8') {
-        let decoder = decoders[encoding];
-        if (!decoder)
-            decoder = decoders[encoding] = new TextDecoder(encoding);
-        return decoder.decode(buffer);
-    }
-    $.$mol_charset_decode = $mol_charset_decode;
-})($ || ($ = {}));
-//mol/charset/decode/decode.ts
-;
-"use strict";
-var $;
-(function ($) {
-    const TextEncoder = globalThis.TextEncoder ?? $node.util.TextEncoder;
-    const encoder = new TextEncoder();
-    function $mol_charset_encode(value) {
-        return encoder.encode(value);
-    }
-    $.$mol_charset_encode = $mol_charset_encode;
-})($ || ($ = {}));
-//mol/charset/encode/encode.ts
-;
-"use strict";
-var $;
-(function ($) {
-    class $mol_file_not_found extends Error {
-    }
-    $.$mol_file_not_found = $mol_file_not_found;
-    class $mol_file extends $mol_object {
-        static absolute(path) {
-            throw new Error('Not implemented yet');
-        }
-        static relative(path) {
-            throw new Error('Not implemented yet');
-        }
-        static base = '';
-        path() {
-            return '.';
-        }
-        parent() {
-            return this.resolve('..');
-        }
-        reset() {
-            try {
-                this.stat(null);
-            }
-            catch (error) {
-                if (error instanceof $mol_file_not_found)
-                    return;
-                return $mol_fail_hidden(error);
-            }
-        }
-        version() {
-            return this.stat()?.mtime.getTime().toString(36).toUpperCase() ?? '';
-        }
-        watcher() {
-            console.warn('$mol_file_web.watcher() not implemented');
-            return {
-                destructor() { }
-            };
-        }
-        exists(next) {
-            let exists = Boolean(this.stat());
-            if (next === undefined)
-                return exists;
-            if (next === exists)
-                return exists;
-            if (next)
-                this.parent().exists(true);
-            this.ensure();
-            this.reset();
-            return next;
-        }
-        type() {
-            return this.stat()?.type ?? '';
-        }
-        name() {
-            return this.path().replace(/^.*\//, '');
-        }
-        ext() {
-            const match = /((?:\.\w+)+)$/.exec(this.path());
-            return match ? match[1].substring(1) : '';
-        }
-        text(next, virt) {
-            if (virt) {
-                const now = new Date;
-                this.stat({
-                    type: 'file',
-                    size: 0,
-                    atime: now,
-                    mtime: now,
-                    ctime: now,
-                }, 'virt');
-                return next;
-            }
-            if (next === undefined) {
-                return $mol_charset_decode(this.buffer(undefined));
-            }
-            else {
-                const buffer = next === undefined ? undefined : $mol_charset_encode(next);
-                this.buffer(buffer);
-                return next;
-            }
-        }
-        find(include, exclude) {
-            const found = [];
-            const sub = this.sub();
-            for (const child of sub) {
-                const child_path = child.path();
-                if (exclude && child_path.match(exclude))
-                    continue;
-                if (!include || child_path.match(include))
-                    found.push(child);
-                if (child.type() === 'dir') {
-                    const sub_child = child.find(include, exclude);
-                    for (const child of sub_child)
-                        found.push(child);
-                }
-            }
-            return found;
-        }
-        size() {
-            switch (this.type()) {
-                case 'file': return this.stat()?.size ?? 0;
-                default: return 0;
-            }
-        }
-    }
-    __decorate([
-        $mol_mem
-    ], $mol_file.prototype, "exists", null);
-    __decorate([
-        $mol_mem
-    ], $mol_file.prototype, "text", null);
-    __decorate([
-        $mol_mem_key
-    ], $mol_file, "absolute", null);
-    $.$mol_file = $mol_file;
-})($ || ($ = {}));
-//mol/file/file.ts
-;
-"use strict";
-var $;
-(function ($) {
-    function $mol_compare_array(a, b) {
-        if (a === b)
-            return true;
-        if (Object.getPrototypeOf(a) !== Object.getPrototypeOf(b))
-            return false;
-        if (a.length !== b.length)
-            return false;
-        for (let i = 0; i < a.length; i++)
-            if (a[i] !== b[i])
-                return false;
-        return true;
-    }
-    $.$mol_compare_array = $mol_compare_array;
-})($ || ($ = {}));
-//mol/compare/array/array.ts
-;
-"use strict";
-var $;
-(function ($) {
-    function stat_convert(stat) {
-        if (!stat)
-            return null;
-        let type;
-        if (stat.isDirectory())
-            type = 'dir';
-        if (stat.isFile())
-            type = 'file';
-        if (stat.isSymbolicLink())
-            type = 'link';
-        if (!type)
-            return $mol_fail(new Error(`Unsupported file type`));
-        return {
-            type,
-            size: Number(stat.size),
-            atime: stat.atime,
-            mtime: stat.mtime,
-            ctime: stat.ctime
-        };
-    }
-    function buffer_normalize(buf) {
-        return new Uint8Array(buf.buffer, buf.byteOffset, buf.byteLength);
-    }
-    class $mol_file_node extends $mol_file {
-        static absolute(path) {
-            return this.make({
-                path: $mol_const(path)
-            });
-        }
-        static relative(path) {
-            return this.absolute($node.path.resolve(this.base, path).replace(/\\/g, '/'));
-        }
-        watcher() {
-            const watcher = $node.chokidar.watch(this.path(), {
-                persistent: true,
-                ignored: /(^\.|___$)/,
-                depth: 0,
-                ignoreInitial: true,
-                awaitWriteFinish: {
-                    stabilityThreshold: 100,
-                },
-            });
-            watcher
-                .on('all', (type, path) => {
-                const file = $mol_file.relative(path.replace(/\\/g, '/'));
-                file.reset();
-                if (type === 'change') {
-                    this.stat(null);
-                }
-                else {
-                    file.parent().reset();
-                }
-            })
-                .on('error', $mol_fail_log);
-            return {
-                destructor() {
-                    watcher.close();
-                }
-            };
-        }
-        stat(next, virt) {
-            let stat = next;
-            const path = this.path();
-            this.parent().watcher();
-            if (virt)
-                return next;
-            try {
-                stat = next ?? stat_convert($node.fs.statSync(path, { throwIfNoEntry: false }));
-            }
-            catch (error) {
-                if (error.code === 'ENOENT')
-                    error = new $mol_file_not_found(`File not found`);
-                error.message += '\n' + path;
-                return this.$.$mol_fail_hidden(error);
-            }
-            return stat;
-        }
-        ensure() {
-            const path = this.path();
-            try {
-                $node.fs.mkdirSync(path);
-            }
-            catch (e) {
-                e.message += '\n' + path;
-                this.$.$mol_fail_hidden(e);
-            }
-        }
-        buffer(next) {
-            const path = this.path();
-            if (next === undefined) {
-                if (!this.stat())
-                    return new Uint8Array;
-                try {
-                    const prev = $mol_mem_cached(() => this.buffer());
-                    next = buffer_normalize($node.fs.readFileSync(path));
-                    if (prev !== undefined && !$mol_compare_array(prev, next)) {
-                        this.$.$mol_log3_rise({
-                            place: `$mol_file_node..buffer()`,
-                            message: 'Changed',
-                            path: this.relate(),
-                        });
-                    }
-                    return next;
-                }
-                catch (error) {
-                    error.message += '\n' + path;
-                    return this.$.$mol_fail_hidden(error);
-                }
-            }
-            this.parent().exists(true);
-            const now = new Date;
-            this.stat({
-                type: 'file',
-                size: next.length,
-                atime: now,
-                mtime: now,
-                ctime: now,
-            }, 'virt');
-            try {
-                $node.fs.writeFileSync(path, next);
-            }
-            catch (error) {
-                error.message += '\n' + path;
-                return this.$.$mol_fail_hidden(error);
-            }
-            return next;
-        }
-        sub() {
-            if (!this.exists())
-                return [];
-            if (this.type() !== 'dir')
-                return [];
-            const path = this.path();
-            this.stat();
-            try {
-                return $node.fs.readdirSync(path)
-                    .filter(name => !/^\.+$/.test(name))
-                    .map(name => this.resolve(name));
-            }
-            catch (e) {
-                e.message += '\n' + path;
-                return this.$.$mol_fail_hidden(e);
-            }
-        }
-        resolve(path) {
-            return this.constructor.relative($node.path.join(this.path(), path));
-        }
-        relate(base = this.constructor.relative('.')) {
-            return $node.path.relative(base.path(), this.path()).replace(/\\/g, '/');
-        }
-        append(next) {
-            const path = this.path();
-            try {
-                $node.fs.appendFileSync(path, next);
-            }
-            catch (e) {
-                e.message += '\n' + path;
-                return this.$.$mol_fail_hidden(e);
-            }
-        }
-    }
-    __decorate([
-        $mol_mem
-    ], $mol_file_node.prototype, "watcher", null);
-    __decorate([
-        $mol_mem
-    ], $mol_file_node.prototype, "stat", null);
-    __decorate([
-        $mol_mem
-    ], $mol_file_node.prototype, "ensure", null);
-    __decorate([
-        $mol_mem
-    ], $mol_file_node.prototype, "buffer", null);
-    __decorate([
-        $mol_mem
-    ], $mol_file_node.prototype, "sub", null);
-    __decorate([
-        $mol_mem_key
-    ], $mol_file_node, "absolute", null);
-    $.$mol_file_node = $mol_file_node;
-    $.$mol_file = $mol_file_node;
-})($ || ($ = {}));
-//mol/file/file.node.ts
-;
-"use strict";
-var $;
-(function ($) {
-    function $mol_wire_sync(obj) {
-        return new Proxy(obj, {
-            get(obj, field) {
-                const val = obj[field];
-                if (typeof val !== 'function')
-                    return val;
-                const temp = $mol_wire_task.getter(val);
-                return function $mol_wire_sync(...args) {
-                    const fiber = temp(obj, args);
-                    return fiber.sync();
-                };
-            },
-            apply(obj, self, args) {
-                const temp = $mol_wire_task.getter(obj);
-                const fiber = temp(self, args);
-                return fiber.sync();
-            },
-        });
-    }
-    $.$mol_wire_sync = $mol_wire_sync;
-})($ || ($ = {}));
-//mol/wire/sync/sync.ts
-;
-"use strict";
-var $;
-(function ($) {
-    $.$mol_action = $mol_wire_method;
-})($ || ($ = {}));
-//mol/action/action.ts
-;
-"use strict";
-var $;
-(function ($) {
-    function $mol_dom_parse(text, type = 'application/xhtml+xml') {
-        const parser = new $mol_dom_context.DOMParser();
-        const doc = parser.parseFromString(text, type);
-        const error = doc.getElementsByTagName('parsererror');
-        if (error.length)
-            throw new Error(error[0].textContent);
-        return doc;
-    }
-    $.$mol_dom_parse = $mol_dom_parse;
-})($ || ($ = {}));
-//mol/dom/parse/parse.ts
-;
-"use strict";
-var $;
-(function ($) {
-    class $mol_fetch_response extends $mol_object2 {
-        native;
-        constructor(native) {
-            super();
-            this.native = native;
-        }
-        status() {
-            const types = ['unknown', 'inform', 'success', 'redirect', 'wrong', 'failed'];
-            return types[Math.floor(this.native.status / 100)];
-        }
-        code() {
-            return this.native.status;
-        }
-        message() {
-            return this.native.statusText || `HTTP Error ${this.code()}`;
-        }
-        headers() {
-            return this.native.headers;
-        }
-        mime() {
-            return this.headers().get('content-type');
-        }
-        stream() {
-            return this.native.body;
-        }
-        text() {
-            const buffer = this.buffer();
-            const native = this.native;
-            const mime = native.headers.get('content-type') || '';
-            const [, charset] = /charset=(.*)/.exec(mime) || [, 'utf-8'];
-            const decoder = new TextDecoder(charset);
-            return decoder.decode(buffer);
-        }
-        json() {
-            return $mol_wire_sync(this.native).json();
-        }
-        buffer() {
-            return $mol_wire_sync(this.native).arrayBuffer();
-        }
-        xml() {
-            return $mol_dom_parse(this.text(), 'application/xml');
-        }
-        xhtml() {
-            return $mol_dom_parse(this.text(), 'application/xhtml+xml');
-        }
-        html() {
-            return $mol_dom_parse(this.text(), 'text/html');
-        }
-    }
-    __decorate([
-        $mol_action
-    ], $mol_fetch_response.prototype, "stream", null);
-    __decorate([
-        $mol_action
-    ], $mol_fetch_response.prototype, "text", null);
-    __decorate([
-        $mol_action
-    ], $mol_fetch_response.prototype, "buffer", null);
-    __decorate([
-        $mol_action
-    ], $mol_fetch_response.prototype, "xml", null);
-    __decorate([
-        $mol_action
-    ], $mol_fetch_response.prototype, "xhtml", null);
-    __decorate([
-        $mol_action
-    ], $mol_fetch_response.prototype, "html", null);
-    $.$mol_fetch_response = $mol_fetch_response;
-    class $mol_fetch extends $mol_object2 {
-        static request(input, init = {}) {
-            const native = globalThis.fetch ?? $node['undici'].fetch;
-            const controller = new AbortController();
-            let done = false;
-            const promise = native(input, {
-                ...init,
-                signal: controller.signal,
-            }).finally(() => {
-                done = true;
-            });
-            return Object.assign(promise, {
-                destructor: () => {
-                    if (!done && !controller.signal.aborted)
-                        controller.abort();
-                },
-            });
-        }
-        static response(input, init) {
-            return new $mol_fetch_response($mol_wire_sync(this).request(input, init));
-        }
-        static success(input, init) {
-            const response = this.response(input, init);
-            if (response.status() === 'success')
-                return response;
-            throw new Error(response.message());
-        }
-        static stream(input, init) {
-            return this.success(input, init).stream();
-        }
-        static text(input, init) {
-            return this.success(input, init).text();
-        }
-        static json(input, init) {
-            return this.success(input, init).json();
-        }
-        static buffer(input, init) {
-            return this.success(input, init).buffer();
-        }
-        static xml(input, init) {
-            return this.success(input, init).xml();
-        }
-        static xhtml(input, init) {
-            return this.success(input, init).xhtml();
-        }
-        static html(input, init) {
-            return this.success(input, init).html();
-        }
-    }
-    __decorate([
-        $mol_action
-    ], $mol_fetch, "response", null);
-    __decorate([
-        $mol_action
-    ], $mol_fetch, "success", null);
-    __decorate([
-        $mol_action
-    ], $mol_fetch, "stream", null);
-    __decorate([
-        $mol_action
-    ], $mol_fetch, "text", null);
-    __decorate([
-        $mol_action
-    ], $mol_fetch, "json", null);
-    __decorate([
-        $mol_action
-    ], $mol_fetch, "buffer", null);
-    __decorate([
-        $mol_action
-    ], $mol_fetch, "xml", null);
-    __decorate([
-        $mol_action
-    ], $mol_fetch, "xhtml", null);
-    __decorate([
-        $mol_action
-    ], $mol_fetch, "html", null);
-    $.$mol_fetch = $mol_fetch;
-})($ || ($ = {}));
-//mol/fetch/fetch.ts
-;
-"use strict";
-var $;
-(function ($) {
-    function $mol_huggingface_run(space, method, ...data) {
-        while (true) {
-            try {
-                if (typeof method === 'number') {
-                    return $mol_wire_sync(this).$mol_huggingface_ws(space, method, ...data);
-                }
-                else {
-                    return this.$mol_huggingface_rest(space, method, ...data);
-                }
-            }
-            catch (error) {
-                if ($mol_promise_like(error))
-                    $mol_fail_hidden(error);
-                if (error instanceof Error && error.message === `Queue full`) {
-                    $mol_fail_log(error);
-                    continue;
-                }
-                $mol_fail_hidden(error);
-            }
-        }
-    }
-    $.$mol_huggingface_run = $mol_huggingface_run;
-    function $mol_huggingface_rest(space, method, ...data) {
-        const uri = `https://${space}.hf.space/run/${method}`;
-        const response = $mol_fetch.json(uri, {
-            method: 'post',
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ data }),
-        });
-        if ('error' in response) {
-            $mol_fail(new Error(response.error ?? 'Unknown API error'));
-        }
-        return response.data;
-    }
-    $.$mol_huggingface_rest = $mol_huggingface_rest;
-    function $mol_huggingface_ws(space, fn_index, ...data) {
-        const session_hash = $mol_guid();
-        const socket = new WebSocket(`wss://${space}.hf.space/queue/join`);
-        const promise = new Promise((done, fail) => {
-            socket.onclose = event => {
-                if (event.reason)
-                    fail(new Error(event.reason));
-            };
-            socket.onerror = event => {
-                fail(new Error(`Socket error`));
-            };
-            socket.onmessage = event => {
-                const message = JSON.parse(event.data);
-                switch (message.msg) {
-                    case 'send_hash':
-                        return socket.send(JSON.stringify({ session_hash, fn_index }));
-                    case 'estimation': return;
-                    case 'queue_full':
-                        fail(new Error(`Queue full`));
-                    case 'send_data':
-                        return socket.send(JSON.stringify({ session_hash, fn_index, data }));
-                    case 'process_starts': return;
-                    case 'process_completed':
-                        if (message.success) {
-                            return done(message.output.data);
-                        }
-                        else {
-                            return fail(new Error(message.output.error ?? `Unknown API error`));
-                        }
-                    default:
-                        return fail(new Error(`Unknown message type: ${message.msg}`));
-                }
-            };
-        });
-        return Object.assign(promise, {
-            destructor: () => socket.close()
-        });
-    }
-    $.$mol_huggingface_ws = $mol_huggingface_ws;
-})($ || ($ = {}));
-//mol/huggingface/huggingface.ts
-;
-"use strict";
-var $;
-(function ($) {
-    function $hyoo_lingua_translate(lang, text) {
-        if (!text.trim())
-            return '';
-        const cache_key = `$hyoo_lingua_translate(${JSON.stringify(lang)},${JSON.stringify(text)})`;
-        const cached = this.$mol_state_local.value(cache_key);
-        if (cached)
-            return String(cached);
-        const translated = this.$mol_huggingface_run('hyoo-translate', 0, lang, text)[0];
-        return this.$mol_state_local.value(cache_key, translated);
-    }
-    $.$hyoo_lingua_translate = $hyoo_lingua_translate;
-})($ || ($ = {}));
-//hyoo/lingua/translate/translate.ts
-;
-"use strict";
-var $;
-(function ($) {
-    class $mol_locale extends $mol_object {
-        static lang_default() {
-            return 'en';
-        }
-        static lang(next) {
-            return this.$.$mol_state_local.value('locale', next) || $mol_dom_context.navigator.language.replace(/-.*/, '') || this.lang_default();
-        }
-        static source(lang) {
-            return JSON.parse(this.$.$mol_file.relative(`web.locale=${lang}.json`).text().toString());
-        }
-        static texts(lang, next) {
-            if (next)
-                return next;
-            try {
-                return this.source(lang).valueOf();
-            }
-            catch (error) {
-                if ($mol_fail_catch(error)) {
-                    const def = this.lang_default();
-                    if (lang === def)
-                        throw error;
-                }
-            }
-            return {};
-        }
-        static text(key) {
-            const lang = this.lang();
-            const target = this.texts(lang)[key];
-            if (target)
-                return target;
-            this.warn(key);
-            const en = this.texts('en')[key];
-            if (!en)
-                return key;
-            try {
-                return $mol_wire_sync($hyoo_lingua_translate).call(this.$, lang, en);
-            }
-            catch (error) {
-                $mol_fail_log(error);
-            }
-            return en;
-        }
-        static warn(key) {
-            console.warn(`Not translated to "${this.lang()}": ${key}`);
-            return null;
-        }
-    }
-    __decorate([
-        $mol_mem
-    ], $mol_locale, "lang_default", null);
-    __decorate([
-        $mol_mem
-    ], $mol_locale, "lang", null);
-    __decorate([
-        $mol_mem_key
-    ], $mol_locale, "source", null);
-    __decorate([
-        $mol_mem_key
-    ], $mol_locale, "texts", null);
-    __decorate([
-        $mol_mem_key
-    ], $mol_locale, "text", null);
-    __decorate([
-        $mol_mem_key
-    ], $mol_locale, "warn", null);
-    $.$mol_locale = $mol_locale;
-})($ || ($ = {}));
-//mol/locale/locale.ts
-;
-"use strict";
-var $;
-(function ($) {
     class $mol_list extends $mol_view {
         render_visible_only() {
             return true;
@@ -4784,6 +3975,13 @@ var $;
 ;
 "use strict";
 //mol/state/arg/arg.ts
+;
+"use strict";
+var $;
+(function ($) {
+    $.$mol_action = $mol_wire_method;
+})($ || ($ = {}));
+//mol/action/action.ts
 ;
 "use strict";
 var $;
@@ -6163,6 +5361,808 @@ var $;
 "use strict";
 var $;
 (function ($) {
+    class $mol_storage extends $mol_object2 {
+        static native() {
+            return null;
+        }
+        static persisted(next) {
+            return false;
+        }
+        static estimate() {
+            return 0;
+        }
+        static dir() {
+            return null;
+        }
+    }
+    __decorate([
+        $mol_mem
+    ], $mol_storage, "native", null);
+    __decorate([
+        $mol_mem
+    ], $mol_storage, "persisted", null);
+    $.$mol_storage = $mol_storage;
+})($ || ($ = {}));
+//mol/storage/storage.node.ts
+;
+"use strict";
+var $;
+(function ($) {
+    class $mol_state_local extends $mol_object {
+        static 'native()';
+        static native() {
+            if (this['native()'])
+                return this['native()'];
+            check: try {
+                const native = $mol_dom_context.localStorage;
+                if (!native)
+                    break check;
+                native.setItem('', '');
+                native.removeItem('');
+                return this['native()'] = native;
+            }
+            catch (error) {
+                console.warn(error);
+            }
+            return this['native()'] = {
+                getItem(key) {
+                    return this[':' + key];
+                },
+                setItem(key, value) {
+                    this[':' + key] = value;
+                },
+                removeItem(key) {
+                    this[':' + key] = void 0;
+                }
+            };
+        }
+        static changes(next) { return next; }
+        static value(key, next) {
+            this.changes();
+            if (next === void 0)
+                return JSON.parse(this.native().getItem(key) || 'null');
+            if (next === null) {
+                this.native().removeItem(key);
+            }
+            else {
+                this.native().setItem(key, JSON.stringify(next));
+                this.$.$mol_storage.persisted(true);
+            }
+            return next;
+        }
+        prefix() { return ''; }
+        value(key, next) {
+            return $mol_state_local.value(this.prefix() + '.' + key, next);
+        }
+    }
+    __decorate([
+        $mol_mem
+    ], $mol_state_local, "changes", null);
+    __decorate([
+        $mol_mem_key
+    ], $mol_state_local, "value", null);
+    $.$mol_state_local = $mol_state_local;
+})($ || ($ = {}));
+//mol/state/local/local.ts
+;
+"use strict";
+//mol/charset/encoding/encoding.ts
+;
+"use strict";
+var $;
+(function ($) {
+    const decoders = {};
+    function $mol_charset_decode(buffer, encoding = 'utf8') {
+        let decoder = decoders[encoding];
+        if (!decoder)
+            decoder = decoders[encoding] = new TextDecoder(encoding);
+        return decoder.decode(buffer);
+    }
+    $.$mol_charset_decode = $mol_charset_decode;
+})($ || ($ = {}));
+//mol/charset/decode/decode.ts
+;
+"use strict";
+var $;
+(function ($) {
+    const TextEncoder = globalThis.TextEncoder ?? $node.util.TextEncoder;
+    const encoder = new TextEncoder();
+    function $mol_charset_encode(value) {
+        return encoder.encode(value);
+    }
+    $.$mol_charset_encode = $mol_charset_encode;
+})($ || ($ = {}));
+//mol/charset/encode/encode.ts
+;
+"use strict";
+var $;
+(function ($) {
+    class $mol_file_not_found extends Error {
+    }
+    $.$mol_file_not_found = $mol_file_not_found;
+    class $mol_file extends $mol_object {
+        static absolute(path) {
+            throw new Error('Not implemented yet');
+        }
+        static relative(path) {
+            throw new Error('Not implemented yet');
+        }
+        static base = '';
+        path() {
+            return '.';
+        }
+        parent() {
+            return this.resolve('..');
+        }
+        reset() {
+            try {
+                this.stat(null);
+            }
+            catch (error) {
+                if (error instanceof $mol_file_not_found)
+                    return;
+                return $mol_fail_hidden(error);
+            }
+        }
+        version() {
+            return this.stat()?.mtime.getTime().toString(36).toUpperCase() ?? '';
+        }
+        watcher() {
+            console.warn('$mol_file_web.watcher() not implemented');
+            return {
+                destructor() { }
+            };
+        }
+        exists(next) {
+            let exists = Boolean(this.stat());
+            if (next === undefined)
+                return exists;
+            if (next === exists)
+                return exists;
+            if (next)
+                this.parent().exists(true);
+            this.ensure();
+            this.reset();
+            return next;
+        }
+        type() {
+            return this.stat()?.type ?? '';
+        }
+        name() {
+            return this.path().replace(/^.*\//, '');
+        }
+        ext() {
+            const match = /((?:\.\w+)+)$/.exec(this.path());
+            return match ? match[1].substring(1) : '';
+        }
+        text(next, virt) {
+            if (virt) {
+                const now = new Date;
+                this.stat({
+                    type: 'file',
+                    size: 0,
+                    atime: now,
+                    mtime: now,
+                    ctime: now,
+                }, 'virt');
+                return next;
+            }
+            if (next === undefined) {
+                return $mol_charset_decode(this.buffer(undefined));
+            }
+            else {
+                const buffer = next === undefined ? undefined : $mol_charset_encode(next);
+                this.buffer(buffer);
+                return next;
+            }
+        }
+        find(include, exclude) {
+            const found = [];
+            const sub = this.sub();
+            for (const child of sub) {
+                const child_path = child.path();
+                if (exclude && child_path.match(exclude))
+                    continue;
+                if (!include || child_path.match(include))
+                    found.push(child);
+                if (child.type() === 'dir') {
+                    const sub_child = child.find(include, exclude);
+                    for (const child of sub_child)
+                        found.push(child);
+                }
+            }
+            return found;
+        }
+        size() {
+            switch (this.type()) {
+                case 'file': return this.stat()?.size ?? 0;
+                default: return 0;
+            }
+        }
+    }
+    __decorate([
+        $mol_mem
+    ], $mol_file.prototype, "exists", null);
+    __decorate([
+        $mol_mem
+    ], $mol_file.prototype, "text", null);
+    __decorate([
+        $mol_mem_key
+    ], $mol_file, "absolute", null);
+    $.$mol_file = $mol_file;
+})($ || ($ = {}));
+//mol/file/file.ts
+;
+"use strict";
+var $;
+(function ($) {
+    function $mol_compare_array(a, b) {
+        if (a === b)
+            return true;
+        if (Object.getPrototypeOf(a) !== Object.getPrototypeOf(b))
+            return false;
+        if (a.length !== b.length)
+            return false;
+        for (let i = 0; i < a.length; i++)
+            if (a[i] !== b[i])
+                return false;
+        return true;
+    }
+    $.$mol_compare_array = $mol_compare_array;
+})($ || ($ = {}));
+//mol/compare/array/array.ts
+;
+"use strict";
+var $;
+(function ($) {
+    function stat_convert(stat) {
+        if (!stat)
+            return null;
+        let type;
+        if (stat.isDirectory())
+            type = 'dir';
+        if (stat.isFile())
+            type = 'file';
+        if (stat.isSymbolicLink())
+            type = 'link';
+        if (!type)
+            return $mol_fail(new Error(`Unsupported file type`));
+        return {
+            type,
+            size: Number(stat.size),
+            atime: stat.atime,
+            mtime: stat.mtime,
+            ctime: stat.ctime
+        };
+    }
+    function buffer_normalize(buf) {
+        return new Uint8Array(buf.buffer, buf.byteOffset, buf.byteLength);
+    }
+    class $mol_file_node extends $mol_file {
+        static absolute(path) {
+            return this.make({
+                path: $mol_const(path)
+            });
+        }
+        static relative(path) {
+            return this.absolute($node.path.resolve(this.base, path).replace(/\\/g, '/'));
+        }
+        watcher() {
+            const watcher = $node.chokidar.watch(this.path(), {
+                persistent: true,
+                ignored: /(^\.|___$)/,
+                depth: 0,
+                ignoreInitial: true,
+                awaitWriteFinish: {
+                    stabilityThreshold: 100,
+                },
+            });
+            watcher
+                .on('all', (type, path) => {
+                const file = $mol_file.relative(path.replace(/\\/g, '/'));
+                file.reset();
+                if (type === 'change') {
+                    this.stat(null);
+                }
+                else {
+                    file.parent().reset();
+                }
+            })
+                .on('error', $mol_fail_log);
+            return {
+                destructor() {
+                    watcher.close();
+                }
+            };
+        }
+        stat(next, virt) {
+            let stat = next;
+            const path = this.path();
+            this.parent().watcher();
+            if (virt)
+                return next;
+            try {
+                stat = next ?? stat_convert($node.fs.statSync(path, { throwIfNoEntry: false }));
+            }
+            catch (error) {
+                if (error.code === 'ENOENT')
+                    error = new $mol_file_not_found(`File not found`);
+                error.message += '\n' + path;
+                return this.$.$mol_fail_hidden(error);
+            }
+            return stat;
+        }
+        ensure() {
+            const path = this.path();
+            try {
+                $node.fs.mkdirSync(path);
+            }
+            catch (e) {
+                e.message += '\n' + path;
+                this.$.$mol_fail_hidden(e);
+            }
+        }
+        buffer(next) {
+            const path = this.path();
+            if (next === undefined) {
+                if (!this.stat())
+                    return new Uint8Array;
+                try {
+                    const prev = $mol_mem_cached(() => this.buffer());
+                    next = buffer_normalize($node.fs.readFileSync(path));
+                    if (prev !== undefined && !$mol_compare_array(prev, next)) {
+                        this.$.$mol_log3_rise({
+                            place: `$mol_file_node..buffer()`,
+                            message: 'Changed',
+                            path: this.relate(),
+                        });
+                    }
+                    return next;
+                }
+                catch (error) {
+                    error.message += '\n' + path;
+                    return this.$.$mol_fail_hidden(error);
+                }
+            }
+            this.parent().exists(true);
+            const now = new Date;
+            this.stat({
+                type: 'file',
+                size: next.length,
+                atime: now,
+                mtime: now,
+                ctime: now,
+            }, 'virt');
+            try {
+                $node.fs.writeFileSync(path, next);
+            }
+            catch (error) {
+                error.message += '\n' + path;
+                return this.$.$mol_fail_hidden(error);
+            }
+            return next;
+        }
+        sub() {
+            if (!this.exists())
+                return [];
+            if (this.type() !== 'dir')
+                return [];
+            const path = this.path();
+            this.stat();
+            try {
+                return $node.fs.readdirSync(path)
+                    .filter(name => !/^\.+$/.test(name))
+                    .map(name => this.resolve(name));
+            }
+            catch (e) {
+                e.message += '\n' + path;
+                return this.$.$mol_fail_hidden(e);
+            }
+        }
+        resolve(path) {
+            return this.constructor.relative($node.path.join(this.path(), path));
+        }
+        relate(base = this.constructor.relative('.')) {
+            return $node.path.relative(base.path(), this.path()).replace(/\\/g, '/');
+        }
+        append(next) {
+            const path = this.path();
+            try {
+                $node.fs.appendFileSync(path, next);
+            }
+            catch (e) {
+                e.message += '\n' + path;
+                return this.$.$mol_fail_hidden(e);
+            }
+        }
+    }
+    __decorate([
+        $mol_mem
+    ], $mol_file_node.prototype, "watcher", null);
+    __decorate([
+        $mol_mem
+    ], $mol_file_node.prototype, "stat", null);
+    __decorate([
+        $mol_mem
+    ], $mol_file_node.prototype, "ensure", null);
+    __decorate([
+        $mol_mem
+    ], $mol_file_node.prototype, "buffer", null);
+    __decorate([
+        $mol_mem
+    ], $mol_file_node.prototype, "sub", null);
+    __decorate([
+        $mol_mem_key
+    ], $mol_file_node, "absolute", null);
+    $.$mol_file_node = $mol_file_node;
+    $.$mol_file = $mol_file_node;
+})($ || ($ = {}));
+//mol/file/file.node.ts
+;
+"use strict";
+var $;
+(function ($) {
+    function $mol_wire_sync(obj) {
+        return new Proxy(obj, {
+            get(obj, field) {
+                const val = obj[field];
+                if (typeof val !== 'function')
+                    return val;
+                const temp = $mol_wire_task.getter(val);
+                return function $mol_wire_sync(...args) {
+                    const fiber = temp(obj, args);
+                    return fiber.sync();
+                };
+            },
+            apply(obj, self, args) {
+                const temp = $mol_wire_task.getter(obj);
+                const fiber = temp(self, args);
+                return fiber.sync();
+            },
+        });
+    }
+    $.$mol_wire_sync = $mol_wire_sync;
+})($ || ($ = {}));
+//mol/wire/sync/sync.ts
+;
+"use strict";
+var $;
+(function ($) {
+    function $mol_dom_parse(text, type = 'application/xhtml+xml') {
+        const parser = new $mol_dom_context.DOMParser();
+        const doc = parser.parseFromString(text, type);
+        const error = doc.getElementsByTagName('parsererror');
+        if (error.length)
+            throw new Error(error[0].textContent);
+        return doc;
+    }
+    $.$mol_dom_parse = $mol_dom_parse;
+})($ || ($ = {}));
+//mol/dom/parse/parse.ts
+;
+"use strict";
+var $;
+(function ($) {
+    class $mol_fetch_response extends $mol_object2 {
+        native;
+        constructor(native) {
+            super();
+            this.native = native;
+        }
+        status() {
+            const types = ['unknown', 'inform', 'success', 'redirect', 'wrong', 'failed'];
+            return types[Math.floor(this.native.status / 100)];
+        }
+        code() {
+            return this.native.status;
+        }
+        message() {
+            return this.native.statusText || `HTTP Error ${this.code()}`;
+        }
+        headers() {
+            return this.native.headers;
+        }
+        mime() {
+            return this.headers().get('content-type');
+        }
+        stream() {
+            return this.native.body;
+        }
+        text() {
+            const buffer = this.buffer();
+            const native = this.native;
+            const mime = native.headers.get('content-type') || '';
+            const [, charset] = /charset=(.*)/.exec(mime) || [, 'utf-8'];
+            const decoder = new TextDecoder(charset);
+            return decoder.decode(buffer);
+        }
+        json() {
+            return $mol_wire_sync(this.native).json();
+        }
+        buffer() {
+            return $mol_wire_sync(this.native).arrayBuffer();
+        }
+        xml() {
+            return $mol_dom_parse(this.text(), 'application/xml');
+        }
+        xhtml() {
+            return $mol_dom_parse(this.text(), 'application/xhtml+xml');
+        }
+        html() {
+            return $mol_dom_parse(this.text(), 'text/html');
+        }
+    }
+    __decorate([
+        $mol_action
+    ], $mol_fetch_response.prototype, "stream", null);
+    __decorate([
+        $mol_action
+    ], $mol_fetch_response.prototype, "text", null);
+    __decorate([
+        $mol_action
+    ], $mol_fetch_response.prototype, "buffer", null);
+    __decorate([
+        $mol_action
+    ], $mol_fetch_response.prototype, "xml", null);
+    __decorate([
+        $mol_action
+    ], $mol_fetch_response.prototype, "xhtml", null);
+    __decorate([
+        $mol_action
+    ], $mol_fetch_response.prototype, "html", null);
+    $.$mol_fetch_response = $mol_fetch_response;
+    class $mol_fetch extends $mol_object2 {
+        static request(input, init = {}) {
+            const native = globalThis.fetch ?? $node['undici'].fetch;
+            const controller = new AbortController();
+            let done = false;
+            const promise = native(input, {
+                ...init,
+                signal: controller.signal,
+            }).finally(() => {
+                done = true;
+            });
+            return Object.assign(promise, {
+                destructor: () => {
+                    if (!done && !controller.signal.aborted)
+                        controller.abort();
+                },
+            });
+        }
+        static response(input, init) {
+            return new $mol_fetch_response($mol_wire_sync(this).request(input, init));
+        }
+        static success(input, init) {
+            const response = this.response(input, init);
+            if (response.status() === 'success')
+                return response;
+            throw new Error(response.message());
+        }
+        static stream(input, init) {
+            return this.success(input, init).stream();
+        }
+        static text(input, init) {
+            return this.success(input, init).text();
+        }
+        static json(input, init) {
+            return this.success(input, init).json();
+        }
+        static buffer(input, init) {
+            return this.success(input, init).buffer();
+        }
+        static xml(input, init) {
+            return this.success(input, init).xml();
+        }
+        static xhtml(input, init) {
+            return this.success(input, init).xhtml();
+        }
+        static html(input, init) {
+            return this.success(input, init).html();
+        }
+    }
+    __decorate([
+        $mol_action
+    ], $mol_fetch, "response", null);
+    __decorate([
+        $mol_action
+    ], $mol_fetch, "success", null);
+    __decorate([
+        $mol_action
+    ], $mol_fetch, "stream", null);
+    __decorate([
+        $mol_action
+    ], $mol_fetch, "text", null);
+    __decorate([
+        $mol_action
+    ], $mol_fetch, "json", null);
+    __decorate([
+        $mol_action
+    ], $mol_fetch, "buffer", null);
+    __decorate([
+        $mol_action
+    ], $mol_fetch, "xml", null);
+    __decorate([
+        $mol_action
+    ], $mol_fetch, "xhtml", null);
+    __decorate([
+        $mol_action
+    ], $mol_fetch, "html", null);
+    $.$mol_fetch = $mol_fetch;
+})($ || ($ = {}));
+//mol/fetch/fetch.ts
+;
+"use strict";
+var $;
+(function ($) {
+    function $mol_huggingface_run(space, method, ...data) {
+        while (true) {
+            try {
+                if (typeof method === 'number') {
+                    return $mol_wire_sync(this).$mol_huggingface_ws(space, method, ...data);
+                }
+                else {
+                    return this.$mol_huggingface_rest(space, method, ...data);
+                }
+            }
+            catch (error) {
+                if ($mol_promise_like(error))
+                    $mol_fail_hidden(error);
+                if (error instanceof Error && error.message === `Queue full`) {
+                    $mol_fail_log(error);
+                    continue;
+                }
+                $mol_fail_hidden(error);
+            }
+        }
+    }
+    $.$mol_huggingface_run = $mol_huggingface_run;
+    function $mol_huggingface_rest(space, method, ...data) {
+        const uri = `https://${space}.hf.space/run/${method}`;
+        const response = $mol_fetch.json(uri, {
+            method: 'post',
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ data }),
+        });
+        if ('error' in response) {
+            $mol_fail(new Error(response.error ?? 'Unknown API error'));
+        }
+        return response.data;
+    }
+    $.$mol_huggingface_rest = $mol_huggingface_rest;
+    function $mol_huggingface_ws(space, fn_index, ...data) {
+        const session_hash = $mol_guid();
+        const socket = new WebSocket(`wss://${space}.hf.space/queue/join`);
+        const promise = new Promise((done, fail) => {
+            socket.onclose = event => {
+                if (event.reason)
+                    fail(new Error(event.reason));
+            };
+            socket.onerror = event => {
+                fail(new Error(`Socket error`));
+            };
+            socket.onmessage = event => {
+                const message = JSON.parse(event.data);
+                switch (message.msg) {
+                    case 'send_hash':
+                        return socket.send(JSON.stringify({ session_hash, fn_index }));
+                    case 'estimation': return;
+                    case 'queue_full':
+                        fail(new Error(`Queue full`));
+                    case 'send_data':
+                        return socket.send(JSON.stringify({ session_hash, fn_index, data }));
+                    case 'process_starts': return;
+                    case 'process_completed':
+                        if (message.success) {
+                            return done(message.output.data);
+                        }
+                        else {
+                            return fail(new Error(message.output.error ?? `Unknown API error`));
+                        }
+                    default:
+                        return fail(new Error(`Unknown message type: ${message.msg}`));
+                }
+            };
+        });
+        return Object.assign(promise, {
+            destructor: () => socket.close()
+        });
+    }
+    $.$mol_huggingface_ws = $mol_huggingface_ws;
+})($ || ($ = {}));
+//mol/huggingface/huggingface.ts
+;
+"use strict";
+var $;
+(function ($) {
+    function $hyoo_lingua_translate(lang, text) {
+        if (!text.trim())
+            return '';
+        const cache_key = `$hyoo_lingua_translate(${JSON.stringify(lang)},${JSON.stringify(text)})`;
+        const cached = this.$mol_state_local.value(cache_key);
+        if (cached)
+            return String(cached);
+        const translated = this.$mol_huggingface_run('hyoo-translate', 0, lang, text)[0];
+        return this.$mol_state_local.value(cache_key, translated);
+    }
+    $.$hyoo_lingua_translate = $hyoo_lingua_translate;
+})($ || ($ = {}));
+//hyoo/lingua/translate/translate.ts
+;
+"use strict";
+var $;
+(function ($) {
+    class $mol_locale extends $mol_object {
+        static lang_default() {
+            return 'en';
+        }
+        static lang(next) {
+            return this.$.$mol_state_local.value('locale', next) || $mol_dom_context.navigator.language.replace(/-.*/, '') || this.lang_default();
+        }
+        static source(lang) {
+            return JSON.parse(this.$.$mol_file.relative(`web.locale=${lang}.json`).text().toString());
+        }
+        static texts(lang, next) {
+            if (next)
+                return next;
+            try {
+                return this.source(lang).valueOf();
+            }
+            catch (error) {
+                if ($mol_fail_catch(error)) {
+                    const def = this.lang_default();
+                    if (lang === def)
+                        throw error;
+                }
+            }
+            return {};
+        }
+        static text(key) {
+            const lang = this.lang();
+            const target = this.texts(lang)[key];
+            if (target)
+                return target;
+            this.warn(key);
+            const en = this.texts('en')[key];
+            if (!en)
+                return key;
+            try {
+                return $mol_wire_sync($hyoo_lingua_translate).call(this.$, lang, en);
+            }
+            catch (error) {
+                $mol_fail_log(error);
+            }
+            return en;
+        }
+        static warn(key) {
+            console.warn(`Not translated to "${this.lang()}": ${key}`);
+            return null;
+        }
+    }
+    __decorate([
+        $mol_mem
+    ], $mol_locale, "lang_default", null);
+    __decorate([
+        $mol_mem
+    ], $mol_locale, "lang", null);
+    __decorate([
+        $mol_mem_key
+    ], $mol_locale, "source", null);
+    __decorate([
+        $mol_mem_key
+    ], $mol_locale, "texts", null);
+    __decorate([
+        $mol_mem_key
+    ], $mol_locale, "text", null);
+    __decorate([
+        $mol_mem_key
+    ], $mol_locale, "warn", null);
+    $.$mol_locale = $mol_locale;
+})($ || ($ = {}));
+//mol/locale/locale.ts
+;
+"use strict";
+var $;
+(function ($) {
     class $hyoo_fallacy_card extends $mol_list {
         minimal_height() {
             return 144;
@@ -7530,7 +7530,7 @@ var $;
 (function ($) {
     class $hyoo_fallacy extends $mol_book2 {
         title() {
-            return this.$.$mol_locale.text('$hyoo_fallacy_title');
+            return "Некорректные доводы";
         }
         plugins() {
             return [
@@ -7571,19 +7571,19 @@ var $;
         tags() {
             return {
                 person: {
-                    title: this.$.$mol_locale.text('$hyoo_fallacy_tags_person_title')
+                    title: "🤺 Атака через личность"
                 },
                 emotion: {
-                    title: this.$.$mol_locale.text('$hyoo_fallacy_tags_emotion_title')
+                    title: "🎭 Эксплуатация эмоций"
                 },
                 logic: {
-                    title: this.$.$mol_locale.text('$hyoo_fallacy_tags_logic_title')
+                    title: "🧠 Нарушение логики"
                 },
                 content: {
-                    title: this.$.$mol_locale.text('$hyoo_fallacy_tags_content_title')
+                    title: "📊 Манипуляция контентом"
                 },
                 reference: {
-                    title: this.$.$mol_locale.text('$hyoo_fallacy_tags_reference_title')
+                    title: "🎅 Сомнительная ссылка"
                 }
             };
         }
@@ -7593,393 +7593,393 @@ var $;
                     tags: [
                         "person"
                     ],
-                    title: this.$.$mol_locale.text('$hyoo_fallacy_fallacies_force_title'),
-                    descr: this.$.$mol_locale.text('$hyoo_fallacy_fallacies_force_descr'),
-                    sample: this.$.$mol_locale.text('$hyoo_fallacy_fallacies_force_sample')
+                    title: "💪 Обращение к силе",
+                    descr: "Угрожать оппоненту физической расправой.",
+                    sample: "Наша страна должна вооружиться так, чтобы нас боялись, и тогда мир признает, что мы правы!"
                 },
                 ridicule: {
                     tags: [
                         "person"
                     ],
-                    title: this.$.$mol_locale.text('$hyoo_fallacy_fallacies_ridicule_title'),
-                    descr: this.$.$mol_locale.text('$hyoo_fallacy_fallacies_ridicule_descr'),
-                    sample: this.$.$mol_locale.text('$hyoo_fallacy_fallacies_ridicule_sample')
+                    title: "🤣 Высмеивание",
+                    descr: "Высмеивать аргумент или человека без опровержения самого аргумента.",
+                    sample: "Вы отрицаете очевидное, чтобы попрактиковаться в демагогии? Хватит клоунады, мы тут о серьёзных вещах говорим."
                 },
                 dummy: {
                     tags: [
                         "content"
                     ],
-                    title: this.$.$mol_locale.text('$hyoo_fallacy_fallacies_dummy_title'),
-                    descr: this.$.$mol_locale.text('$hyoo_fallacy_fallacies_dummy_descr'),
-                    sample: this.$.$mol_locale.text('$hyoo_fallacy_fallacies_dummy_sample')
+                    title: "🥊 Соломенное чучело",
+                    descr: "Перевирать доводы оппонента для того, чтобы было легче нападать.",
+                    sample: "Олег поддержал увеличение дотаций на образование и здравоохранение. Павел возмутился: \"Не думал, что ты ненавидишь свою страну настолько, что хочешь оставить её беззащитной, урезав расходы на армию\"."
                 },
                 social: {
                     tags: [
                         "person"
                     ],
-                    title: this.$.$mol_locale.text('$hyoo_fallacy_fallacies_social_title'),
-                    descr: this.$.$mol_locale.text('$hyoo_fallacy_fallacies_social_descr'),
-                    sample: this.$.$mol_locale.text('$hyoo_fallacy_fallacies_social_sample')
+                    title: "🥶 Аргумент к социальной неуспешности",
+                    descr: "Атаковать оппонента за то, что он не имеет социального статуса, который, по мнению атакующего, даёт этому оппоненту какое-либо право иметь критикуемую позицию.",
+                    sample: "Как ты можешь что-либо доказывать, если у тебя нет ни жены, ни детей? Ты до сих пор ещё с родителями живёшь!"
                 },
                 yourself: {
                     tags: [
                         "person"
                     ],
-                    title: this.$.$mol_locale.text('$hyoo_fallacy_fallacies_yourself_title'),
-                    descr: this.$.$mol_locale.text('$hyoo_fallacy_fallacies_yourself_descr'),
-                    sample: this.$.$mol_locale.text('$hyoo_fallacy_fallacies_yourself_sample')
+                    title: "🤳 А сам какой?!",
+                    descr: "Указывать на то, что оппонент сам действует вопреки аргументу.",
+                    sample: "Вася: Курение вредит здоровью, людям не следует курить. Петя: Но ты ведь сам курил пару минут назад. Значит, курить можно."
                 },
                 personality: {
                     tags: [
                         "person"
                     ],
-                    title: this.$.$mol_locale.text('$hyoo_fallacy_fallacies_personality_title'),
-                    descr: this.$.$mol_locale.text('$hyoo_fallacy_fallacies_personality_descr'),
-                    sample: this.$.$mol_locale.text('$hyoo_fallacy_fallacies_personality_sample')
+                    title: "👇 Переход на личности",
+                    descr: "Обращать внимание на личные качества или характер оппонента для того, чтобы победить в споре.",
+                    sample: "Ты утверждаешь, что безбожники - порядочные люди. Но я знаю, что ты бросил жену с детьми."
                 },
                 shape: {
                     tags: [
                         "person"
                     ],
-                    title: this.$.$mol_locale.text('$hyoo_fallacy_fallacies_shape_title'),
-                    descr: this.$.$mol_locale.text('$hyoo_fallacy_fallacies_shape_descr'),
-                    sample: this.$.$mol_locale.text('$hyoo_fallacy_fallacies_shape_sample')
+                    title: "💐 Форма поверх содержания",
+                    descr: "Предоставлять аргумент с акцентом на внешнюю привлекательность, а не на действенность или правильность.",
+                    sample: "У него очень приятный голос, он стильно одевается, фотогеничен и слаженно говорит. Ему можно доверять."
                 },
                 genetics: {
                     tags: [
                         "reference"
                     ],
-                    title: this.$.$mol_locale.text('$hyoo_fallacy_fallacies_genetics_title'),
-                    descr: this.$.$mol_locale.text('$hyoo_fallacy_fallacies_genetics_descr'),
-                    sample: this.$.$mol_locale.text('$hyoo_fallacy_fallacies_genetics_sample')
+                    title: "🧬 Генетическая логическая ошибка",
+                    descr: "Считать что-либо плохим или хорошим, опираясь на его происхождение.",
+                    sample: "Эта картошка точно хуже - посмотри на этикетку, её привезли из Америки."
                 },
                 diversion: {
                     tags: [
                         "content"
                     ],
-                    title: this.$.$mol_locale.text('$hyoo_fallacy_fallacies_diversion_title'),
-                    descr: this.$.$mol_locale.text('$hyoo_fallacy_fallacies_diversion_descr'),
-                    sample: this.$.$mol_locale.text('$hyoo_fallacy_fallacies_diversion_sample')
+                    title: "🕺 Отвлекающий манёвр",
+                    descr: "Предоставление нерелевантного материала к аргументу для отвлечения, чтобы подтолкнуть к другому заключению.",
+                    sample: "Сенатора не нужно штрафовать за нецелевые расходы. В конце концов, есть другие сенаторы, которые делают гораздо более плохие вещи."
                 },
                 question: {
                     tags: [
                         "content"
                     ],
-                    title: this.$.$mol_locale.text('$hyoo_fallacy_fallacies_question_title'),
-                    descr: this.$.$mol_locale.text('$hyoo_fallacy_fallacies_question_descr'),
-                    sample: this.$.$mol_locale.text('$hyoo_fallacy_fallacies_question_sample')
+                    title: "❓ Наводящий вопрос",
+                    descr: "Задавать вопрос, который подразумевает истинность некого утверждения, которое на самом деле ложное или спорное.",
+                    sample: "Как вы считаете, поможет ли снизить заболеваемость недавно опубликованное научное доказательство действенности гомеопатии?"
                 },
                 ambiguity: {
                     tags: [
                         "content"
                     ],
-                    title: this.$.$mol_locale.text('$hyoo_fallacy_fallacies_ambiguity_title'),
-                    descr: this.$.$mol_locale.text('$hyoo_fallacy_fallacies_ambiguity_descr'),
-                    sample: this.$.$mol_locale.text('$hyoo_fallacy_fallacies_ambiguity_sample')
+                    title: "🤞 Двусмысленность",
+                    descr: "Использовать слова и фразы, которые могут быть поняты неоднозначно, чтобы ввести оппонента в заблуждение.",
+                    sample: "Я сейчас делаю вам очень выгодное предложение!"
                 },
                 analogy: {
                     tags: [
                         "logic"
                     ],
-                    title: this.$.$mol_locale.text('$hyoo_fallacy_fallacies_analogy_title'),
-                    descr: this.$.$mol_locale.text('$hyoo_fallacy_fallacies_analogy_descr'),
-                    sample: this.$.$mol_locale.text('$hyoo_fallacy_fallacies_analogy_sample')
+                    title: "🎭 Ложная аналогия",
+                    descr: "Создавать ошибочные аналогии либо метафоры, чтобы перекладывать построенные в них выводы на первоначальную проблему.",
+                    sample: "Капуста не понимает, что существует коза. Так же и человек, как капуста, не может понять Бога."
                 },
                 contradiction: {
                     tags: [
                         "logic"
                     ],
-                    title: this.$.$mol_locale.text('$hyoo_fallacy_fallacies_contradiction_title'),
-                    descr: this.$.$mol_locale.text('$hyoo_fallacy_fallacies_contradiction_descr'),
-                    sample: this.$.$mol_locale.text('$hyoo_fallacy_fallacies_contradiction_sample')
+                    title: "🤯 Противоречие",
+                    descr: "Отстаивать взаимоисключающие положения.",
+                    sample: "Никого нельзя убивать! Давайте повесим преступника."
                 },
                 circle: {
                     tags: [
                         "logic"
                     ],
-                    title: this.$.$mol_locale.text('$hyoo_fallacy_fallacies_circle_title'),
-                    descr: this.$.$mol_locale.text('$hyoo_fallacy_fallacies_circle_descr'),
-                    sample: this.$.$mol_locale.text('$hyoo_fallacy_fallacies_circle_sample')
+                    title: "🔁 Порочный круг",
+                    descr: "Наличие вывода среди причин.",
+                    sample: "Бог есть, потому что так написано в Библии. Библия истинна, потому что она Слово Божье."
                 },
                 matryoshka: {
                     tags: [
                         "logic"
                     ],
-                    title: this.$.$mol_locale.text('$hyoo_fallacy_fallacies_matryoshka_title'),
-                    descr: this.$.$mol_locale.text('$hyoo_fallacy_fallacies_matryoshka_descr'),
-                    sample: this.$.$mol_locale.text('$hyoo_fallacy_fallacies_matryoshka_sample')
+                    title: "🤦‍♂️ Ошибка в ошибке",
+                    descr: "Настаивать на ошибочности всего высказывания только потому, что в одном из аргументов была допущена ошибка.",
+                    sample: "Катя: Необходимо питаться здоровой пищей, так как мой врач сообщил, что сейчас это очень популярно. Маша: Фастфуды более популярны и рекламируются на каждом углу, поэтому надо питаться гамбургерами."
                 },
                 certitude: {
                     tags: [
                         "reference"
                     ],
-                    title: this.$.$mol_locale.text('$hyoo_fallacy_fallacies_certitude_title'),
-                    descr: this.$.$mol_locale.text('$hyoo_fallacy_fallacies_certitude_descr'),
-                    sample: this.$.$mol_locale.text('$hyoo_fallacy_fallacies_certitude_sample')
+                    title: "🤩 Аргумент к уверенности",
+                    descr: "Доказывать верность мнения лишь утверждением его верности. (Круговая аргументация) Позиционировать себя как светоча истинного знания.",
+                    sample: "Это правда потому что я уверен на 100% в своей правоте!"
                 },
                 episode: {
                     tags: [
                         "logic"
                     ],
-                    title: this.$.$mol_locale.text('$hyoo_fallacy_fallacies_episode_title'),
-                    descr: this.$.$mol_locale.text('$hyoo_fallacy_fallacies_episode_descr'),
-                    sample: this.$.$mol_locale.text('$hyoo_fallacy_fallacies_episode_sample')
+                    title: "📝 Случай из жизни",
+                    descr: "Использовать личный опыт или известный случай в качестве аргумента в споре, особенно для опровержения статистики.",
+                    sample: "Да что вы мне рассказываете о вреде курения? Мой прадед курил по две пачки в день, и дожил до 97 лет."
                 },
                 wish: {
                     tags: [
                         "emotion"
                     ],
-                    title: this.$.$mol_locale.text('$hyoo_fallacy_fallacies_wish_title'),
-                    descr: this.$.$mol_locale.text('$hyoo_fallacy_fallacies_wish_descr'),
-                    sample: this.$.$mol_locale.text('$hyoo_fallacy_fallacies_wish_sample')
+                    title: "🌠 Желаемое за действительное",
+                    descr: "Мыслить желаниями: что-либо существует или является правдой лишь потому, что этого хочет утверждающий.",
+                    sample: "После смерти хорошие люди попадут в рай. Потому что я хороший и очень хочу туда попасть."
                 },
                 result: {
                     tags: [
                         "emotion"
                     ],
-                    title: this.$.$mol_locale.text('$hyoo_fallacy_fallacies_result_title'),
-                    descr: this.$.$mol_locale.text('$hyoo_fallacy_fallacies_result_descr'),
-                    sample: this.$.$mol_locale.text('$hyoo_fallacy_fallacies_result_sample')
+                    title: "🏆 Аргумент к последствиям",
+                    descr: "Если что-то приводит к (не)благоприятным последствиям, то оно (не)верно.",
+                    sample: "Если подсудимый будет признан невиновным, то это может побудить других к совершению подобных преступлений, ибо они не будут бояться наказания!"
                 },
                 slip: {
                     tags: [
                         "logic"
                     ],
-                    title: this.$.$mol_locale.text('$hyoo_fallacy_fallacies_slip_title'),
-                    descr: this.$.$mol_locale.text('$hyoo_fallacy_fallacies_slip_descr'),
-                    sample: this.$.$mol_locale.text('$hyoo_fallacy_fallacies_slip_sample')
+                    title: "🎿 Скользкий путь",
+                    descr: "Утверждать, что если случится событие \"A\", оно повлечёт за собой событие \"Z\" (не учитывая промежуточных), поэтому событие \"A\" ни в коем случае нельзя допустить.",
+                    sample: "Если мы разрешим гомосексуальным парам вступать в брак, следующее, с чем мы столкнёмся, будет заключение брака с собственными родителями, машинами и даже обезьянками."
                 },
                 possible: {
                     tags: [
                         "logic"
                     ],
-                    title: this.$.$mol_locale.text('$hyoo_fallacy_fallacies_possible_title'),
-                    descr: this.$.$mol_locale.text('$hyoo_fallacy_fallacies_possible_descr'),
-                    sample: this.$.$mol_locale.text('$hyoo_fallacy_fallacies_possible_sample')
+                    title: "🐘 Аргументация возможностью",
+                    descr: "Допущение, что если что-то может случиться, то оно обязательно случится.",
+                    sample: "На улице в любой момент с крайне малой вероятностью может упасть кирпич на голову. Не выйду сегодня из дома, чтобы не умереть."
                 },
                 after: {
                     tags: [
                         "logic"
                     ],
-                    title: this.$.$mol_locale.text('$hyoo_fallacy_fallacies_after_title'),
-                    descr: this.$.$mol_locale.text('$hyoo_fallacy_fallacies_after_descr'),
-                    sample: this.$.$mol_locale.text('$hyoo_fallacy_fallacies_after_sample')
+                    title: "⏱ После, значит вследствие",
+                    descr: "Если одно событие произошло раньше другого, то первое обязательно стало причиной второго.",
+                    sample: "Петух кукарекает перед восходом Солнца, значит Солнце встаёт из-за петуха."
                 },
                 proofer: {
                     tags: [
                         "logic"
                     ],
-                    title: this.$.$mol_locale.text('$hyoo_fallacy_fallacies_proofer_title'),
-                    descr: this.$.$mol_locale.text('$hyoo_fallacy_fallacies_proofer_descr'),
-                    sample: this.$.$mol_locale.text('$hyoo_fallacy_fallacies_proofer_sample')
+                    title: "🔀 Бремя доказательства",
+                    descr: "Говорить, что свою правоту должен доказывать отрицающий, но не утверждающий. (А должно быть наоборот)",
+                    sample: "Что, не можешь доказать, что невидимого розового единорога не существует? Значит он есть!"
                 },
                 falsifiability: {
                     tags: [
                         "logic"
                     ],
-                    title: this.$.$mol_locale.text('$hyoo_fallacy_fallacies_falsifiability_title'),
-                    descr: this.$.$mol_locale.text('$hyoo_fallacy_fallacies_falsifiability_descr'),
-                    sample: this.$.$mol_locale.text('$hyoo_fallacy_fallacies_falsifiability_sample')
+                    title: "🔮 Нефальсифицируемость",
+                    descr: "Высказывание, которое не может быть опровергнуто из-за того, что нет способа проверить, является оно ложным или нет.",
+                    sample: "После смерти души людей покидают их и перерождаются в новом теле, но ничего не помнят о прошлой жизни."
                 },
                 subjective: {
                     tags: [
                         "logic"
                     ],
-                    title: this.$.$mol_locale.text('$hyoo_fallacy_fallacies_subjective_title'),
-                    descr: this.$.$mol_locale.text('$hyoo_fallacy_fallacies_subjective_descr'),
-                    sample: this.$.$mol_locale.text('$hyoo_fallacy_fallacies_subjective_sample')
+                    title: "👀 Ошибка наблюдателя",
+                    descr: "Делать ложный вывод из-за неизбежной субъективности наблюдателя (или слепо корректировать его под своё убеждение).",
+                    sample: "Все железнодорожные переезды постоянно закрыты, а светофоры на них горят красным светом. Потому что я всегда это наблюдаю, когда еду в поезде."
                 },
                 exception: {
                     tags: [
                         "content"
                     ],
-                    title: this.$.$mol_locale.text('$hyoo_fallacy_fallacies_exception_title'),
-                    descr: this.$.$mol_locale.text('$hyoo_fallacy_fallacies_exception_descr'),
-                    sample: this.$.$mol_locale.text('$hyoo_fallacy_fallacies_exception_sample')
+                    title: "🦄 Специальные требования",
+                    descr: "Внезапно менять правила игры, чтобы создать исключение из правил, и показать, что требования недопустимы.",
+                    sample: "Сергей требовал признать его экстрасенсом, но когда его способности стали проверять, они неожиданно испарились. \"Для того, чтобы увидеть мой дар, необходимо сначала в него поверить\", - не моргнув, объяснил произошедшее Сергей."
                 },
                 crowd: {
                     tags: [
                         "reference"
                     ],
-                    title: this.$.$mol_locale.text('$hyoo_fallacy_fallacies_crowd_title'),
-                    descr: this.$.$mol_locale.text('$hyoo_fallacy_fallacies_crowd_descr'),
-                    sample: this.$.$mol_locale.text('$hyoo_fallacy_fallacies_crowd_sample')
+                    title: "👨‍👩‍👦‍👦 Мнение масс",
+                    descr: "Поддерживать что-либо лишь потому, что многие считают это верным.",
+                    sample: "Миллионы людей согласны с его позицией, значит он прав."
                 },
                 galileo: {
                     tags: [
                         "reference"
                     ],
-                    title: this.$.$mol_locale.text('$hyoo_fallacy_fallacies_galileo_title'),
-                    descr: this.$.$mol_locale.text('$hyoo_fallacy_fallacies_galileo_descr'),
-                    sample: this.$.$mol_locale.text('$hyoo_fallacy_fallacies_galileo_sample')
+                    title: "🔥 Уловка Галилея",
+                    descr: "Утверждать, что идея, отвергаемая некоторым сообществом, обязательно верна.",
+                    sample: "Учёные высмеивают мой проект вечного двигателя, значит они боятся конкуренции, и это подтверждает важность моего проекта."
                 },
                 celeprity: {
                     tags: [
                         "reference"
                     ],
-                    title: this.$.$mol_locale.text('$hyoo_fallacy_fallacies_celeprity_title'),
-                    descr: this.$.$mol_locale.text('$hyoo_fallacy_fallacies_celeprity_descr'),
-                    sample: this.$.$mol_locale.text('$hyoo_fallacy_fallacies_celeprity_sample')
+                    title: "👑 Апелляция к знаменитости",
+                    descr: "Ссылаться на мнение известного лица или представителя власти вместо предоставления настоящего аргумента.",
+                    sample: "Не будет в следующем году кризиса! Сам министр экономики так сказал!"
                 },
                 anonymous: {
                     tags: [
                         "reference"
                     ],
-                    title: this.$.$mol_locale.text('$hyoo_fallacy_fallacies_anonymous_title'),
-                    descr: this.$.$mol_locale.text('$hyoo_fallacy_fallacies_anonymous_descr'),
-                    sample: this.$.$mol_locale.text('$hyoo_fallacy_fallacies_anonymous_sample')
+                    title: "👽 Анонимный авторитет",
+                    descr: "Придавать информации убедительности, ссылаясь на неких неизвестных учёных или авторитетов, не называя их.",
+                    sample: "Науке давно известно, что люди с тёмными волосами умнее, чем люди со светлыми."
                 },
                 complexity: {
                     tags: [
                         "reference"
                     ],
-                    title: this.$.$mol_locale.text('$hyoo_fallacy_fallacies_complexity_title'),
-                    descr: this.$.$mol_locale.text('$hyoo_fallacy_fallacies_complexity_descr'),
-                    sample: this.$.$mol_locale.text('$hyoo_fallacy_fallacies_complexity_sample')
+                    title: "⏰ Аргумент к сложности/невероятности",
+                    descr: "Считать информацию ошибочной из-за того, что она сложна для понимания (по причине личной некомпетентности в обсуждаемом вопросе).",
+                    sample: "Это невозможно, чтобы случайные мутации могли создать такой сложный организм, как у человека."
                 },
                 tradition: {
                     tags: [
                         "reference"
                     ],
-                    title: this.$.$mol_locale.text('$hyoo_fallacy_fallacies_tradition_title'),
-                    descr: this.$.$mol_locale.text('$hyoo_fallacy_fallacies_tradition_descr'),
-                    sample: this.$.$mol_locale.text('$hyoo_fallacy_fallacies_tradition_sample')
+                    title: "🎄 Апелляция к традиции",
+                    descr: "Полагать что-либо верным (или лучше) ввиду своей традиционности.",
+                    sample: "Люди должны работать и зарабатывать, потому что их предки всегда это делали."
                 },
                 novelty: {
                     tags: [
                         "reference"
                     ],
-                    title: this.$.$mol_locale.text('$hyoo_fallacy_fallacies_novelty_title'),
-                    descr: this.$.$mol_locale.text('$hyoo_fallacy_fallacies_novelty_descr'),
-                    sample: this.$.$mol_locale.text('$hyoo_fallacy_fallacies_novelty_sample')
+                    title: "🎁 Аргументация новизной",
+                    descr: "Предположение, что нечто лучше, поскольку оно новее.",
+                    sample: "Последняя версия этой операционной системы сделает мой компьютер быстрее и лучше."
                 },
                 nature: {
                     tags: [
                         "reference"
                     ],
-                    title: this.$.$mol_locale.text('$hyoo_fallacy_fallacies_nature_title'),
-                    descr: this.$.$mol_locale.text('$hyoo_fallacy_fallacies_nature_descr'),
-                    sample: this.$.$mol_locale.text('$hyoo_fallacy_fallacies_nature_sample')
+                    title: "🌳 Апелляция к природе",
+                    descr: "Доказывать, что всё, что естественно - не безобразно, и более того - полезно, оправданно, неизбежно, правильно или идеально.",
+                    sample: "Хищники пожирают друг друга - таков закон природы. То же делают и люди в обществе. Таков закон природы."
                 },
                 emotion: {
                     tags: [
                         "emotion"
                     ],
-                    title: this.$.$mol_locale.text('$hyoo_fallacy_fallacies_emotion_title'),
-                    descr: this.$.$mol_locale.text('$hyoo_fallacy_fallacies_emotion_descr'),
-                    sample: this.$.$mol_locale.text('$hyoo_fallacy_fallacies_emotion_sample')
+                    title: "🤡\tАпелляция к эмоциям",
+                    descr: "Вызывать к эмоциям вместо предоставления логических доводов.",
+                    sample: "В мире столько детей, которые умирают от голода, поэтому радуйся, что можешь есть манную кашу."
                 },
                 binary: {
                     tags: [
                         "logic"
                     ],
-                    title: this.$.$mol_locale.text('$hyoo_fallacy_fallacies_binary_title'),
-                    descr: this.$.$mol_locale.text('$hyoo_fallacy_fallacies_binary_descr'),
-                    sample: this.$.$mol_locale.text('$hyoo_fallacy_fallacies_binary_sample')
+                    title: "👣 Ложная дихотомия",
+                    descr: "Предоставлять два альтернативных результата как единственно возможные тогда как зачастую вариантов куда больше.",
+                    sample: "Или вы со мной, или вы против меня - на стороне моего врага."
                 },
                 compromise: {
                     tags: [
                         "emotion"
                     ],
-                    title: this.$.$mol_locale.text('$hyoo_fallacy_fallacies_compromise_title'),
-                    descr: this.$.$mol_locale.text('$hyoo_fallacy_fallacies_compromise_descr'),
-                    sample: this.$.$mol_locale.text('$hyoo_fallacy_fallacies_compromise_sample')
+                    title: "🤝 Золотая середина",
+                    descr: "Настаивать на том, что в споре \"худой мир лучше доброй войны\" и принимать компромиссную позицию за истину.",
+                    sample: "Спорить о том вызывают ли прививки аутизм можно долго. Давайте сойдёмся на том, что прививки могут вызывать \"немного\" аутизма."
                 },
                 evil: {
                     tags: [
                         "emotion"
                     ],
-                    title: this.$.$mol_locale.text('$hyoo_fallacy_fallacies_evil_title'),
-                    descr: this.$.$mol_locale.text('$hyoo_fallacy_fallacies_evil_descr'),
-                    sample: this.$.$mol_locale.text('$hyoo_fallacy_fallacies_evil_sample')
+                    title: "😈 Два зла образуют добро",
+                    descr: "Утверждать, что одно зло может компенсировать другое и справедливость будет восстановлена.",
+                    sample: "Если мне когда-либо было плохо, значит так же плохо должно быть и другим."
                 },
                 perfect: {
                     tags: [
                         "emotion"
                     ],
-                    title: this.$.$mol_locale.text('$hyoo_fallacy_fallacies_perfect_title'),
-                    descr: this.$.$mol_locale.text('$hyoo_fallacy_fallacies_perfect_descr'),
-                    sample: this.$.$mol_locale.text('$hyoo_fallacy_fallacies_perfect_sample')
+                    title: "✨ Перфекционистское заблуждение",
+                    descr: "Предположение, что единственным приемлемым результатом является идеальный, и отвержение всего, что работает не идеально.",
+                    sample: "Зачем нужна эта кампания против пьянства за рулём? Люди всё равно будут ездить пьяными, несмотря ни на что."
                 },
                 partial: {
                     tags: [
                         "logic"
                     ],
-                    title: this.$.$mol_locale.text('$hyoo_fallacy_fallacies_partial_title'),
-                    descr: this.$.$mol_locale.text('$hyoo_fallacy_fallacies_partial_descr'),
-                    sample: this.$.$mol_locale.text('$hyoo_fallacy_fallacies_partial_sample')
+                    title: "🍕 Часть-целое",
+                    descr: "Неумело сравнивать истинность утверждения для целого и для его частей.",
+                    sample: "Каждое зерно в куче почти ничего не весит. Следовательно, куча также почти ничего не весит."
                 },
                 induction: {
                     tags: [
                         "logic"
                     ],
-                    title: this.$.$mol_locale.text('$hyoo_fallacy_fallacies_induction_title'),
-                    descr: this.$.$mol_locale.text('$hyoo_fallacy_fallacies_induction_descr'),
-                    sample: this.$.$mol_locale.text('$hyoo_fallacy_fallacies_induction_sample')
+                    title: "🌍 Поспешное обобщение",
+                    descr: "Создание обобщённого вывода на основе маленькой выборки.",
+                    sample: "\"Меня только что чуть не сбила женщина за рулём. Женщины не умеют водить."
                 },
                 select: {
                     tags: [
                         "content"
                     ],
-                    title: this.$.$mol_locale.text('$hyoo_fallacy_fallacies_select_title'),
-                    descr: this.$.$mol_locale.text('$hyoo_fallacy_fallacies_select_descr'),
-                    sample: this.$.$mol_locale.text('$hyoo_fallacy_fallacies_select_sample')
+                    title: "👁‍🗨 Ошибка подтверждения",
+                    descr: "Выбор свидетельств в пользу своей идеи и игнорирование опровергающих свидетельств.",
+                    sample: "Американцы не летали на Луну! Посмотри сам, сколько всего не сходится на снимках - на небе нет звёзд, флаг колышется как на ветру, освещение нереалистичное - это точно всё снимали в Голливуде!"
                 },
                 association: {
                     tags: [
                         "logic"
                     ],
-                    title: this.$.$mol_locale.text('$hyoo_fallacy_fallacies_association_title'),
-                    descr: this.$.$mol_locale.text('$hyoo_fallacy_fallacies_association_descr'),
-                    sample: this.$.$mol_locale.text('$hyoo_fallacy_fallacies_association_sample')
+                    title: "💫 Ассоциативная ошибка",
+                    descr: "Утверждать, что свойства одной вещи присущи другой лишь из-за наличия у них общего качества.",
+                    sample: "Ядерное оружия, использует энергию от расщепления атома. Ядерная энергетика использует энергию от расщепления атома. Следовательно, ядерная энергетика плоха."
                 },
                 typical: {
                     tags: [
                         "logic"
                     ],
-                    title: this.$.$mol_locale.text('$hyoo_fallacy_fallacies_typical_title'),
-                    descr: this.$.$mol_locale.text('$hyoo_fallacy_fallacies_typical_descr'),
-                    sample: this.$.$mol_locale.text('$hyoo_fallacy_fallacies_typical_sample')
+                    title: "👨‍🦲 Презумпция типичности",
+                    descr: "Приравнивать понятие к более общей категории, для которой оно не является типичным представителем.",
+                    sample: "Аборт - это убийство, за него надо давать 10 лет тюрьмы!"
                 },
                 bore: {
                     tags: [
                         "emotion"
                     ],
-                    title: this.$.$mol_locale.text('$hyoo_fallacy_fallacies_bore_title'),
-                    descr: this.$.$mol_locale.text('$hyoo_fallacy_fallacies_bore_descr'),
-                    sample: this.$.$mol_locale.text('$hyoo_fallacy_fallacies_bore_sample')
+                    title: "🥱 Обвинение в скучности",
+                    descr: "Обвинять аргументацию или человека в скучности без опровержения аргумента по сути.",
+                    sample: "Твои аргументы такие длинные и скучные. Ты всегда такой зануда?"
                 },
                 purism: {
                     tags: [
                         "content"
                     ],
-                    title: this.$.$mol_locale.text('$hyoo_fallacy_fallacies_purism_title'),
-                    descr: this.$.$mol_locale.text('$hyoo_fallacy_fallacies_purism_descr'),
-                    sample: this.$.$mol_locale.text('$hyoo_fallacy_fallacies_purism_sample')
+                    title: "👓 Ни один истинный шотландец",
+                    descr: "Исключать членов класса с неудобным поведением, чтобы защитить весь класс.",
+                    sample: "Ислам мирная религия. Те, кто устраивают теракты, — ненастоящие мусульмане."
                 },
                 dress: {
                     tags: [
                         "emotion"
                     ],
-                    title: this.$.$mol_locale.text('$hyoo_fallacy_fallacies_dress_title'),
-                    descr: this.$.$mol_locale.text('$hyoo_fallacy_fallacies_dress_descr'),
-                    sample: this.$.$mol_locale.text('$hyoo_fallacy_fallacies_dress_sample')
+                    title: "👗 Платье короля",
+                    descr: "Навешивать негативные ярлыки на идею, утверждение, аргумент или вопрос, чтобы оппонент испугался её поддерживать, приводить аргументы или задавать неудобные вопросы, чтобы этот ярлык не перенёсся на его личность.",
+                    sample: "Евгеника поддерживалась нацистами. Ты что нацист, раз её поддерживаешь?"
                 },
                 sniper: {
                     tags: [
                         "content"
                     ],
-                    title: this.$.$mol_locale.text('$hyoo_fallacy_fallacies_sniper_title'),
-                    descr: this.$.$mol_locale.text('$hyoo_fallacy_fallacies_sniper_descr'),
-                    sample: this.$.$mol_locale.text('$hyoo_fallacy_fallacies_sniper_sample')
+                    title: "🎯 Ошибка техасского стрелка",
+                    descr: "Брать только сходные данные, тогда как отличные от них игнорировать.",
+                    sample: "Из истории про техасца, который сначала стреляет по амбару, а уже потом, в месте, где появилось самое большое количество пробоин, рисует мишень, заявляя о своих якобы удачных попаданиях."
                 },
                 conviction: {
                     tags: [
                         "person"
                     ],
-                    title: this.$.$mol_locale.text('$hyoo_fallacy_fallacies_conviction_title'),
-                    descr: this.$.$mol_locale.text('$hyoo_fallacy_fallacies_conviction_descr'),
-                    sample: this.$.$mol_locale.text('$hyoo_fallacy_fallacies_conviction_sample')
+                    title: "😎 Осуждение уверенности",
+                    descr: "Подчёркивание, что слова оппонента являются лишь его личным мнением, а не истиной в последней инстанции, вместо опровержения приведённых им аргументов.",
+                    sample: "Господин палеонтолог, вы утверждаете, что единорогов никогда не существовало. Но это всего-лишь ваша точка зрения! Что бы вы ни говорили, но законам физики и биологии их существование не противоречит. "
                 }
             };
         }
@@ -8014,7 +8014,7 @@ var $;
             obj.arg = () => ({
                 filter: null
             });
-            obj.title = () => this.$.$mol_locale.text('$hyoo_fallacy_All_title');
+            obj.title = () => "Все";
             return obj;
         }
         Selected() {
@@ -8022,7 +8022,7 @@ var $;
             obj.arg = () => ({
                 filter: "selected"
             });
-            obj.title = () => this.$.$mol_locale.text('$hyoo_fallacy_Selected_title');
+            obj.title = () => "📌Отобранное";
             return obj;
         }
         filters() {
@@ -8039,12 +8039,12 @@ var $;
         Feedback() {
             const obj = new this.$.$mol_link();
             obj.uri = () => "https://github.com/hyoo-ru/fallacy.hyoo.ru/issues";
-            obj.title = () => this.$.$mol_locale.text('$hyoo_fallacy_Feedback_title');
+            obj.title = () => "Ошибки? Правки? Предложения?";
             return obj;
         }
         Menu() {
             const obj = new this.$.$mol_page();
-            obj.title = () => this.$.$mol_locale.text('$hyoo_fallacy_Menu_title');
+            obj.title = () => "Типы софизмов";
             obj.tools = () => [
                 this.Lights(),
                 this.Sources()
@@ -8074,7 +8074,7 @@ var $;
             return [];
         }
         empty_label() {
-            return this.$.$mol_locale.text('$hyoo_fallacy_empty_label');
+            return "Заблуждений не найдено";
         }
         Cards_empty() {
             const obj = new this.$.$mol_view();
