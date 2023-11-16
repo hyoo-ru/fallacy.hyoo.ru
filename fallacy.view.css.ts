@@ -10,7 +10,7 @@ namespace $.$$ {
 				basis: rem(60),
 			},	
 			
-			Body: {
+			Body_content: {
 				padding: 0,
 			},	
 
@@ -21,7 +21,6 @@ namespace $.$$ {
 		},
 
 		Feedback: {
-			padding: [ rem(.75), rem(1.5) ],
 			flex: {
 				grow: 1,
 			},
