@@ -377,36 +377,36 @@ $hyoo_fallacy $mol_book2
 				<= Feedback $mol_link
 					uri \https://github.com/hyoo-ru/fallacy.hyoo.ru/issues
 					title \Ошибки? Правки? Предложения?
-	Content!id $mol_page
-		title <= content_title!id \
+	Content* $mol_page
+		title <= content_title* \
 		tools /
 			<= Search $mol_search
 				query?val <=> search?val \
 		body /
-			<= Cards!id $mol_list
-				rows <= cards!id /
+			<= Cards* $mol_list
+				rows <= cards* /
 				Empty <= Cards_empty $mol_view
 					sub /
 						<= empty_label \Заблуждений не найдено
-	Filter!id $mol_link
-		arg <= filter_arg!id *
-		title <= filter_title!id \
-	Card!id $hyoo_fallacy_card
+	Filter* $mol_link
+		arg <= filter_arg* *
+		title <= filter_title* \
+	Card* $hyoo_fallacy_card
 		tags <= tags
-		selected?val <=> fallacy_selected!id?val false
-		fallacy <= fallacy!id *
+		selected?val <=> fallacy_selected*?val false
+		fallacy <= fallacy* *
 			tags /string
 			title \
 			descr \
 			sample \
 		highlight <= search
-	tags *
+	tags *$hyoo_fallacy_tag
 		person * title \🤺 Атака через личность
 		emotion * title \🎭 Эксплуатация эмоций
 		logic * title \🧠 Нарушение логики
 		content * title \📊 Манипуляция контентом
 		reference * title \🎅 Сомнительная ссылка
-	fallacies *
+	fallacies *$hyoo_fallacy_data
 		- zero *
 			tags /
 			title \🚫 Зеро

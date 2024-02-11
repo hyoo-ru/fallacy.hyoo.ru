@@ -11,7 +11,7 @@ var $;
 (function ($) {
 })($ || ($ = {}));
 module.exports = $;
-//mam.ts
+
 ;
 
 $node[ "../mam.ts" ] = $node[ "../mam.ts" ] = module.exports }.call( {} , {} )
@@ -30,7 +30,7 @@ $.$$ = $
 
 ;
 "use strict";
-//hyoo/hyoo.ts
+
 ;
 "use strict";
 var $;
@@ -41,7 +41,7 @@ var $;
     }
     $.$mol_ambient = $mol_ambient;
 })($ || ($ = {}));
-//mol/ambient/ambient.ts
+
 ;
 "use strict";
 var $;
@@ -78,7 +78,7 @@ var $;
         value: (obj) => instances.has(obj),
     });
 })($ || ($ = {}));
-//mol/delegate/delegate.ts
+
 ;
 "use strict";
 var $;
@@ -134,7 +134,7 @@ var $;
     }
     $.$mol_owning_catch = $mol_owning_catch;
 })($ || ($ = {}));
-//mol/owning/owning.ts
+
 ;
 "use strict";
 var $;
@@ -144,7 +144,7 @@ var $;
     }
     $.$mol_fail = $mol_fail;
 })($ || ($ = {}));
-//mol/fail/fail.ts
+
 ;
 "use strict";
 var $;
@@ -154,10 +154,10 @@ var $;
     }
     $.$mol_fail_hidden = $mol_fail_hidden;
 })($ || ($ = {}));
-//mol/fail/hidden/hidden.ts
+
 ;
 "use strict";
-//mol/type/writable/writable.ts
+
 ;
 "use strict";
 var $;
@@ -189,7 +189,7 @@ var $;
     }
     $.$mol_func_name_from = $mol_func_name_from;
 })($ || ($ = {}));
-//mol/func/name/name.ts
+
 ;
 "use strict";
 var $;
@@ -232,7 +232,7 @@ var $;
     }
     $.$mol_object2 = $mol_object2;
 })($ || ($ = {}));
-//mol/object2/object2.ts
+
 ;
 "use strict";
 var $;
@@ -252,7 +252,7 @@ var $;
     }
     $_1.$mol_object = $mol_object;
 })($ || ($ = {}));
-//mol/object/object.ts
+
 ;
 "use strict";
 var $;
@@ -265,7 +265,7 @@ var $;
         $mol_wire_cursor[$mol_wire_cursor["final"] = -4] = "final";
     })($mol_wire_cursor = $.$mol_wire_cursor || ($.$mol_wire_cursor = {}));
 })($ || ($ = {}));
-//mol/wire/cursor/cursor.ts
+
 ;
 "use strict";
 var $;
@@ -332,10 +332,10 @@ var $;
     }
     $.$mol_wire_pub = $mol_wire_pub;
 })($ || ($ = {}));
-//mol/wire/pub/pub.ts
+
 ;
 "use strict";
-//mol/wire/sub/sub.ts
+
 ;
 "use strict";
 var $;
@@ -347,7 +347,7 @@ var $;
     $.$mol_wire_auto = $mol_wire_auto;
     $.$mol_wire_affected = [];
 })($ || ($ = {}));
-//mol/wire/wire.ts
+
 ;
 "use strict";
 var $;
@@ -449,7 +449,7 @@ var $;
         'margin-left': '13px'
     });
 })($ || ($ = {}));
-//mol/dev/format/format.ts
+
 ;
 "use strict";
 var $;
@@ -593,7 +593,7 @@ var $;
     }
     $.$mol_wire_pub_sub = $mol_wire_pub_sub;
 })($ || ($ = {}));
-//mol/wire/pub/sub/sub.ts
+
 ;
 "use strict";
 var $;
@@ -634,7 +634,7 @@ var $;
     }
     $.$mol_after_frame = $mol_after_frame;
 })($ || ($ = {}));
-//mol/after/frame/frame.web.ts
+
 ;
 "use strict";
 var $;
@@ -644,7 +644,7 @@ var $;
     }
     $.$mol_promise_like = $mol_promise_like;
 })($ || ($ = {}));
-//mol/promise/like/like.ts
+
 ;
 "use strict";
 var $;
@@ -867,7 +867,7 @@ var $;
     }
     $.$mol_wire_fiber = $mol_wire_fiber;
 })($ || ($ = {}));
-//mol/wire/fiber/fiber.ts
+
 ;
 "use strict";
 var $;
@@ -882,7 +882,7 @@ var $;
     }
     $.$mol_guid = $mol_guid;
 })($ || ($ = {}));
-//mol/guid/guid.ts
+
 ;
 "use strict";
 var $;
@@ -929,7 +929,7 @@ var $;
     }
     $.$mol_key = $mol_key;
 })($ || ($ = {}));
-//mol/key/key.ts
+
 ;
 "use strict";
 var $;
@@ -1068,7 +1068,7 @@ var $;
         return Object.is(left[Symbol.toPrimitive]('default'), right[Symbol.toPrimitive]('default'));
     }
 })($ || ($ = {}));
-//mol/compare/deep/deep.ts
+
 ;
 "use strict";
 var $;
@@ -1092,10 +1092,10 @@ var $;
     $.$mol_log3_area_lazy = $mol_log3_area_lazy;
     $.$mol_log3_stack = [];
 })($ || ($ = {}));
-//mol/log3/log3.ts
+
 ;
 "use strict";
-//mol/type/keys/extract/extract.ts
+
 ;
 "use strict";
 var $;
@@ -1124,7 +1124,7 @@ var $;
     $.$mol_log3_rise = $mol_log3_web_make('log', 'magenta');
     $.$mol_log3_area = $mol_log3_web_make('group', 'cyan');
 })($ || ($ = {}));
-//mol/log3/log3.web.ts
+
 ;
 "use strict";
 var $;
@@ -1185,7 +1185,7 @@ var $;
     }
     $.$mol_wire_task = $mol_wire_task;
 })($ || ($ = {}));
-//mol/wire/task/task.ts
+
 ;
 "use strict";
 var $;
@@ -1211,13 +1211,13 @@ var $;
     }
     $.$mol_wire_method = $mol_wire_method;
 })($ || ($ = {}));
-//mol/wire/method/method.ts
+
 ;
 "use strict";
-//mol/type/tail/tail.ts
+
 ;
 "use strict";
-//mol/type/foot/foot.ts
+
 ;
 "use strict";
 var $;
@@ -1235,7 +1235,7 @@ var $;
     }
     $.$mol_fail_catch = $mol_fail_catch;
 })($ || ($ = {}));
-//mol/fail/catch/catch.ts
+
 ;
 "use strict";
 var $;
@@ -1250,7 +1250,7 @@ var $;
     }
     $.$mol_fail_log = $mol_fail_log;
 })($ || ($ = {}));
-//mol/fail/log/log.ts
+
 ;
 "use strict";
 var $;
@@ -1380,7 +1380,7 @@ var $;
     ], $mol_wire_atom.prototype, "once", null);
     $.$mol_wire_atom = $mol_wire_atom;
 })($ || ($ = {}));
-//mol/wire/atom/atom.ts
+
 ;
 "use strict";
 var $;
@@ -1418,7 +1418,7 @@ var $;
     }
     $.$mol_wire_solo = $mol_wire_solo;
 })($ || ($ = {}));
-//mol/wire/solo/solo.ts
+
 ;
 "use strict";
 var $;
@@ -1456,7 +1456,7 @@ var $;
     }
     $.$mol_wire_plex = $mol_wire_plex;
 })($ || ($ = {}));
-//mol/wire/plex/plex.ts
+
 ;
 "use strict";
 var $;
@@ -1464,7 +1464,7 @@ var $;
     $.$mol_mem = $mol_wire_solo;
     $.$mol_mem_key = $mol_wire_plex;
 })($ || ($ = {}));
-//mol/mem/mem.ts
+
 ;
 "use strict";
 var $;
@@ -1488,20 +1488,20 @@ var $;
     $.$mol_window = $mol_window;
     self.addEventListener('resize', event => $mol_window.resizes(event));
 })($ || ($ = {}));
-//mol/window/window.web.ts
+
 ;
 "use strict";
 var $;
 (function ($) {
 })($ || ($ = {}));
-//mol/dom/context/context.ts
+
 ;
 "use strict";
 var $;
 (function ($) {
     $.$mol_dom_context = self;
 })($ || ($ = {}));
-//mol/dom/context/context.web.ts
+
 ;
 "use strict";
 var $;
@@ -1525,7 +1525,7 @@ var $;
     }
     $.$mol_after_tick = $mol_after_tick;
 })($ || ($ = {}));
-//mol/after/tick/tick.ts
+
 ;
 "use strict";
 var $;
@@ -1555,7 +1555,7 @@ var $;
     ], $mol_view_selection, "focused", null);
     $.$mol_view_selection = $mol_view_selection;
 })($ || ($ = {}));
-//mol/view/selection/selection.ts
+
 ;
 "use strict";
 var $;
@@ -1565,7 +1565,7 @@ var $;
     }
     $.$mol_maybe = $mol_maybe;
 })($ || ($ = {}));
-//mol/maybe/maybe.ts
+
 ;
 "use strict";
 var $;
@@ -1576,7 +1576,7 @@ var $;
         }, true);
     }
 })($ || ($ = {}));
-//mol/view/selection/selection.web.ts
+
 ;
 "use strict";
 var $;
@@ -1614,7 +1614,7 @@ var $;
     }
     $.$mol_wrapper = $mol_wrapper;
 })($ || ($ = {}));
-//mol/wrapper/wrapper.ts
+
 ;
 "use strict";
 var $;
@@ -1633,7 +1633,7 @@ var $;
     }
     $.$mol_memo = $mol_memo;
 })($ || ($ = {}));
-//mol/memo/memo.ts
+
 ;
 "use strict";
 var $;
@@ -1643,7 +1643,7 @@ var $;
     }
     $.$mol_dom_qname = $mol_dom_qname;
 })($ || ($ = {}));
-//mol/dom/qname/qname.ts
+
 ;
 "use strict";
 var $;
@@ -1663,7 +1663,7 @@ var $;
     }
     $.$mol_wire_probe = $mol_wire_probe;
 })($ || ($ = {}));
-//mol/wire/probe/probe.ts
+
 ;
 "use strict";
 var $;
@@ -1679,7 +1679,7 @@ var $;
     }
     $.$mol_wire_watch = $mol_wire_watch;
 })($ || ($ = {}));
-//mol/wire/watch/watch.ts
+
 ;
 "use strict";
 var $;
@@ -1693,7 +1693,7 @@ var $;
     }
     $.$mol_const = $mol_const;
 })($ || ($ = {}));
-//mol/const/const.ts
+
 ;
 "use strict";
 var $;
@@ -1711,7 +1711,7 @@ var $;
     const nothing = () => { };
     const sub = new $mol_wire_pub_sub;
 })($ || ($ = {}));
-//mol/wire/solid/solid.ts
+
 ;
 "use strict";
 var $;
@@ -1737,7 +1737,7 @@ var $;
     }
     $.$mol_dom_render_attributes = $mol_dom_render_attributes;
 })($ || ($ = {}));
-//mol/dom/render/attributes/attributes.ts
+
 ;
 "use strict";
 var $;
@@ -1749,7 +1749,7 @@ var $;
     }
     $.$mol_dom_render_events = $mol_dom_render_events;
 })($ || ($ = {}));
-//mol/dom/render/events/events.ts
+
 ;
 "use strict";
 var $;
@@ -1769,7 +1769,7 @@ var $;
     }
     $.$mol_dom_render_styles = $mol_dom_render_styles;
 })($ || ($ = {}));
-//mol/dom/render/styles/styles.ts
+
 ;
 "use strict";
 var $;
@@ -1824,7 +1824,7 @@ var $;
     }
     $.$mol_dom_render_children = $mol_dom_render_children;
 })($ || ($ = {}));
-//mol/dom/render/children/children.ts
+
 ;
 "use strict";
 var $;
@@ -1839,7 +1839,7 @@ var $;
     }
     $.$mol_dom_render_fields = $mol_dom_render_fields;
 })($ || ($ = {}));
-//mol/dom/render/fields/fields.ts
+
 ;
 "use strict";
 var $;
@@ -1869,10 +1869,10 @@ var $;
     }
     $.$mol_wire_async = $mol_wire_async;
 })($ || ($ = {}));
-//mol/wire/async/async.ts
+
 ;
 "use strict";
-//mol/type/pick/pick.ts
+
 ;
 "use strict";
 var $;
@@ -1904,7 +1904,7 @@ var $;
     }
     $.$mol_style_attach = $mol_style_attach;
 })($ || ($ = {}));
-//mol/style/attach/attach.ts
+
 ;
 "use strict";
 var $;
@@ -1923,7 +1923,7 @@ var $;
     }
     $.$mol_decor = $mol_decor;
 })($ || ($ = {}));
-//mol/decor/decor.ts
+
 ;
 "use strict";
 var $;
@@ -1968,7 +1968,7 @@ var $;
     }
     $.$mol_style_unit = $mol_style_unit;
 })($ || ($ = {}));
-//mol/style/unit/unit.ts
+
 ;
 "use strict";
 var $;
@@ -2054,13 +2054,13 @@ var $;
     }
     $.$mol_style_func = $mol_style_func;
 })($ || ($ = {}));
-//mol/style/func/func.ts
+
 ;
 "use strict";
-//mol/type/override/override.ts
+
 ;
 "use strict";
-//mol/style/properties/properties.ts
+
 ;
 "use strict";
 var $;
@@ -2074,7 +2074,7 @@ var $;
     }
     $.$mol_style_prop = $mol_style_prop;
 })($ || ($ = {}));
-//mol/style/prop/prop.ts
+
 ;
 "use strict";
 var $;
@@ -2094,14 +2094,14 @@ var $;
         'image',
     ]);
 })($ || ($ = {}));
-//mol/theme/theme.ts
+
 ;
 "use strict";
 var $;
 (function ($) {
     $mol_style_attach("mol/theme/theme.css", ":root {\n\t--mol_theme_hue: 210deg;\n\t--mol_theme_hue_spread: 90deg;\n}\n\n:where([mol_theme]) {\n\tcolor: var(--mol_theme_text);\n\tfill: var(--mol_theme_text);\n\tbackground-color: var(--mol_theme_back);\n}\n\t\n:root, [mol_theme=\"$mol_theme_dark\"], :where([mol_theme=\"$mol_theme_dark\"]) [mol_theme]  {\n\n\t--mol_theme_luma: -1;\n\t--mol_theme_image: invert(1) hue-rotate( 180deg );\n\n\t--mol_theme_back: hsl( var(--mol_theme_hue), 20%, 10% );\n\t--mol_theme_card: hsl( var(--mol_theme_hue), 50%, 20%, .25 );\n\t--mol_theme_field: hsl( var(--mol_theme_hue), 50%, 8%, .25 );\n\t--mol_theme_hover: hsl( var(--mol_theme_hue), 0%, 50%, .1 );\n\t\n\t--mol_theme_text: hsl( var(--mol_theme_hue), 0%, 80% );\n\t--mol_theme_shade: hsl( var(--mol_theme_hue), 0%, 60%, 1 );\n\t--mol_theme_line: hsl( var(--mol_theme_hue), 0%, 50%, .2 );\n\t--mol_theme_focus: hsl( calc( var(--mol_theme_hue) + 180deg ), 100%, 65% );\n\t\n\t--mol_theme_control: hsl( var(--mol_theme_hue), 60%, 65% );\n\t--mol_theme_current: hsl( calc( var(--mol_theme_hue) - var(--mol_theme_hue_spread) ), 60%, 65% );\n\t--mol_theme_special: hsl( calc( var(--mol_theme_hue) + var(--mol_theme_hue_spread) ), 60%, 65% );\n\n\t/* --mol_theme_back: oklch( 20% .03 var(--mol_theme_hue) );\n\t--mol_theme_card: oklch( 35% .05 var(--mol_theme_hue) / .25 );\n\t--mol_theme_field: oklch( 0% 0 var(--mol_theme_hue) / .25 );\n\t--mol_theme_hover: oklch( 70% 0 var(--mol_theme_hue) / .1 );\n\t\n\t--mol_theme_text: oklch( 80% 0 var(--mol_theme_hue) );\n\t--mol_theme_shade: oklch( 60% 0 var(--mol_theme_hue) );\n\t--mol_theme_line: oklch( 50% 0 var(--mol_theme_hue) / .2 );\n\t--mol_theme_focus: oklch( 80% .2 calc( var(--mol_theme_hue) + 120deg ) );\n\t\n\t--mol_theme_control: oklch( 70% .1 var(--mol_theme_hue) );\n\t--mol_theme_current: oklch( 80% .2 calc( var(--mol_theme_hue) - 60deg ) );\n\t--mol_theme_special: oklch( 80% .3 calc( var(--mol_theme_hue) + 60deg ) ); */\n\n}\n\n[mol_theme=\"$mol_theme_light\"], :where([mol_theme=\"$mol_theme_light\"]) [mol_theme] {\n\t\n\t--mol_theme_luma: 1;\n\t--mol_theme_image: none;\n\t\n\t--mol_theme_back: hsl( var(--mol_theme_hue), 20%, 85% );\n\t--mol_theme_card: hsl( var(--mol_theme_hue), 50%, 100%, .25 );\n\t--mol_theme_field: hsl( var(--mol_theme_hue), 50%, 100%, .25 );\n\t--mol_theme_hover: hsl( var(--mol_theme_hue), 0%, 50%, .1 );\n\t\n\t--mol_theme_text: hsl( var(--mol_theme_hue), 0%, 0% );\n\t--mol_theme_shade: hsl( var(--mol_theme_hue), 0%, 40%, 1 );\n\t--mol_theme_line: hsl( var(--mol_theme_hue), 0%, 50%, .2 );\n\t--mol_theme_focus: hsl( calc( var(--mol_theme_hue) + 180deg ), 100%, 40% );\n\t\n\t--mol_theme_control: hsl( var(--mol_theme_hue), 80%, 30% );\n\t--mol_theme_current: hsl( calc( var(--mol_theme_hue) - var(--mol_theme_hue_spread) ), 80%, 30% );\n\t--mol_theme_special: hsl( calc( var(--mol_theme_hue) + var(--mol_theme_hue_spread) ), 80%, 30% );\n\t\n\t/* --mol_theme_back: oklch( 93% .01 var(--mol_theme_hue) );\n\t--mol_theme_card: oklch( 100% .02 var(--mol_theme_hue) / .25 );\n\t--mol_theme_field: oklch( 100% 0 var(--mol_theme_hue) / .5 );\n\t--mol_theme_hover: oklch( 70% 0 var(--mol_theme_hue) / .1 );\n\t\n\t--mol_theme_text: oklch( 20% 0 var(--mol_theme_hue) );\n\t--mol_theme_shade: oklch( 60% 0 var(--mol_theme_hue) );\n\t--mol_theme_line: oklch( 70% 0 var(--mol_theme_hue) / .2 );\n\t--mol_theme_focus: oklch( 20% .8 calc( var(--mol_theme_hue) + 120deg ) );\n\t\n\t--mol_theme_control: oklch( 45% .25 var(--mol_theme_hue) );\n\t--mol_theme_current: oklch( 45% .5 calc( var(--mol_theme_hue) - 60deg ) );\n\t--mol_theme_special: oklch( 45% .5 calc( var(--mol_theme_hue) + 60deg ) ); */\n\n}\n\n:where( :root, [mol_theme=\"$mol_theme_dark\"] ) [mol_theme=\"$mol_theme_base\"] {\n\t--mol_theme_back: hsl( var(--mol_theme_hue), 50%, 30% );\n\t--mol_theme_card: hsl( var(--mol_theme_hue), 40%, 20%, .25 );\n\t/* --mol_theme_back: oklch( 25% .05 var(--mol_theme_hue) );\n\t--mol_theme_card: oklch( 35% .1 var(--mol_theme_hue) / .25 ); */\n}\n:where( [mol_theme=\"$mol_theme_light\"] ) [mol_theme=\"$mol_theme_base\"] {\n\t--mol_theme_back: hsl( var(--mol_theme_hue), 50%, 80% );\n\t--mol_theme_card: hsl( var(--mol_theme_hue), 80%, 95%, .25 );\n\t/* --mol_theme_back: oklch( 95% .02 var(--mol_theme_hue) );\n\t--mol_theme_card: oklch( 80% .05 var(--mol_theme_hue) / .25 ); */\n}\n\n:where( :root, [mol_theme=\"$mol_theme_dark\"] ) [mol_theme=\"$mol_theme_accent\"] {\n\t--mol_theme_back: hsl( calc( var(--mol_theme_hue) + 180deg ), 90%, 30% );\n\t--mol_theme_card: hsl( calc( var(--mol_theme_hue) + 180deg ), 80%, 20%, .25 );\n\t/* --mol_theme_back: oklch( 40% .2 calc( var(--mol_theme_hue) + 120deg ) );\n\t--mol_theme_card: oklch( 50% .3 calc( var(--mol_theme_hue) + 120deg ) / .25 ); */\n}\n:where( [mol_theme=\"$mol_theme_light\"] ) [mol_theme=\"$mol_theme_accent\"] {\n\t--mol_theme_back: hsl( calc( var(--mol_theme_hue) + 180deg ), 90%, 75% );\n\t--mol_theme_card: hsl( calc( var(--mol_theme_hue) + 180deg ), 80%, 90%, .25 );\n\t/* --mol_theme_back: oklch( 90% .03 calc( var(--mol_theme_hue) + 120deg ) );\n\t--mol_theme_card: oklch( 80% .05 calc( var(--mol_theme_hue) + 120deg ) / .25 ); */\n}\n\n:where( :root, [mol_theme=\"$mol_theme_dark\"] ) [mol_theme=\"$mol_theme_current\"] {\n\t--mol_theme_back: hsl( calc( var(--mol_theme_hue) - var(--mol_theme_hue_spread) ), 50%, 30% );\n\t--mol_theme_card: hsl( calc( var(--mol_theme_hue) - var(--mol_theme_hue_spread) ), 40%, 20%, .25 );\n\t/* --mol_theme_back: oklch( 25% .05 calc( var(--mol_theme_hue) - 60deg ) );\n\t--mol_theme_card: oklch( 35% .1 calc( var(--mol_theme_hue) - 60deg ) / .25 ); */\n}\n:where( [mol_theme=\"$mol_theme_light\"] ) [mol_theme=\"$mol_theme_current\"] {\n\t--mol_theme_back: hsl( calc( var(--mol_theme_hue) - var(--mol_theme_hue_spread) ), 50%, 80% );\n\t--mol_theme_card: hsl( calc( var(--mol_theme_hue) - var(--mol_theme_hue_spread) ), 80%, 95%, .25 );\n\t/* --mol_theme_back: oklch( 95% .02 calc( var(--mol_theme_hue) - 60deg ) );\n\t--mol_theme_card: oklch( 80% .05 calc( var(--mol_theme_hue) - 60deg ) / .25 ); */\n}\n\n:where( :root, [mol_theme=\"$mol_theme_dark\"] ) [mol_theme=\"$mol_theme_special\"] {\n\t--mol_theme_back: hsl( calc( var(--mol_theme_hue) + var(--mol_theme_hue_spread) ), 50%, 30% );\n\t--mol_theme_card: hsl( calc( var(--mol_theme_hue) + var(--mol_theme_hue_spread) ), 40%, 20%, .25 );\n\t/* --mol_theme_back: oklch( 25% .05 calc( var(--mol_theme_hue) + 60deg ) );\n\t--mol_theme_card: oklch( 35% .1 calc( var(--mol_theme_hue) + 60deg ) / .25 ); */\n}\n:where( [mol_theme=\"$mol_theme_light\"] ) [mol_theme=\"$mol_theme_special\"] {\n\t--mol_theme_back: hsl( calc( var(--mol_theme_hue) + var(--mol_theme_hue_spread) ), 50%, 80% );\n\t--mol_theme_card: hsl( calc( var(--mol_theme_hue) + var(--mol_theme_hue_spread) ), 80%, 95%, .25 );\n\t/* --mol_theme_back: oklch( 95% .02 calc( var(--mol_theme_hue) + 60deg ) );\n\t--mol_theme_card: oklch( 80% .05 calc( var(--mol_theme_hue) + 60deg ) / .25 ); */\n}\n");
 })($ || ($ = {}));
-//mol/theme/-css/theme.css.ts
+
 ;
 "use strict";
 var $;
@@ -2114,14 +2114,14 @@ var $;
         'blur',
     ]);
 })($ || ($ = {}));
-//mol/gap/gap.ts
+
 ;
 "use strict";
 var $;
 (function ($) {
     $mol_style_attach("mol/gap/gap.css", ":root {\n\t--mol_gap_block: .75rem;\n\t--mol_gap_text: .5rem .75rem;\n\t--mol_gap_round: .25rem;\n\t--mol_gap_space: .25rem;\n\t--mol_gap_blur: .5rem;\n}\n");
 })($ || ($ = {}));
-//mol/gap/-css/gap.css.ts
+
 ;
 "use strict";
 var $;
@@ -2553,21 +2553,21 @@ var $;
     ], $mol_view, "view_classes", null);
     $.$mol_view = $mol_view;
 })($ || ($ = {}));
-//mol/view/view/view.ts
+
 ;
 "use strict";
 var $;
 (function ($) {
     $mol_style_attach("mol/view/view/view.css", "[mol_view] {\n\ttransition-property: height, width, min-height, min-width, max-width, max-height, transform;\n\ttransition-duration: .2s;\n\ttransition-timing-function: ease-out;\n\t-webkit-appearance: none;\n\tbox-sizing: border-box;\n\tdisplay: flex;\n\tflex-shrink: 0;\n\tcontain: style;\n\tscrollbar-color: var(--mol_theme_line) transparent;\n\tscrollbar-width: thin;\n}\t\n\n[mol_view]::selection {\n\tbackground: var(--mol_theme_line);\n}\t\n\n[mol_view]::-webkit-scrollbar {\n\twidth: .25rem;\n\theight: .25rem;\n}\n\n[mol_view]::-webkit-scrollbar-corner {\n\tbackground-color: var(--mol_theme_line);\n}\n\n[mol_view]::-webkit-scrollbar-track {\n\tbackground-color: transparent;\n}\n\n[mol_view]::-webkit-scrollbar-thumb {\n\tbackground-color: var(--mol_theme_line);\n\tborder-radius: var(--mol_gap_round);\n}\n\n[mol_view] > * {\n\tword-break: inherit;\n}\n\n[mol_view_root] {\n\tmargin: 0;\n\tpadding: 0;\n\twidth: 100%;\n\theight: 100%;\n\tbox-sizing: border-box;\n\tfont-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;\n\tfont-size: 1rem;\n\tline-height: 1.5rem;\n\tbackground: var(--mol_theme_back);\n\tcolor: var(--mol_theme_text);\n\tcontain: unset; /** Fixes bg ignoring when applied to body on Chrome */\n\ttab-size: 4;\n\toverscroll-behavior: contain; /** Disable navigation gestures **/\n}\n\n@media print {\n\t[mol_view_root] {\n\t\theight: auto;\n\t}\n}\n\n[mol_view][mol_view_error]:not([mol_view_error=\"Promise\"]) {\n\tbackground-image: repeating-linear-gradient(\n\t\t-45deg,\n\t\t#f92323,\n\t\t#f92323 .5rem,\n\t\t#ff3d3d .5rem,\n\t\t#ff3d3d 1.5rem\n\t);\n\tcolor: black;\n\talign-items: center;\n\tjustify-content: center;\n}\n\n@keyframes mol_view_wait {\n\tfrom {\n\t\topacity: .25;\n\t}\n\t20% {\n\t\topacity: .75;\n\t}\n\tto {\n\t\topacity: .25;\n\t}\n}\n\n:where([mol_view][mol_view_error=\"Promise\"]) {\n\tbackground: var(--mol_theme_hover);\n}\n\n[mol_view][mol_view_error=\"Promise\"] {\n\tanimation: mol_view_wait 1s steps( 20, end ) infinite;\n}\n");
 })($ || ($ = {}));
-//mol/view/view/-css/view.css.ts
+
 ;
 "use strict";
 var $;
 (function ($) {
     $mol_dom_context.document?.addEventListener('DOMContentLoaded', () => $mol_view.autobind(), { once: true });
 })($ || ($ = {}));
-//mol/view/view/view.web.ts
+
 ;
 "use strict";
 var $;
@@ -2582,55 +2582,36 @@ var $;
     }
     $.$mol_plugin = $mol_plugin;
 })($ || ($ = {}));
-//mol/plugin/plugin.ts
+
 ;
-"use strict";
-var $;
-(function ($) {
-    class $mol_scroll extends $mol_view {
-        scroll_top(next) {
-            if (next !== undefined)
-                return next;
-            return 0;
-        }
-        scroll_left(next) {
-            if (next !== undefined)
-                return next;
-            return 0;
-        }
-        field() {
-            return {
-                ...super.field(),
-                tabIndex: this.tabindex()
-            };
-        }
-        event() {
-            return {
-                ...super.event(),
-                scroll: (event) => this.event_scroll(event)
-            };
-        }
-        tabindex() {
-            return -1;
-        }
-        event_scroll(event) {
-            if (event !== undefined)
-                return event;
-            return null;
-        }
-    }
-    __decorate([
-        $mol_mem
-    ], $mol_scroll.prototype, "scroll_top", null);
-    __decorate([
-        $mol_mem
-    ], $mol_scroll.prototype, "scroll_left", null);
-    __decorate([
-        $mol_mem
-    ], $mol_scroll.prototype, "event_scroll", null);
-    $.$mol_scroll = $mol_scroll;
-})($ || ($ = {}));
-//mol/scroll/-view.tree/scroll.view.tree.ts
+	($.$mol_scroll) = class $mol_scroll extends ($.$mol_view) {
+		scroll_top(next){
+			if(next !== undefined) return next;
+			return 0;
+		}
+		scroll_left(next){
+			if(next !== undefined) return next;
+			return 0;
+		}
+		field(){
+			return {...(super.field()), "tabIndex": (this.tabindex())};
+		}
+		event(){
+			return {...(super.event()), "scroll": (next) => (this.event_scroll(next))};
+		}
+		tabindex(){
+			return -1;
+		}
+		event_scroll(next){
+			if(next !== undefined) return next;
+			return null;
+		}
+	};
+	($mol_mem(($.$mol_scroll.prototype), "scroll_top"));
+	($mol_mem(($.$mol_scroll.prototype), "scroll_left"));
+	($mol_mem(($.$mol_scroll.prototype), "event_scroll"));
+
+
 ;
 "use strict";
 var $;
@@ -2655,7 +2636,7 @@ var $;
     }
     $.$mol_dom_listener = $mol_dom_listener;
 })($ || ($ = {}));
-//mol/dom/listener/listener.ts
+
 ;
 "use strict";
 var $;
@@ -2688,19 +2669,19 @@ var $;
     ], $mol_print, "active", null);
     $.$mol_print = $mol_print;
 })($ || ($ = {}));
-//mol/print/print.ts
+
 ;
 "use strict";
-//mol/style/pseudo/class.ts
+
 ;
 "use strict";
-//mol/style/pseudo/element.ts
+
 ;
 "use strict";
-//mol/type/error/error.ts
+
 ;
 "use strict";
-//mol/style/guard/guard.ts
+
 ;
 "use strict";
 var $;
@@ -2798,7 +2779,7 @@ var $;
     }
     $.$mol_style_sheet = $mol_style_sheet;
 })($ || ($ = {}));
-//mol/style/sheet/sheet.ts
+
 ;
 "use strict";
 var $;
@@ -2808,7 +2789,10 @@ var $;
     }
     $.$mol_style_define = $mol_style_define;
 })($ || ($ = {}));
-//mol/style/define/define.ts
+
+;
+"use strict";
+
 ;
 "use strict";
 var $;
@@ -2849,7 +2833,7 @@ var $;
         $$.$mol_scroll = $mol_scroll;
     })($$ = $.$$ || ($.$$ = {}));
 })($ || ($ = {}));
-//mol/scroll/scroll.view.ts
+
 ;
 "use strict";
 var $;
@@ -2902,50 +2886,48 @@ var $;
         });
     })($$ = $.$$ || ($.$$ = {}));
 })($ || ($ = {}));
-//mol/scroll/scroll.view.css.ts
+
 ;
-"use strict";
-var $;
-(function ($) {
-    class $mol_book2 extends $mol_scroll {
-        menu_title() {
-            return "";
-        }
-        sub() {
-            return this.pages();
-        }
-        minimal_width() {
-            return 0;
-        }
-        Placeholder() {
-            const obj = new this.$.$mol_view();
-            return obj;
-        }
-        Gap(id) {
-            const obj = new this.$.$mol_view();
-            obj.title = () => "";
-            return obj;
-        }
-        pages() {
-            return [];
-        }
-    }
-    __decorate([
-        $mol_mem
-    ], $mol_book2.prototype, "Placeholder", null);
-    __decorate([
-        $mol_mem_key
-    ], $mol_book2.prototype, "Gap", null);
-    $.$mol_book2 = $mol_book2;
-})($ || ($ = {}));
-//mol/book2/-view.tree/book2.view.tree.ts
+	($.$mol_book2) = class $mol_book2 extends ($.$mol_scroll) {
+		menu_title(){
+			return "";
+		}
+		sub(){
+			return (this.pages());
+		}
+		minimal_width(){
+			return 0;
+		}
+		Placeholder(){
+			const obj = new this.$.$mol_view();
+			return obj;
+		}
+		Gap(id){
+			const obj = new this.$.$mol_view();
+			(obj.title) = () => ("");
+			return obj;
+		}
+		pages(){
+			return [];
+		}
+	};
+	($mol_mem(($.$mol_book2.prototype), "Placeholder"));
+	($mol_mem_key(($.$mol_book2.prototype), "Gap"));
+
+
 ;
 "use strict";
 var $;
 (function ($) {
     $.$mol_mem_cached = $mol_wire_probe;
 })($ || ($ = {}));
-//mol/mem/cached/cached.ts
+
+;
+"use strict";
+
+;
+"use strict";
+
 ;
 "use strict";
 var $;
@@ -2995,126 +2977,102 @@ var $;
         $$.$mol_book2 = $mol_book2;
     })($$ = $.$$ || ($.$$ = {}));
 })($ || ($ = {}));
-//mol/book2/book2.view.ts
+
 ;
 "use strict";
 var $;
 (function ($) {
     $mol_style_attach("mol/book2/book2.view.css", "[mol_book2] {\n\tdisplay: flex;\n\tflex-flow: row nowrap;\n\talign-items: stretch;\n\tflex: 1 1 auto;\n\talign-self: stretch;\n\tmargin: 0;\n\t/* box-shadow: 0 0 0 1px var(--mol_theme_line); */\n\t/* transform: translateZ(0); */\n\ttransition: none;\n\toverflow: overlay;\n\tscroll-snap-type: x mandatory;\n\tpadding: 0 1px;\n\tscroll-padding: 0 1px;\n\tgap: 1px;\n}\n\n[mol_book2] > * {\n/* \tflex: none; */\n\tscroll-snap-stop: always;\n\tscroll-snap-align: end;\n\tposition: relative;\n\tmin-height: 100%;\n\tmax-height: 100%;\n\tmax-width: 100%;\n\tflex-shrink: 0;\n}\n\n[mol_book2] > *:not(:first-of-type):before,\n[mol_book2] > *:not(:last-of-type)::after {\n\tcontent: '';\n\tposition: absolute;\n\ttop: 1.5rem;\n\twidth: 3px;\n\theight: 1rem;\n\tbackground: linear-gradient(\n\t\tto bottom,\n\t\tvar(--mol_theme_focus) 0%,\n\t\tvar(--mol_theme_focus) 15%,\n\t\ttransparent 15%,\n\t\ttransparent 42%,\n\t\tvar(--mol_theme_focus) 42%,\n\t\tvar(--mol_theme_focus) 58%,\n\t\ttransparent 58%,\n\t\ttransparent 85%,\n\t\tvar(--mol_theme_focus) 85%,\n\t\tvar(--mol_theme_focus) 100%\n\t);\n\topacity: .5;\n}\n[mol_book2] > *:not(:first-of-type):before {\n\tleft: -2px;\n}\n[mol_book2] > *:not(:last-of-type)::after {\n\tright: -2px;\n}\n\n:where([mol_book2]) > * {\n\tbackground-color: var(--mol_theme_card);\n\t/* box-shadow: 0 0 0 1px var(--mol_theme_back); */\n}\n\n[mol_book2] > [mol_book2] {\n\tdisplay: contents;\n}\n\n[mol_book2] > *:first-child {\n\tscroll-snap-align: start;\n}\n\n[mol_book2] > [mol_view] {\n\ttransform: none; /* prevent content clipping */\n}\n\n[mol_book2_placeholder] {\n\tflex: 1 1 0;\n\tbackground: none;\n}\n\n[mol_book2_gap] {\n\tbackground: none;\n\tflex-grow: 1;\n\tscroll-snap-align: none;\n\tmargin-right: -1px;\n\tbox-shadow: none;\n}\n\n[mol_book2_gap]::before,\n[mol_book2_gap]::after {\n\tdisplay: none;\n}\n");
 })($ || ($ = {}));
-//mol/book2/-css/book2.view.css.ts
+
+;
+	($.$mol_page) = class $mol_page extends ($.$mol_view) {
+		dom_name(){
+			return "article";
+		}
+		field(){
+			return {...(super.field()), "tabIndex": (this.tabindex())};
+		}
+		sub(){
+			return [
+				(this.Head()), 
+				(this.Body()), 
+				(this.Foot())
+			];
+		}
+		tabindex(){
+			return -1;
+		}
+		Logo(){
+			return null;
+		}
+		title_content(){
+			return [(this.Logo()), (this.title())];
+		}
+		Title(){
+			const obj = new this.$.$mol_view();
+			(obj.dom_name) = () => ("h1");
+			(obj.sub) = () => ((this.title_content()));
+			return obj;
+		}
+		tools(){
+			return [];
+		}
+		Tools(){
+			const obj = new this.$.$mol_view();
+			(obj.sub) = () => ((this.tools()));
+			return obj;
+		}
+		head(){
+			return [(this.Title()), (this.Tools())];
+		}
+		Head(){
+			const obj = new this.$.$mol_view();
+			(obj.minimal_height) = () => (64);
+			(obj.dom_name) = () => ("header");
+			(obj.sub) = () => ((this.head()));
+			return obj;
+		}
+		body_scroll_top(next){
+			return (this.Body().scroll_top(next));
+		}
+		body(){
+			return [];
+		}
+		Body_content(){
+			const obj = new this.$.$mol_view();
+			(obj.sub) = () => ((this.body()));
+			return obj;
+		}
+		body_content(){
+			return [(this.Body_content())];
+		}
+		Body(){
+			const obj = new this.$.$mol_scroll();
+			(obj.sub) = () => ((this.body_content()));
+			return obj;
+		}
+		foot(){
+			return [];
+		}
+		Foot(){
+			const obj = new this.$.$mol_view();
+			(obj.dom_name) = () => ("footer");
+			(obj.sub) = () => ((this.foot()));
+			return obj;
+		}
+	};
+	($mol_mem(($.$mol_page.prototype), "Title"));
+	($mol_mem(($.$mol_page.prototype), "Tools"));
+	($mol_mem(($.$mol_page.prototype), "Head"));
+	($mol_mem(($.$mol_page.prototype), "Body_content"));
+	($mol_mem(($.$mol_page.prototype), "Body"));
+	($mol_mem(($.$mol_page.prototype), "Foot"));
+
+
 ;
 "use strict";
-var $;
-(function ($) {
-    class $mol_page extends $mol_view {
-        dom_name() {
-            return "article";
-        }
-        field() {
-            return {
-                ...super.field(),
-                tabIndex: this.tabindex()
-            };
-        }
-        sub() {
-            return [
-                this.Head(),
-                this.Body(),
-                this.Foot()
-            ];
-        }
-        tabindex() {
-            return -1;
-        }
-        Logo() {
-            return null;
-        }
-        title_content() {
-            return [
-                this.Logo(),
-                this.title()
-            ];
-        }
-        Title() {
-            const obj = new this.$.$mol_view();
-            obj.dom_name = () => "h1";
-            obj.sub = () => this.title_content();
-            return obj;
-        }
-        tools() {
-            return [];
-        }
-        Tools() {
-            const obj = new this.$.$mol_view();
-            obj.sub = () => this.tools();
-            return obj;
-        }
-        head() {
-            return [
-                this.Title(),
-                this.Tools()
-            ];
-        }
-        Head() {
-            const obj = new this.$.$mol_view();
-            obj.minimal_height = () => 64;
-            obj.dom_name = () => "header";
-            obj.sub = () => this.head();
-            return obj;
-        }
-        body() {
-            return [];
-        }
-        Body_content() {
-            const obj = new this.$.$mol_view();
-            obj.sub = () => this.body();
-            return obj;
-        }
-        body_content() {
-            return [
-                this.Body_content()
-            ];
-        }
-        body_scroll_top(next) {
-            return this.Body().scroll_top(next);
-        }
-        Body() {
-            const obj = new this.$.$mol_scroll();
-            obj.sub = () => this.body_content();
-            return obj;
-        }
-        foot() {
-            return [];
-        }
-        Foot() {
-            const obj = new this.$.$mol_view();
-            obj.dom_name = () => "footer";
-            obj.sub = () => this.foot();
-            return obj;
-        }
-    }
-    __decorate([
-        $mol_mem
-    ], $mol_page.prototype, "Title", null);
-    __decorate([
-        $mol_mem
-    ], $mol_page.prototype, "Tools", null);
-    __decorate([
-        $mol_mem
-    ], $mol_page.prototype, "Head", null);
-    __decorate([
-        $mol_mem
-    ], $mol_page.prototype, "Body_content", null);
-    __decorate([
-        $mol_mem
-    ], $mol_page.prototype, "Body", null);
-    __decorate([
-        $mol_mem
-    ], $mol_page.prototype, "Foot", null);
-    $.$mol_page = $mol_page;
-})($ || ($ = {}));
-//mol/page/-view.tree/page.view.tree.ts
+
 ;
 "use strict";
 var $;
@@ -3223,98 +3181,86 @@ var $;
         });
     })($$ = $.$$ || ($.$$ = {}));
 })($ || ($ = {}));
-//mol/page/page.view.css.ts
+
+;
+	($.$mol_link) = class $mol_link extends ($.$mol_view) {
+		uri(){
+			return "";
+		}
+		dom_name(){
+			return "a";
+		}
+		uri_off(){
+			return "";
+		}
+		uri_native(){
+			return null;
+		}
+		external(){
+			return false;
+		}
+		attr(){
+			return {
+				...(super.attr()), 
+				"href": (this.uri_toggle()), 
+				"title": (this.hint_safe()), 
+				"target": (this.target()), 
+				"download": (this.file_name()), 
+				"mol_link_current": (this.current()), 
+				"rel": (this.relation())
+			};
+		}
+		sub(){
+			return [(this.title())];
+		}
+		arg(){
+			return {};
+		}
+		event(){
+			return {...(super.event()), "click": (next) => (this.click(next))};
+		}
+		uri_toggle(){
+			return "";
+		}
+		hint(){
+			return "";
+		}
+		hint_safe(){
+			return (this.hint());
+		}
+		target(){
+			return "_self";
+		}
+		file_name(){
+			return "";
+		}
+		current(){
+			return false;
+		}
+		relation(){
+			return "";
+		}
+		event_click(next){
+			if(next !== undefined) return next;
+			return null;
+		}
+		click(next){
+			return (this.event_click(next));
+		}
+	};
+	($mol_mem(($.$mol_link.prototype), "event_click"));
+
+
 ;
 "use strict";
-var $;
-(function ($) {
-    class $mol_link extends $mol_view {
-        uri() {
-            return "";
-        }
-        dom_name() {
-            return "a";
-        }
-        uri_off() {
-            return "";
-        }
-        uri_native() {
-            return null;
-        }
-        external() {
-            return false;
-        }
-        attr() {
-            return {
-                ...super.attr(),
-                href: this.uri_toggle(),
-                title: this.hint_safe(),
-                target: this.target(),
-                download: this.file_name(),
-                mol_link_current: this.current(),
-                rel: this.relation()
-            };
-        }
-        sub() {
-            return [
-                this.title()
-            ];
-        }
-        arg() {
-            return {};
-        }
-        event() {
-            return {
-                ...super.event(),
-                click: (event) => this.click(event)
-            };
-        }
-        uri_toggle() {
-            return "";
-        }
-        hint() {
-            return "";
-        }
-        hint_safe() {
-            return this.hint();
-        }
-        target() {
-            return "_self";
-        }
-        file_name() {
-            return "";
-        }
-        current() {
-            return false;
-        }
-        relation() {
-            return "";
-        }
-        event_click(event) {
-            if (event !== undefined)
-                return event;
-            return null;
-        }
-        click(event) {
-            return this.event_click(event);
-        }
-    }
-    __decorate([
-        $mol_mem
-    ], $mol_link.prototype, "event_click", null);
-    $.$mol_link = $mol_link;
-})($ || ($ = {}));
-//mol/link/-view.tree/link.view.tree.ts
-;
-"use strict";
-//mol/state/arg/arg.ts
+
 ;
 "use strict";
 var $;
 (function ($) {
     $.$mol_action = $mol_wire_method;
 })($ || ($ = {}));
-//mol/action/action.ts
+
 ;
 "use strict";
 var $;
@@ -3446,7 +3392,10 @@ var $;
     }
     self.addEventListener('hashchange', $mol_state_arg_change);
 })($ || ($ = {}));
-//mol/state/arg/arg.web.ts
+
+;
+"use strict";
+
 ;
 "use strict";
 var $;
@@ -3525,7 +3474,7 @@ var $;
         $$.$mol_link = $mol_link;
     })($$ = $.$$ || ($.$$ = {}));
 })($ || ($ = {}));
-//mol/link/link.view.ts
+
 ;
 "use strict";
 var $;
@@ -3568,67 +3517,50 @@ var $;
         },
     });
 })($ || ($ = {}));
-//mol/link/link.view.css.ts
+
 ;
-"use strict";
-var $;
-(function ($) {
-    class $mol_list extends $mol_view {
-        render_visible_only() {
-            return true;
-        }
-        render_over() {
-            return 0;
-        }
-        sub() {
-            return this.rows();
-        }
-        Empty() {
-            const obj = new this.$.$mol_view();
-            return obj;
-        }
-        Gap_before() {
-            const obj = new this.$.$mol_view();
-            obj.style = () => ({
-                paddingTop: this.gap_before()
-            });
-            return obj;
-        }
-        Gap_after() {
-            const obj = new this.$.$mol_view();
-            obj.style = () => ({
-                paddingTop: this.gap_after()
-            });
-            return obj;
-        }
-        view_window() {
-            return [
-                0,
-                0
-            ];
-        }
-        rows() {
-            return [];
-        }
-        gap_before() {
-            return 0;
-        }
-        gap_after() {
-            return 0;
-        }
-    }
-    __decorate([
-        $mol_mem
-    ], $mol_list.prototype, "Empty", null);
-    __decorate([
-        $mol_mem
-    ], $mol_list.prototype, "Gap_before", null);
-    __decorate([
-        $mol_mem
-    ], $mol_list.prototype, "Gap_after", null);
-    $.$mol_list = $mol_list;
-})($ || ($ = {}));
-//mol/list/-view.tree/list.view.tree.ts
+	($.$mol_list) = class $mol_list extends ($.$mol_view) {
+		render_visible_only(){
+			return true;
+		}
+		render_over(){
+			return 0;
+		}
+		sub(){
+			return (this.rows());
+		}
+		Empty(){
+			const obj = new this.$.$mol_view();
+			return obj;
+		}
+		Gap_before(){
+			const obj = new this.$.$mol_view();
+			(obj.style) = () => ({"paddingTop": (this.gap_before())});
+			return obj;
+		}
+		Gap_after(){
+			const obj = new this.$.$mol_view();
+			(obj.style) = () => ({"paddingTop": (this.gap_after())});
+			return obj;
+		}
+		view_window(){
+			return [0, 0];
+		}
+		rows(){
+			return [];
+		}
+		gap_before(){
+			return 0;
+		}
+		gap_after(){
+			return 0;
+		}
+	};
+	($mol_mem(($.$mol_list.prototype), "Empty"));
+	($mol_mem(($.$mol_list.prototype), "Gap_before"));
+	($mol_mem(($.$mol_list.prototype), "Gap_after"));
+
+
 ;
 "use strict";
 var $;
@@ -3640,7 +3572,10 @@ var $;
     }
     $.$mol_support_css_overflow_anchor = $mol_support_css_overflow_anchor;
 })($ || ($ = {}));
-//mol/support/css/css.ts
+
+;
+"use strict";
+
 ;
 "use strict";
 var $;
@@ -3772,40 +3707,37 @@ var $;
         $$.$mol_list = $mol_list;
     })($$ = $.$$ || ($.$$ = {}));
 })($ || ($ = {}));
-//mol/list/list.view.ts
+
 ;
 "use strict";
 var $;
 (function ($) {
     $mol_style_attach("mol/list/list.view.css", "[mol_list] {\n\twill-change: contents;\n\tdisplay: flex;\n\tflex-direction: column;\n\tflex-shrink: 0;\n\tmax-width: 100%;\n\t/* display: flex;\n\talign-items: stretch;\n\talign-content: stretch; */\n\ttransition: none;\n\tmin-height: 1.5rem;\n}\n\n[mol_list_gap_before] ,\n[mol_list_gap_after] {\n\tdisplay: block !important;\n\tflex: none;\n\ttransition: none;\n\toverflow-anchor: none;\n}\n");
 })($ || ($ = {}));
-//mol/list/-css/list.view.css.ts
+
+;
+	($.$mol_paragraph) = class $mol_paragraph extends ($.$mol_view) {
+		line_height(){
+			return 24;
+		}
+		letter_width(){
+			return 7;
+		}
+		width_limit(){
+			return +Infinity;
+		}
+		row_width(){
+			return 0;
+		}
+		sub(){
+			return [(this.title())];
+		}
+	};
+
+
 ;
 "use strict";
-var $;
-(function ($) {
-    class $mol_paragraph extends $mol_view {
-        line_height() {
-            return 24;
-        }
-        letter_width() {
-            return 7;
-        }
-        width_limit() {
-            return +Infinity;
-        }
-        row_width() {
-            return 0;
-        }
-        sub() {
-            return [
-                this.title()
-            ];
-        }
-    }
-    $.$mol_paragraph = $mol_paragraph;
-})($ || ($ = {}));
-//mol/paragraph/-view.tree/paragraph.view.tree.ts
+
 ;
 "use strict";
 var $;
@@ -3853,70 +3785,58 @@ var $;
         $$.$mol_paragraph = $mol_paragraph;
     })($$ = $.$$ || ($.$$ = {}));
 })($ || ($ = {}));
-//mol/paragraph/paragraph.view.ts
+
 ;
 "use strict";
 var $;
 (function ($) {
     $mol_style_attach("mol/paragraph/paragraph.view.css", ":where([mol_paragraph]) {\n\tmargin: 0;\n\tmax-width: 100%;\n}\n");
 })($ || ($ = {}));
-//mol/paragraph/-css/paragraph.view.css.ts
+
+;
+	($.$mol_dimmer) = class $mol_dimmer extends ($.$mol_paragraph) {
+		haystack(){
+			return "";
+		}
+		needle(){
+			return "";
+		}
+		sub(){
+			return (this.parts());
+		}
+		Low(id){
+			const obj = new this.$.$mol_paragraph();
+			(obj.sub) = () => ([(this.string(id))]);
+			return obj;
+		}
+		High(id){
+			const obj = new this.$.$mol_paragraph();
+			(obj.sub) = () => ([(this.string(id))]);
+			return obj;
+		}
+		parts(){
+			return [];
+		}
+		string(id){
+			return "";
+		}
+	};
+	($mol_mem_key(($.$mol_dimmer.prototype), "Low"));
+	($mol_mem_key(($.$mol_dimmer.prototype), "High"));
+
+
 ;
 "use strict";
-var $;
-(function ($) {
-    class $mol_dimmer extends $mol_paragraph {
-        haystack() {
-            return "";
-        }
-        needle() {
-            return "";
-        }
-        sub() {
-            return this.parts();
-        }
-        Low(id) {
-            const obj = new this.$.$mol_paragraph();
-            obj.sub = () => [
-                this.string(id)
-            ];
-            return obj;
-        }
-        High(id) {
-            const obj = new this.$.$mol_paragraph();
-            obj.sub = () => [
-                this.string(id)
-            ];
-            return obj;
-        }
-        parts() {
-            return [];
-        }
-        string(id) {
-            return "";
-        }
-    }
-    __decorate([
-        $mol_mem_key
-    ], $mol_dimmer.prototype, "Low", null);
-    __decorate([
-        $mol_mem_key
-    ], $mol_dimmer.prototype, "High", null);
-    $.$mol_dimmer = $mol_dimmer;
-})($ || ($ = {}));
-//mol/dimmer/-view.tree/dimmer.view.tree.ts
+
 ;
 "use strict";
-//mol/type/equals/equals.ts
+
 ;
 "use strict";
-//mol/type/merge/merge.ts
+
 ;
 "use strict";
-//mol/type/intersect/intersect.ts
-;
-"use strict";
-//mol/unicode/unicode.ts
+
 ;
 "use strict";
 var $;
@@ -4191,7 +4111,10 @@ var $;
     }
     $.$mol_regexp = $mol_regexp;
 })($ || ($ = {}));
-//mol/regexp/regexp.ts
+
+;
+"use strict";
+
 ;
 "use strict";
 var $;
@@ -4235,46 +4158,34 @@ var $;
         $$.$mol_dimmer = $mol_dimmer;
     })($$ = $.$$ || ($.$$ = {}));
 })($ || ($ = {}));
-//mol/dimmer/dimmer.view.ts
+
 ;
 "use strict";
 var $;
 (function ($) {
     $mol_style_attach("mol/dimmer/dimmer.view.css", "[mol_dimmer] {\n\tdisplay: block;\n\tmax-width: 100%;\n}\n\n[mol_dimmer_low] {\n\tdisplay: inline;\n\topacity: 0.8;\n}\n\n[mol_dimmer_high] {\n\tdisplay: inline;\n\tcolor: var(--mol_theme_focus);\n\ttext-shadow: 0 0;\n}\n");
 })($ || ($ = {}));
-//mol/dimmer/-css/dimmer.view.css.ts
+
 ;
-"use strict";
-var $;
-(function ($) {
-    class $mol_speck extends $mol_view {
-        attr() {
-            return {
-                ...super.attr(),
-                mol_theme: this.theme()
-            };
-        }
-        style() {
-            return {
-                ...super.style(),
-                minHeight: "1em"
-            };
-        }
-        sub() {
-            return [
-                this.value()
-            ];
-        }
-        theme() {
-            return "$mol_theme_accent";
-        }
-        value() {
-            return null;
-        }
-    }
-    $.$mol_speck = $mol_speck;
-})($ || ($ = {}));
-//mol/speck/-view.tree/speck.view.tree.ts
+	($.$mol_speck) = class $mol_speck extends ($.$mol_view) {
+		attr(){
+			return {...(super.attr()), "mol_theme": (this.theme())};
+		}
+		style(){
+			return {...(super.style()), "minHeight": "1em"};
+		}
+		sub(){
+			return [(this.value())];
+		}
+		theme(){
+			return "$mol_theme_accent";
+		}
+		value(){
+			return null;
+		}
+	};
+
+
 ;
 "use strict";
 var $;
@@ -4287,118 +4198,98 @@ var $;
         'popup',
     ]);
 })($ || ($ = {}));
-//mol/layer/layer.ts
+
 ;
 "use strict";
 var $;
 (function ($) {
     $mol_style_attach("mol/layer/layer.css", ":root {\n\t--mol_layer_hover: 1;\n\t--mol_layer_focus: 2;\n\t--mol_layer_speck: 3;\n\t--mol_layer_float: 4;\n\t--mol_layer_popup: 5;\n}\n");
 })($ || ($ = {}));
-//mol/layer/-css/layer.css.ts
+
 ;
 "use strict";
 var $;
 (function ($) {
     $mol_style_attach("mol/speck/speck.view.css", "[mol_speck] {\n\tfont-size: .625rem;\n\tborder-radius: 1rem;\n\tmargin: -0.5rem -0.25rem;\n\talign-self: flex-start;\n\tmin-height: 1em;\n\tmin-width: .5em;\n\tvertical-align: sub;\n\tpadding: .25em .5em;\n\tposition: absolute;\n\tz-index: var(--mol_layer_speck);\n\ttext-align: center;\n\tline-height: 1;\n\tdisplay: inline-block;\n\twhite-space: nowrap;\n\ttext-overflow: ellipsis;\n\tuser-select: none;\n}\n");
 })($ || ($ = {}));
-//mol/speck/-css/speck.view.css.ts
+
 ;
 "use strict";
-var $;
-(function ($) {
-    class $mol_button extends $mol_view {
-        enabled() {
-            return true;
-        }
-        click(event) {
-            if (event !== undefined)
-                return event;
-            return null;
-        }
-        event_click(event) {
-            if (event !== undefined)
-                return event;
-            return null;
-        }
-        event() {
-            return {
-                ...super.event(),
-                click: (event) => this.event_activate(event),
-                dblclick: (event) => this.clicks(event),
-                keydown: (event) => this.event_key_press(event)
-            };
-        }
-        attr() {
-            return {
-                ...super.attr(),
-                disabled: this.disabled(),
-                role: "button",
-                tabindex: this.tab_index(),
-                title: this.hint_safe()
-            };
-        }
-        sub() {
-            return [
-                this.title()
-            ];
-        }
-        Speck() {
-            const obj = new this.$.$mol_speck();
-            obj.value = () => this.error();
-            return obj;
-        }
-        event_activate(event) {
-            if (event !== undefined)
-                return event;
-            return null;
-        }
-        clicks(event) {
-            if (event !== undefined)
-                return event;
-            return null;
-        }
-        event_key_press(event) {
-            if (event !== undefined)
-                return event;
-            return null;
-        }
-        disabled() {
-            return false;
-        }
-        tab_index() {
-            return 0;
-        }
-        hint() {
-            return "";
-        }
-        hint_safe() {
-            return this.hint();
-        }
-        error() {
-            return "";
-        }
-    }
-    __decorate([
-        $mol_mem
-    ], $mol_button.prototype, "click", null);
-    __decorate([
-        $mol_mem
-    ], $mol_button.prototype, "event_click", null);
-    __decorate([
-        $mol_mem
-    ], $mol_button.prototype, "Speck", null);
-    __decorate([
-        $mol_mem
-    ], $mol_button.prototype, "event_activate", null);
-    __decorate([
-        $mol_mem
-    ], $mol_button.prototype, "clicks", null);
-    __decorate([
-        $mol_mem
-    ], $mol_button.prototype, "event_key_press", null);
-    $.$mol_button = $mol_button;
-})($ || ($ = {}));
-//mol/button/-view.tree/button.view.tree.ts
+
+;
+	($.$mol_button) = class $mol_button extends ($.$mol_view) {
+		enabled(){
+			return true;
+		}
+		click(next){
+			if(next !== undefined) return next;
+			return null;
+		}
+		event_click(next){
+			if(next !== undefined) return next;
+			return null;
+		}
+		event(){
+			return {
+				...(super.event()), 
+				"click": (next) => (this.event_activate(next)), 
+				"dblclick": (next) => (this.clicks(next)), 
+				"keydown": (next) => (this.event_key_press(next))
+			};
+		}
+		attr(){
+			return {
+				...(super.attr()), 
+				"disabled": (this.disabled()), 
+				"role": "button", 
+				"tabindex": (this.tab_index()), 
+				"title": (this.hint_safe())
+			};
+		}
+		sub(){
+			return [(this.title())];
+		}
+		Speck(){
+			const obj = new this.$.$mol_speck();
+			(obj.value) = () => ((this.error()));
+			return obj;
+		}
+		event_activate(next){
+			if(next !== undefined) return next;
+			return null;
+		}
+		clicks(next){
+			if(next !== undefined) return next;
+			return null;
+		}
+		event_key_press(next){
+			if(next !== undefined) return next;
+			return null;
+		}
+		disabled(){
+			return false;
+		}
+		tab_index(){
+			return 0;
+		}
+		hint(){
+			return "";
+		}
+		hint_safe(){
+			return (this.hint());
+		}
+		error(){
+			return "";
+		}
+	};
+	($mol_mem(($.$mol_button.prototype), "click"));
+	($mol_mem(($.$mol_button.prototype), "event_click"));
+	($mol_mem(($.$mol_button.prototype), "Speck"));
+	($mol_mem(($.$mol_button.prototype), "event_activate"));
+	($mol_mem(($.$mol_button.prototype), "clicks"));
+	($mol_mem(($.$mol_button.prototype), "event_key_press"));
+
+
 ;
 "use strict";
 var $;
@@ -4507,7 +4398,10 @@ var $;
         $mol_keyboard_code[$mol_keyboard_code["quoteSingle"] = 222] = "quoteSingle";
     })($mol_keyboard_code = $.$mol_keyboard_code || ($.$mol_keyboard_code = {}));
 })($ || ($ = {}));
-//mol/keyboard/code/code.ts
+
+;
+"use strict";
+
 ;
 "use strict";
 var $;
@@ -4573,117 +4467,101 @@ var $;
         $$.$mol_button = $mol_button;
     })($$ = $.$$ || ($.$$ = {}));
 })($ || ($ = {}));
-//mol/button/button.view.ts
+
 ;
 "use strict";
 var $;
 (function ($) {
     $mol_style_attach("mol/button/button.view.css", "[mol_button] {\n\tborder: none;\n\tfont: inherit;\n\tdisplay: inline-flex;\n\tflex-shrink: 0;\n\ttext-decoration: inherit;\n\tcursor: inherit;\n\tposition: relative;\n\tbox-sizing: border-box;\n\tword-break: normal;\n\tcursor: default;\n\tuser-select: none;\n\tborder-radius: var(--mol_gap_round);\n}\n\n[mol_button]:where(:not(:disabled)):hover {\n\tz-index: var(--mol_layer_hover);\n}\n\n[mol_button]:focus-visible {\n\toutline: none;\n\tz-index: var(--mol_layer_focus);\n}\n");
 })($ || ($ = {}));
-//mol/button/-css/button.view.css.ts
+
 ;
-"use strict";
-var $;
-(function ($) {
-    class $mol_button_typed extends $mol_button {
-        minimal_height() {
-            return 40;
-        }
-        minimal_width() {
-            return 40;
-        }
-    }
-    $.$mol_button_typed = $mol_button_typed;
-})($ || ($ = {}));
-//mol/button/typed/-view.tree/typed.view.tree.ts
+	($.$mol_button_typed) = class $mol_button_typed extends ($.$mol_button) {
+		minimal_height(){
+			return 40;
+		}
+		minimal_width(){
+			return 40;
+		}
+	};
+
+
 ;
 "use strict";
 var $;
 (function ($) {
     $mol_style_attach("mol/button/typed/typed.view.css", "[mol_button_typed] {\n\talign-content: center;\n\talign-items: center;\n\tpadding: var(--mol_gap_text);\n\tborder-radius: var(--mol_gap_round);\n\tgap: var(--mol_gap_space);\n\tuser-select: none;\n\tcursor: pointer;\n}\n\n[mol_button_typed][disabled] {\n\tpointer-events: none;\n}\n\n[mol_button_typed]:hover ,\n[mol_button_typed]:focus-visible {\n\tbackground-color: var(--mol_theme_hover);\n}\n\n[mol_button_typed]:active {\n\tcolor: var(--mol_theme_focus);\n}\n\n");
 })($ || ($ = {}));
-//mol/button/typed/-css/typed.view.css.ts
+
 ;
 "use strict";
-var $;
-(function ($) {
-    class $mol_button_minor extends $mol_button_typed {
-    }
-    $.$mol_button_minor = $mol_button_minor;
-})($ || ($ = {}));
-//mol/button/minor/-view.tree/minor.view.tree.ts
+
+;
+	($.$mol_button_minor) = class $mol_button_minor extends ($.$mol_button_typed) {};
+
+
 ;
 "use strict";
 var $;
 (function ($) {
     $mol_style_attach("mol/button/minor/minor.view.css", "[mol_button_minor] {\n\tcolor: var(--mol_theme_control);\n}\n\n[mol_button_minor][disabled] {\n\tcolor: var(--mol_theme_shade);\n}\n");
 })($ || ($ = {}));
-//mol/button/minor/-css/minor.view.css.ts
+
 ;
 "use strict";
-var $;
-(function ($) {
-    class $mol_check extends $mol_button_minor {
-        attr() {
-            return {
-                ...super.attr(),
-                mol_check_checked: this.checked(),
-                "aria-checked": this.aria_checked(),
-                role: this.aria_role()
-            };
-        }
-        sub() {
-            return [
-                this.Icon(),
-                this.label()
-            ];
-        }
-        checked(next) {
-            if (next !== undefined)
-                return next;
-            return false;
-        }
-        aria_checked() {
-            return "false";
-        }
-        aria_role() {
-            return "checkbox";
-        }
-        Icon() {
-            return null;
-        }
-        title() {
-            return "";
-        }
-        Title() {
-            const obj = new this.$.$mol_view();
-            obj.sub = () => [
-                this.title()
-            ];
-            return obj;
-        }
-        label() {
-            return [
-                this.Title()
-            ];
-        }
-    }
-    __decorate([
-        $mol_mem
-    ], $mol_check.prototype, "checked", null);
-    __decorate([
-        $mol_mem
-    ], $mol_check.prototype, "Title", null);
-    $.$mol_check = $mol_check;
-})($ || ($ = {}));
-//mol/check/-view.tree/check.view.tree.ts
+
+;
+	($.$mol_check) = class $mol_check extends ($.$mol_button_minor) {
+		attr(){
+			return {
+				...(super.attr()), 
+				"mol_check_checked": (this.checked()), 
+				"aria-checked": (this.aria_checked()), 
+				"role": (this.aria_role())
+			};
+		}
+		sub(){
+			return [(this.Icon()), (this.label())];
+		}
+		checked(next){
+			if(next !== undefined) return next;
+			return false;
+		}
+		aria_checked(){
+			return "false";
+		}
+		aria_role(){
+			return "checkbox";
+		}
+		Icon(){
+			return null;
+		}
+		title(){
+			return "";
+		}
+		Title(){
+			const obj = new this.$.$mol_view();
+			(obj.sub) = () => ([(this.title())]);
+			return obj;
+		}
+		label(){
+			return [(this.Title())];
+		}
+	};
+	($mol_mem(($.$mol_check.prototype), "checked"));
+	($mol_mem(($.$mol_check.prototype), "Title"));
+
+
 ;
 "use strict";
 var $;
 (function ($) {
     $mol_style_attach("mol/check/check.css", "[mol_check] {\n\tflex: 0 0 auto;\n\tjustify-content: flex-start;\n\talign-content: center;\n\t/* align-items: flex-start; */\n\tborder: none;\n\tfont-weight: inherit;\n\tbox-shadow: none;\n\ttext-align: left;\n\tdisplay: inline-flex;\n\tflex-wrap: nowrap;\n}\n\n[mol_check_title] {\n\tflex-shrink: 1;\n}\n");
 })($ || ($ = {}));
-//mol/check/-css/check.css.ts
+
+;
+"use strict";
+
 ;
 "use strict";
 var $;
@@ -4714,31 +4592,27 @@ var $;
         $$.$mol_check = $mol_check;
     })($$ = $.$$ || ($.$$ = {}));
 })($ || ($ = {}));
-//mol/check/check.view.ts
+
 ;
-"use strict";
-var $;
-(function ($) {
-    class $mol_svg extends $mol_view {
-        dom_name() {
-            return "svg";
-        }
-        dom_name_space() {
-            return "http://www.w3.org/2000/svg";
-        }
-        font_size() {
-            return 16;
-        }
-        font_family() {
-            return "";
-        }
-        style_size() {
-            return {};
-        }
-    }
-    $.$mol_svg = $mol_svg;
-})($ || ($ = {}));
-//mol/svg/-view.tree/svg.view.tree.ts
+	($.$mol_svg) = class $mol_svg extends ($.$mol_view) {
+		dom_name(){
+			return "svg";
+		}
+		dom_name_space(){
+			return "http://www.w3.org/2000/svg";
+		}
+		font_size(){
+			return 16;
+		}
+		font_family(){
+			return "";
+		}
+		style_size(){
+			return {};
+		}
+	};
+
+
 ;
 "use strict";
 var $;
@@ -4759,7 +4633,7 @@ var $;
     }
     $.$mol_after_timeout = $mol_after_timeout;
 })($ || ($ = {}));
-//mol/after/timeout/timeout.ts
+
 ;
 "use strict";
 var $;
@@ -4786,7 +4660,10 @@ var $;
     ], $mol_state_time, "now", null);
     $.$mol_state_time = $mol_state_time;
 })($ || ($ = {}));
-//mol/state/time/time.ts
+
+;
+"use strict";
+
 ;
 "use strict";
 var $;
@@ -4820,143 +4697,129 @@ var $;
         $$.$mol_svg = $mol_svg;
     })($$ = $.$$ || ($.$$ = {}));
 })($ || ($ = {}));
-//mol/svg/svg.view.ts
+
 ;
-"use strict";
-var $;
-(function ($) {
-    class $mol_svg_root extends $mol_svg {
-        dom_name() {
-            return "svg";
-        }
-        attr() {
-            return {
-                ...super.attr(),
-                viewBox: this.view_box(),
-                preserveAspectRatio: this.aspect()
-            };
-        }
-        view_box() {
-            return "0 0 100 100";
-        }
-        aspect() {
-            return "xMidYMid";
-        }
-    }
-    $.$mol_svg_root = $mol_svg_root;
-})($ || ($ = {}));
-//mol/svg/root/-view.tree/root.view.tree.ts
+	($.$mol_svg_root) = class $mol_svg_root extends ($.$mol_svg) {
+		dom_name(){
+			return "svg";
+		}
+		attr(){
+			return {
+				...(super.attr()), 
+				"viewBox": (this.view_box()), 
+				"preserveAspectRatio": (this.aspect())
+			};
+		}
+		view_box(){
+			return "0 0 100 100";
+		}
+		aspect(){
+			return "xMidYMid";
+		}
+	};
+
+
 ;
 "use strict";
 var $;
 (function ($) {
     $mol_style_attach("mol/svg/root/root.view.css", "[mol_svg_root] {\n\toverflow: hidden;\n}\n");
 })($ || ($ = {}));
-//mol/svg/root/-css/root.view.css.ts
+
 ;
 "use strict";
-var $;
-(function ($) {
-    class $mol_svg_path extends $mol_svg {
-        dom_name() {
-            return "path";
-        }
-        attr() {
-            return {
-                ...super.attr(),
-                d: this.geometry()
-            };
-        }
-        geometry() {
-            return "";
-        }
-    }
-    $.$mol_svg_path = $mol_svg_path;
-})($ || ($ = {}));
-//mol/svg/path/-view.tree/path.view.tree.ts
+
+;
+	($.$mol_svg_path) = class $mol_svg_path extends ($.$mol_svg) {
+		dom_name(){
+			return "path";
+		}
+		attr(){
+			return {...(super.attr()), "d": (this.geometry())};
+		}
+		geometry(){
+			return "";
+		}
+	};
+
+
 ;
 "use strict";
-var $;
-(function ($) {
-    class $mol_icon extends $mol_svg_root {
-        view_box() {
-            return "0 0 24 24";
-        }
-        minimal_width() {
-            return 16;
-        }
-        minimal_height() {
-            return 16;
-        }
-        sub() {
-            return [
-                this.Path()
-            ];
-        }
-        path() {
-            return "";
-        }
-        Path() {
-            const obj = new this.$.$mol_svg_path();
-            obj.geometry = () => this.path();
-            return obj;
-        }
-    }
-    __decorate([
-        $mol_mem
-    ], $mol_icon.prototype, "Path", null);
-    $.$mol_icon = $mol_icon;
-})($ || ($ = {}));
-//mol/icon/-view.tree/icon.view.tree.ts
+
+;
+	($.$mol_icon) = class $mol_icon extends ($.$mol_svg_root) {
+		view_box(){
+			return "0 0 24 24";
+		}
+		minimal_width(){
+			return 16;
+		}
+		minimal_height(){
+			return 16;
+		}
+		sub(){
+			return [(this.Path())];
+		}
+		path(){
+			return "";
+		}
+		Path(){
+			const obj = new this.$.$mol_svg_path();
+			(obj.geometry) = () => ((this.path()));
+			return obj;
+		}
+	};
+	($mol_mem(($.$mol_icon.prototype), "Path"));
+
+
 ;
 "use strict";
 var $;
 (function ($) {
     $mol_style_attach("mol/icon/icon.view.css", "[mol_icon] {\n\tfill: currentColor;\n\tstroke: none;\n\twidth: 1em;\n\theight: 1.5em;\n\tflex: 0 0 auto;\n\tvertical-align: top;\n\tdisplay: inline-block;\n\tfilter: drop-shadow(0px 1px 1px var(--mol_theme_back));\n\ttransform-origin: center;\n}\n\n[mol_icon_path] {\n\ttransform-origin: center;\n}\n");
 })($ || ($ = {}));
-//mol/icon/-css/icon.view.css.ts
+
 ;
 "use strict";
-var $;
-(function ($) {
-    class $mol_icon_tick extends $mol_icon {
-        path() {
-            return "M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z";
-        }
-    }
-    $.$mol_icon_tick = $mol_icon_tick;
-})($ || ($ = {}));
-//mol/icon/tick/-view.tree/tick.view.tree.ts
+
+;
+	($.$mol_icon_tick) = class $mol_icon_tick extends ($.$mol_icon) {
+		path(){
+			return "M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z";
+		}
+	};
+
+
 ;
 "use strict";
-var $;
-(function ($) {
-    class $mol_check_box extends $mol_check {
-        Icon() {
-            const obj = new this.$.$mol_icon_tick();
-            return obj;
-        }
-    }
-    __decorate([
-        $mol_mem
-    ], $mol_check_box.prototype, "Icon", null);
-    $.$mol_check_box = $mol_check_box;
-})($ || ($ = {}));
-//mol/check/box/-view.tree/box.view.tree.ts
+
+;
+	($.$mol_check_box) = class $mol_check_box extends ($.$mol_check) {
+		Icon(){
+			const obj = new this.$.$mol_icon_tick();
+			return obj;
+		}
+	};
+	($mol_mem(($.$mol_check_box.prototype), "Icon"));
+
+
 ;
 "use strict";
 var $;
 (function ($) {
     $mol_style_attach("mol/check/box/box.view.css", "[mol_check_box_icon] {\n\tborder-radius: var(--mol_gap_round);\n\tbox-shadow: inset 0 0 0 1px var(--mol_theme_line);\n\tcolor: var(--mol_theme_shade);\n\theight: 1rem;\n\talign-self: center;\n}\n\n[mol_check]:not([mol_check_checked]) > [mol_check_box_icon] {\n\tfill: transparent;\n}\n\n[mol_check]:not([disabled]) > [mol_check_box_icon] {\n\tbackground: var(--mol_theme_field);\n\tcolor: var(--mol_theme_text);\n}\n");
 })($ || ($ = {}));
-//mol/check/box/-css/box.view.css.ts
+
+;
+"use strict";
+
 ;
 "use strict";
 var $;
 (function ($) {
     $.$mol_mem_persist = $mol_wire_solid;
 })($ || ($ = {}));
-//mol/mem/persist/persist.ts
+
 ;
 "use strict";
 var $;
@@ -4982,7 +4845,7 @@ var $;
     }
     $.$mol_wire_sync = $mol_wire_sync;
 })($ || ($ = {}));
-//mol/wire/sync/sync.ts
+
 ;
 "use strict";
 var $;
@@ -5027,7 +4890,7 @@ var $;
     ], $mol_storage, "persisted", null);
     $.$mol_storage = $mol_storage;
 })($ || ($ = {}));
-//mol/storage/storage.ts
+
 ;
 "use strict";
 var $;
@@ -5087,17 +4950,17 @@ var $;
     ], $mol_state_local, "value", null);
     $.$mol_state_local = $mol_state_local;
 })($ || ($ = {}));
-//mol/state/local/local.ts
+
 ;
 "use strict";
 var $;
 (function ($) {
     self.addEventListener('storage', event => $.$mol_state_local.changes(event));
 })($ || ($ = {}));
-//mol/state/local/local.web.ts
+
 ;
 "use strict";
-//mol/charset/encoding/encoding.ts
+
 ;
 "use strict";
 var $;
@@ -5111,14 +4974,14 @@ var $;
     }
     $.$mol_charset_decode = $mol_charset_decode;
 })($ || ($ = {}));
-//mol/charset/decode/decode.ts
+
 ;
 "use strict";
-//node/node.ts
+
 ;
 "use strict";
 var $node = $node || {};
-//node/node.web.ts
+
 ;
 "use strict";
 var $;
@@ -5130,7 +4993,7 @@ var $;
     }
     $.$mol_charset_encode = $mol_charset_encode;
 })($ || ($ = {}));
-//mol/charset/encode/encode.ts
+
 ;
 "use strict";
 var $;
@@ -5249,7 +5112,7 @@ var $;
     ], $mol_file, "absolute", null);
     $.$mol_file = $mol_file;
 })($ || ($ = {}));
-//mol/file/file.ts
+
 ;
 "use strict";
 var $;
@@ -5264,7 +5127,7 @@ var $;
     }
     $.$mol_dom_parse = $mol_dom_parse;
 })($ || ($ = {}));
-//mol/dom/parse/parse.ts
+
 ;
 "use strict";
 var $;
@@ -5415,7 +5278,7 @@ var $;
     ], $mol_fetch, "html", null);
     $.$mol_fetch = $mol_fetch;
 })($ || ($ = {}));
-//mol/fetch/fetch.ts
+
 ;
 "use strict";
 var $;
@@ -5494,7 +5357,7 @@ var $;
     $.$mol_file_web = $mol_file_web;
     $.$mol_file = $mol_file_web;
 })($ || ($ = {}));
-//mol/file/file.web.ts
+
 ;
 "use strict";
 var $;
@@ -5560,115 +5423,97 @@ var $;
     ], $mol_locale, "warn", null);
     $.$mol_locale = $mol_locale;
 })($ || ($ = {}));
-//mol/locale/locale.ts
+
+;
+	($.$hyoo_fallacy_card) = class $hyoo_fallacy_card extends ($.$mol_list) {
+		minimal_height(){
+			return 144;
+		}
+		tags(){
+			return {};
+		}
+		fallacy(){
+			return {
+				"tags": [], 
+				"title": "", 
+				"descr": "", 
+				"sample": ""
+			};
+		}
+		highlight(){
+			return "";
+		}
+		rows(){
+			return [
+				(this.Main()), 
+				(this.Descr()), 
+				(this.Sample())
+			];
+		}
+		Title(){
+			const obj = new this.$.$mol_dimmer();
+			(obj.haystack) = () => ((this.title()));
+			(obj.needle) = () => ((this.highlight()));
+			return obj;
+		}
+		tag(){
+			return "";
+		}
+		Tag(){
+			const obj = new this.$.$mol_paragraph();
+			(obj.sub) = () => ([(this.tag())]);
+			return obj;
+		}
+		selected(next){
+			if(next !== undefined) return next;
+			return false;
+		}
+		Selected(){
+			const obj = new this.$.$mol_check_box();
+			(obj.checked) = (next) => ((this.selected(next)));
+			(obj.hint) = () => (this.$.$mol_locale.text("$hyoo_fallacy_card_Selected_hint"));
+			return obj;
+		}
+		Main(){
+			const obj = new this.$.$mol_view();
+			(obj.sub) = () => ([
+				(this.Title()), 
+				(this.Tag()), 
+				(this.Selected())
+			]);
+			return obj;
+		}
+		descr(){
+			return "";
+		}
+		Descr(){
+			const obj = new this.$.$mol_dimmer();
+			(obj.haystack) = () => ((this.descr()));
+			(obj.needle) = () => ((this.highlight()));
+			return obj;
+		}
+		sample(){
+			return "";
+		}
+		Sample(){
+			const obj = new this.$.$mol_dimmer();
+			(obj.haystack) = () => ((this.sample()));
+			(obj.needle) = () => ((this.highlight()));
+			return obj;
+		}
+	};
+	($mol_mem(($.$hyoo_fallacy_card.prototype), "Title"));
+	($mol_mem(($.$hyoo_fallacy_card.prototype), "Tag"));
+	($mol_mem(($.$hyoo_fallacy_card.prototype), "selected"));
+	($mol_mem(($.$hyoo_fallacy_card.prototype), "Selected"));
+	($mol_mem(($.$hyoo_fallacy_card.prototype), "Main"));
+	($mol_mem(($.$hyoo_fallacy_card.prototype), "Descr"));
+	($mol_mem(($.$hyoo_fallacy_card.prototype), "Sample"));
+
+
 ;
 "use strict";
-var $;
-(function ($) {
-    class $hyoo_fallacy_card extends $mol_list {
-        minimal_height() {
-            return 144;
-        }
-        tags() {
-            return {};
-        }
-        fallacy() {
-            return {
-                tags: [],
-                title: "",
-                descr: "",
-                sample: ""
-            };
-        }
-        highlight() {
-            return "";
-        }
-        rows() {
-            return [
-                this.Main(),
-                this.Descr(),
-                this.Sample()
-            ];
-        }
-        Title() {
-            const obj = new this.$.$mol_dimmer();
-            obj.haystack = () => this.title();
-            obj.needle = () => this.highlight();
-            return obj;
-        }
-        tag() {
-            return "";
-        }
-        Tag() {
-            const obj = new this.$.$mol_paragraph();
-            obj.sub = () => [
-                this.tag()
-            ];
-            return obj;
-        }
-        selected(val) {
-            if (val !== undefined)
-                return val;
-            return false;
-        }
-        Selected() {
-            const obj = new this.$.$mol_check_box();
-            obj.checked = (val) => this.selected(val);
-            obj.hint = () => this.$.$mol_locale.text('$hyoo_fallacy_card_Selected_hint');
-            return obj;
-        }
-        Main() {
-            const obj = new this.$.$mol_view();
-            obj.sub = () => [
-                this.Title(),
-                this.Tag(),
-                this.Selected()
-            ];
-            return obj;
-        }
-        descr() {
-            return "";
-        }
-        Descr() {
-            const obj = new this.$.$mol_dimmer();
-            obj.haystack = () => this.descr();
-            obj.needle = () => this.highlight();
-            return obj;
-        }
-        sample() {
-            return "";
-        }
-        Sample() {
-            const obj = new this.$.$mol_dimmer();
-            obj.haystack = () => this.sample();
-            obj.needle = () => this.highlight();
-            return obj;
-        }
-    }
-    __decorate([
-        $mol_mem
-    ], $hyoo_fallacy_card.prototype, "Title", null);
-    __decorate([
-        $mol_mem
-    ], $hyoo_fallacy_card.prototype, "Tag", null);
-    __decorate([
-        $mol_mem
-    ], $hyoo_fallacy_card.prototype, "selected", null);
-    __decorate([
-        $mol_mem
-    ], $hyoo_fallacy_card.prototype, "Selected", null);
-    __decorate([
-        $mol_mem
-    ], $hyoo_fallacy_card.prototype, "Main", null);
-    __decorate([
-        $mol_mem
-    ], $hyoo_fallacy_card.prototype, "Descr", null);
-    __decorate([
-        $mol_mem
-    ], $hyoo_fallacy_card.prototype, "Sample", null);
-    $.$hyoo_fallacy_card = $hyoo_fallacy_card;
-})($ || ($ = {}));
-//hyoo/fallacy/card/-view.tree/card.view.tree.ts
+
 ;
 "use strict";
 var $;
@@ -5692,7 +5537,7 @@ var $;
         $$.$hyoo_fallacy_card = $hyoo_fallacy_card;
     })($$ = $.$$ || ($.$$ = {}));
 })($ || ($ = {}));
-//hyoo/fallacy/card/card.view.ts
+
 ;
 "use strict";
 var $;
@@ -5743,24 +5588,18 @@ var $;
         });
     })($$ = $.$$ || ($.$$ = {}));
 })($ || ($ = {}));
-//hyoo/fallacy/card/card.view.css.ts
+
 ;
-"use strict";
-var $;
-(function ($) {
-    class $mol_theme_auto extends $mol_plugin {
-        attr() {
-            return {
-                mol_theme: this.theme()
-            };
-        }
-        theme() {
-            return "";
-        }
-    }
-    $.$mol_theme_auto = $mol_theme_auto;
-})($ || ($ = {}));
-//mol/theme/auto/-view.tree/auto.view.tree.ts
+	($.$mol_theme_auto) = class $mol_theme_auto extends ($.$mol_plugin) {
+		attr(){
+			return {"mol_theme": (this.theme())};
+		}
+		theme(){
+			return "";
+		}
+	};
+
+
 ;
 "use strict";
 var $;
@@ -5790,7 +5629,10 @@ var $;
     }
     $.$mol_lights = $mol_lights;
 })($ || ($ = {}));
-//mol/lights/lights.ts
+
+;
+"use strict";
+
 ;
 "use strict";
 var $;
@@ -5805,42 +5647,35 @@ var $;
         $$.$mol_theme_auto = $mol_theme_auto;
     })($$ = $.$$ || ($.$$ = {}));
 })($ || ($ = {}));
-//mol/theme/auto/auto.view.ts
+
+;
+	($.$mol_hotkey) = class $mol_hotkey extends ($.$mol_plugin) {
+		event(){
+			return {...(super.event()), "keydown": (next) => (this.keydown(next))};
+		}
+		key(){
+			return {};
+		}
+		mod_ctrl(){
+			return false;
+		}
+		mod_alt(){
+			return false;
+		}
+		mod_shift(){
+			return false;
+		}
+		keydown(next){
+			if(next !== undefined) return next;
+			return null;
+		}
+	};
+	($mol_mem(($.$mol_hotkey.prototype), "keydown"));
+
+
 ;
 "use strict";
-var $;
-(function ($) {
-    class $mol_hotkey extends $mol_plugin {
-        event() {
-            return {
-                ...super.event(),
-                keydown: (event) => this.keydown(event)
-            };
-        }
-        key() {
-            return {};
-        }
-        mod_ctrl() {
-            return false;
-        }
-        mod_alt() {
-            return false;
-        }
-        mod_shift() {
-            return false;
-        }
-        keydown(event) {
-            if (event !== undefined)
-                return event;
-            return null;
-        }
-    }
-    __decorate([
-        $mol_mem
-    ], $mol_hotkey.prototype, "keydown", null);
-    $.$mol_hotkey = $mol_hotkey;
-})($ || ($ = {}));
-//mol/hotkey/-view.tree/hotkey.view.tree.ts
+
 ;
 "use strict";
 var $;
@@ -5871,68 +5706,59 @@ var $;
         $$.$mol_hotkey = $mol_hotkey;
     })($$ = $.$$ || ($.$$ = {}));
 })($ || ($ = {}));
-//mol/hotkey/hotkey.view.ts
+
 ;
-"use strict";
-var $;
-(function ($) {
-    class $mol_check_icon extends $mol_check {
-    }
-    $.$mol_check_icon = $mol_check_icon;
-})($ || ($ = {}));
-//mol/check/icon/-view.tree/icon.view.tree.ts
+	($.$mol_check_icon) = class $mol_check_icon extends ($.$mol_check) {};
+
+
 ;
 "use strict";
 var $;
 (function ($) {
     $mol_style_attach("mol/check/icon/icon.view.css", "[mol_check_icon]:where([mol_check_checked]) {\n\tcolor: var(--mol_theme_current);\n}\n");
 })($ || ($ = {}));
-//mol/check/icon/-css/icon.view.css.ts
+
 ;
 "use strict";
-var $;
-(function ($) {
-    class $mol_icon_brightness_6 extends $mol_icon {
-        path() {
-            return "M12,18V6C15.31,6 18,8.69 18,12C18,15.31 15.31,18 12,18M20,15.31L23.31,12L20,8.69V4H15.31L12,0.69L8.69,4H4V8.69L0.69,12L4,15.31V20H8.69L12,23.31L15.31,20H20V15.31Z";
-        }
-    }
-    $.$mol_icon_brightness_6 = $mol_icon_brightness_6;
-})($ || ($ = {}));
-//mol/icon/brightness/6/-view.tree/6.view.tree.ts
+
+;
+	($.$mol_icon_brightness_6) = class $mol_icon_brightness_6 extends ($.$mol_icon) {
+		path(){
+			return "M12,18V6C15.31,6 18,8.69 18,12C18,15.31 15.31,18 12,18M20,15.31L23.31,12L20,8.69V4H15.31L12,0.69L8.69,4H4V8.69L0.69,12L4,15.31V20H8.69L12,23.31L15.31,20H20V15.31Z";
+		}
+	};
+
+
 ;
 "use strict";
-var $;
-(function ($) {
-    class $mol_lights_toggle extends $mol_check_icon {
-        Icon() {
-            return this.Lights_icon();
-        }
-        hint() {
-            return this.$.$mol_locale.text('$mol_lights_toggle_hint');
-        }
-        checked(next) {
-            return this.lights(next);
-        }
-        Lights_icon() {
-            const obj = new this.$.$mol_icon_brightness_6();
-            return obj;
-        }
-        lights(next) {
-            if (next !== undefined)
-                return next;
-            return false;
-        }
-    }
-    __decorate([
-        $mol_mem
-    ], $mol_lights_toggle.prototype, "Lights_icon", null);
-    __decorate([
-        $mol_mem
-    ], $mol_lights_toggle.prototype, "lights", null);
-    $.$mol_lights_toggle = $mol_lights_toggle;
-})($ || ($ = {}));
-//mol/lights/toggle/-view.tree/toggle.view.tree.ts
+
+;
+	($.$mol_lights_toggle) = class $mol_lights_toggle extends ($.$mol_check_icon) {
+		Icon(){
+			return (this.Lights_icon());
+		}
+		hint(){
+			return (this.$.$mol_locale.text("$mol_lights_toggle_hint"));
+		}
+		checked(next){
+			return (this.lights(next));
+		}
+		Lights_icon(){
+			const obj = new this.$.$mol_icon_brightness_6();
+			return obj;
+		}
+		lights(next){
+			if(next !== undefined) return next;
+			return false;
+		}
+	};
+	($mol_mem(($.$mol_lights_toggle.prototype), "Lights_icon"));
+	($mol_mem(($.$mol_lights_toggle.prototype), "lights"));
+
+
+;
+"use strict";
+
 ;
 "use strict";
 var $;
@@ -5947,142 +5773,120 @@ var $;
         $$.$mol_lights_toggle = $mol_lights_toggle;
     })($$ = $.$$ || ($.$$ = {}));
 })($ || ($ = {}));
-//mol/lights/toggle/toggle.view.ts
+
+;
+	($.$mol_icon_script) = class $mol_icon_script extends ($.$mol_icon) {
+		path(){
+			return "M17.8,20C17.4,21.2 16.3,22 15,22H5C3.3,22 2,20.7 2,19V18H5L14.2,18C14.6,19.2 15.7,20 17,20H17.8M19,2H8C6.3,2 5,3.3 5,5V16H16V17C16,17.6 16.4,18 17,18H18V5C18,4.4 18.4,4 19,4C19.6,4 20,4.4 20,5V6H22V5C22,3.3 20.7,2 19,2Z";
+		}
+	};
+
+
 ;
 "use strict";
-var $;
-(function ($) {
-    class $mol_icon_script extends $mol_icon {
-        path() {
-            return "M17.8,20C17.4,21.2 16.3,22 15,22H5C3.3,22 2,20.7 2,19V18H5L14.2,18C14.6,19.2 15.7,20 17,20H17.8M19,2H8C6.3,2 5,3.3 5,5V16H16V17C16,17.6 16.4,18 17,18H18V5C18,4.4 18.4,4 19,4C19.6,4 20,4.4 20,5V6H22V5C22,3.3 20.7,2 19,2Z";
-        }
-    }
-    $.$mol_icon_script = $mol_icon_script;
-})($ || ($ = {}));
-//mol/icon/script/-view.tree/script.view.tree.ts
+
+;
+	($.$mol_icon_script_text) = class $mol_icon_script_text extends ($.$mol_icon) {
+		path(){
+			return "M17.8,20C17.4,21.2 16.3,22 15,22H5C3.3,22 2,20.7 2,19V18H5L14.2,18C14.6,19.2 15.7,20 17,20H17.8M19,2C20.7,2 22,3.3 22,5V6H20V5C20,4.4 19.6,4 19,4C18.4,4 18,4.4 18,5V18H17C16.4,18 16,17.6 16,17V16H5V5C5,3.3 6.3,2 8,2H19M8,6V8H15V6H8M8,10V12H14V10H8Z";
+		}
+	};
+
+
 ;
 "use strict";
-var $;
-(function ($) {
-    class $mol_icon_script_text extends $mol_icon {
-        path() {
-            return "M17.8,20C17.4,21.2 16.3,22 15,22H5C3.3,22 2,20.7 2,19V18H5L14.2,18C14.6,19.2 15.7,20 17,20H17.8M19,2C20.7,2 22,3.3 22,5V6H20V5C20,4.4 19.6,4 19,4C18.4,4 18,4.4 18,5V18H17C16.4,18 16,17.6 16,17V16H5V5C5,3.3 6.3,2 8,2H19M8,6V8H15V6H8M8,10V12H14V10H8Z";
-        }
-    }
-    $.$mol_icon_script_text = $mol_icon_script_text;
-})($ || ($ = {}));
-//mol/icon/script/text/-view.tree/text.view.tree.ts
+
+;
+	($.$mol_link_source) = class $mol_link_source extends ($.$mol_link) {
+		hint(){
+			return (this.$.$mol_locale.text("$mol_link_source_hint"));
+		}
+		sub(){
+			return [(this.Icon())];
+		}
+		Icon(){
+			const obj = new this.$.$mol_icon_script_text();
+			return obj;
+		}
+	};
+	($mol_mem(($.$mol_link_source.prototype), "Icon"));
+
+
 ;
 "use strict";
-var $;
-(function ($) {
-    class $mol_link_source extends $mol_link {
-        hint() {
-            return this.$.$mol_locale.text('$mol_link_source_hint');
-        }
-        sub() {
-            return [
-                this.Icon()
-            ];
-        }
-        Icon() {
-            const obj = new this.$.$mol_icon_script_text();
-            return obj;
-        }
-    }
-    __decorate([
-        $mol_mem
-    ], $mol_link_source.prototype, "Icon", null);
-    $.$mol_link_source = $mol_link_source;
-})($ || ($ = {}));
-//mol/link/source/-view.tree/source.view.tree.ts
+
+;
+	($.$mol_pop) = class $mol_pop extends ($.$mol_view) {
+		showed(next){
+			if(next !== undefined) return next;
+			return false;
+		}
+		align_vert(){
+			return "";
+		}
+		align_hor(){
+			return "";
+		}
+		prefer(){
+			return "vert";
+		}
+		sub(){
+			return [(this.Anchor())];
+		}
+		sub_visible(){
+			return [(this.Anchor()), (this.Bubble())];
+		}
+		Anchor(){
+			return null;
+		}
+		align(){
+			return "bottom_center";
+		}
+		bubble_content(){
+			return [];
+		}
+		height_max(){
+			return 9999;
+		}
+		Bubble(){
+			const obj = new this.$.$mol_pop_bubble();
+			(obj.align) = () => ((this.align()));
+			(obj.content) = () => ((this.bubble_content()));
+			(obj.height_max) = () => ((this.height_max()));
+			return obj;
+		}
+	};
+	($mol_mem(($.$mol_pop.prototype), "showed"));
+	($mol_mem(($.$mol_pop.prototype), "Bubble"));
+	($.$mol_pop_bubble) = class $mol_pop_bubble extends ($.$mol_view) {
+		sub(){
+			return (this.content());
+		}
+		style(){
+			return {...(super.style()), "maxHeight": (this.height_max())};
+		}
+		attr(){
+			return {
+				...(super.attr()), 
+				"mol_pop_align": (this.align()), 
+				"tabindex": 0
+			};
+		}
+		content(){
+			return [];
+		}
+		height_max(){
+			return 9999;
+		}
+		align(){
+			return "";
+		}
+	};
+
+
 ;
 "use strict";
-var $;
-(function ($) {
-    class $mol_pop extends $mol_view {
-        showed(next) {
-            if (next !== undefined)
-                return next;
-            return false;
-        }
-        align_vert() {
-            return "";
-        }
-        align_hor() {
-            return "";
-        }
-        prefer() {
-            return "vert";
-        }
-        sub() {
-            return [
-                this.Anchor()
-            ];
-        }
-        sub_visible() {
-            return [
-                this.Anchor(),
-                this.Bubble()
-            ];
-        }
-        Anchor() {
-            return null;
-        }
-        align() {
-            return "bottom_center";
-        }
-        bubble_content() {
-            return [];
-        }
-        height_max() {
-            return 9999;
-        }
-        Bubble() {
-            const obj = new this.$.$mol_pop_bubble();
-            obj.align = () => this.align();
-            obj.content = () => this.bubble_content();
-            obj.height_max = () => this.height_max();
-            return obj;
-        }
-    }
-    __decorate([
-        $mol_mem
-    ], $mol_pop.prototype, "showed", null);
-    __decorate([
-        $mol_mem
-    ], $mol_pop.prototype, "Bubble", null);
-    $.$mol_pop = $mol_pop;
-    class $mol_pop_bubble extends $mol_view {
-        sub() {
-            return this.content();
-        }
-        style() {
-            return {
-                ...super.style(),
-                maxHeight: this.height_max()
-            };
-        }
-        attr() {
-            return {
-                ...super.attr(),
-                mol_pop_align: this.align(),
-                tabindex: 0
-            };
-        }
-        content() {
-            return [];
-        }
-        height_max() {
-            return 9999;
-        }
-        align() {
-            return "";
-        }
-    }
-    $.$mol_pop_bubble = $mol_pop_bubble;
-})($ || ($ = {}));
-//mol/pop/-view.tree/pop.view.tree.ts
+
 ;
 "use strict";
 var $;
@@ -6174,118 +5978,84 @@ var $;
         $$.$mol_pop = $mol_pop;
     })($$ = $.$$ || ($.$$ = {}));
 })($ || ($ = {}));
-//mol/pop/pop.view.ts
+
 ;
 "use strict";
 var $;
 (function ($) {
     $mol_style_attach("mol/pop/pop.view.css", "[mol_pop] {\n\tposition: relative;\n\tdisplay: inline-flex;\n}\n\n[mol_pop_bubble] {\n\tbox-shadow: 0 0 1rem hsla(0,0%,0%,.5);\n\tborder-radius: var(--mol_gap_round);\n\tposition: absolute;\n\tz-index: var(--mol_layer_popup);\n\tbackground: var(--mol_theme_back);\n\tmax-width: none;\n\tmax-height: none;\n\t/* overflow: hidden;\n\toverflow-y: scroll;\n\toverflow-y: overlay; */\n\tword-break: normal;\n\twidth: max-content;\n\theight: max-content;\n\tflex-direction: column;\n\tmax-width: 80vw;\n\tmax-height: 80vw;\n\tcontain: paint;\n}\n\n:where( [mol_pop_bubble] > * ) {\n\tbackground: var(--mol_theme_card);\n}\n\n[mol_pop_bubble][mol_scroll] {\n\tbackground: var(--mol_theme_back);\n}\n\n[mol_pop_bubble]:focus {\n\toutline: none;\n}\n\n[mol_pop_align=\"suspense_suspense\"] {\n\topacity: 0;\n}\n\n[mol_pop_align=\"left_top\"] {\n\ttransform: translate(-100%);\n\tleft: 0;\n\tbottom: 0;\n}\n\n[mol_pop_align=\"left_center\"] {\n\ttransform: translate(-100%, -50%);\n\tleft: 0;\n\ttop: 50%;\n}\n\n[mol_pop_align=\"left_bottom\"] {\n\ttransform: translate(-100%);\n\tleft: 0;\n\ttop: 0;\n}\n\n[mol_pop_align=\"right_top\"] {\n\ttransform: translate(100%);\n\tright: 0;\n\tbottom: 0;\n}\n\n[mol_pop_align=\"right_center\"] {\n\ttransform: translate(100%, -50%);\n\tright: 0;\n\ttop: 50%;\n}\n\n[mol_pop_align=\"right_bottom\"] {\n\ttransform: translate(100%);\n\tright: 0;\n\ttop: 0;\n}\n\n[mol_pop_align=\"center\"] {\n\tleft: 50%;\n\ttop: 50%;\n\ttransform: translate(-50%, -50%);\n}\n\n[mol_pop_align=\"top_left\"] {\n\tright: 0;\n\tbottom: 100%;\n}\n\n[mol_pop_align=\"top_center\"] {\n\ttransform: translate(-50%);\n\tleft: 50%;\n\tbottom: 100%;\n}\n\n[mol_pop_align=\"top_right\"] {\n\tleft: 0;\n\tbottom: 100%;\n}\n\n[mol_pop_align=\"bottom_left\"] {\n\tright: 0;\n\ttop: 100%;\n}\n\n[mol_pop_align=\"bottom_center\"] {\n\ttransform: translate(-50%);\n\tleft: 50%;\n\ttop: 100%;\n}\n\n[mol_pop_align=\"bottom_right\"] {\n\tleft: 0;\n\ttop: 100%;\n}\n");
 })($ || ($ = {}));
-//mol/pop/-css/pop.view.css.ts
+
+;
+	($.$mol_nav) = class $mol_nav extends ($.$mol_plugin) {
+		cycle(next){
+			if(next !== undefined) return next;
+			return false;
+		}
+		mod_ctrl(){
+			return false;
+		}
+		mod_shift(){
+			return false;
+		}
+		mod_alt(){
+			return false;
+		}
+		keys_x(next){
+			if(next !== undefined) return next;
+			return [];
+		}
+		keys_y(next){
+			if(next !== undefined) return next;
+			return [];
+		}
+		current_x(next){
+			if(next !== undefined) return next;
+			return null;
+		}
+		current_y(next){
+			if(next !== undefined) return next;
+			return null;
+		}
+		event_up(next){
+			if(next !== undefined) return next;
+			return null;
+		}
+		event_down(next){
+			if(next !== undefined) return next;
+			return null;
+		}
+		event_left(next){
+			if(next !== undefined) return next;
+			return null;
+		}
+		event_right(next){
+			if(next !== undefined) return next;
+			return null;
+		}
+		event(){
+			return {...(super.event()), "keydown": (next) => (this.event_key(next))};
+		}
+		event_key(next){
+			if(next !== undefined) return next;
+			return null;
+		}
+	};
+	($mol_mem(($.$mol_nav.prototype), "cycle"));
+	($mol_mem(($.$mol_nav.prototype), "keys_x"));
+	($mol_mem(($.$mol_nav.prototype), "keys_y"));
+	($mol_mem(($.$mol_nav.prototype), "current_x"));
+	($mol_mem(($.$mol_nav.prototype), "current_y"));
+	($mol_mem(($.$mol_nav.prototype), "event_up"));
+	($mol_mem(($.$mol_nav.prototype), "event_down"));
+	($mol_mem(($.$mol_nav.prototype), "event_left"));
+	($mol_mem(($.$mol_nav.prototype), "event_right"));
+	($mol_mem(($.$mol_nav.prototype), "event_key"));
+
+
 ;
 "use strict";
-var $;
-(function ($) {
-    class $mol_nav extends $mol_plugin {
-        cycle(next) {
-            if (next !== undefined)
-                return next;
-            return false;
-        }
-        mod_ctrl() {
-            return false;
-        }
-        mod_shift() {
-            return false;
-        }
-        mod_alt() {
-            return false;
-        }
-        keys_x(next) {
-            if (next !== undefined)
-                return next;
-            return [];
-        }
-        keys_y(next) {
-            if (next !== undefined)
-                return next;
-            return [];
-        }
-        current_x(next) {
-            if (next !== undefined)
-                return next;
-            return null;
-        }
-        current_y(next) {
-            if (next !== undefined)
-                return next;
-            return null;
-        }
-        event_up(event) {
-            if (event !== undefined)
-                return event;
-            return null;
-        }
-        event_down(event) {
-            if (event !== undefined)
-                return event;
-            return null;
-        }
-        event_left(event) {
-            if (event !== undefined)
-                return event;
-            return null;
-        }
-        event_right(event) {
-            if (event !== undefined)
-                return event;
-            return null;
-        }
-        event() {
-            return {
-                ...super.event(),
-                keydown: (event) => this.event_key(event)
-            };
-        }
-        event_key(event) {
-            if (event !== undefined)
-                return event;
-            return null;
-        }
-    }
-    __decorate([
-        $mol_mem
-    ], $mol_nav.prototype, "cycle", null);
-    __decorate([
-        $mol_mem
-    ], $mol_nav.prototype, "keys_x", null);
-    __decorate([
-        $mol_mem
-    ], $mol_nav.prototype, "keys_y", null);
-    __decorate([
-        $mol_mem
-    ], $mol_nav.prototype, "current_x", null);
-    __decorate([
-        $mol_mem
-    ], $mol_nav.prototype, "current_y", null);
-    __decorate([
-        $mol_mem
-    ], $mol_nav.prototype, "event_up", null);
-    __decorate([
-        $mol_mem
-    ], $mol_nav.prototype, "event_down", null);
-    __decorate([
-        $mol_mem
-    ], $mol_nav.prototype, "event_left", null);
-    __decorate([
-        $mol_mem
-    ], $mol_nav.prototype, "event_right", null);
-    __decorate([
-        $mol_mem
-    ], $mol_nav.prototype, "event_key", null);
-    $.$mol_nav = $mol_nav;
-})($ || ($ = {}));
-//mol/nav/-view.tree/nav.view.tree.ts
+
 ;
 "use strict";
 var $;
@@ -6385,162 +6155,131 @@ var $;
         $$.$mol_nav = $mol_nav;
     })($$ = $.$$ || ($.$$ = {}));
 })($ || ($ = {}));
-//mol/nav/nav.view.ts
+
+;
+	($.$mol_string) = class $mol_string extends ($.$mol_view) {
+		dom_name(){
+			return "input";
+		}
+		enabled(){
+			return true;
+		}
+		minimal_height(){
+			return 40;
+		}
+		autocomplete(){
+			return false;
+		}
+		selection(next){
+			if(next !== undefined) return next;
+			return [0, 0];
+		}
+		auto(){
+			return [(this.selection_watcher()), (this.error_report())];
+		}
+		field(){
+			return {
+				...(super.field()), 
+				"disabled": (this.disabled()), 
+				"value": (this.value_changed()), 
+				"placeholder": (this.hint_visible()), 
+				"spellcheck": (this.spellcheck()), 
+				"autocomplete": (this.autocomplete_native()), 
+				"selectionEnd": (this.selection_end()), 
+				"selectionStart": (this.selection_start()), 
+				"inputMode": (this.keyboard()), 
+				"enterkeyhint": (this.enter())
+			};
+		}
+		attr(){
+			return {
+				...(super.attr()), 
+				"maxlength": (this.length_max()), 
+				"type": (this.type())
+			};
+		}
+		event(){
+			return {...(super.event()), "input": (next) => (this.event_change(next))};
+		}
+		plugins(){
+			return [(this.Submit())];
+		}
+		selection_watcher(){
+			return null;
+		}
+		error_report(){
+			return null;
+		}
+		disabled(){
+			return false;
+		}
+		value(next){
+			if(next !== undefined) return next;
+			return "";
+		}
+		value_changed(next){
+			return (this.value(next));
+		}
+		hint(){
+			return "";
+		}
+		hint_visible(){
+			return (this.hint());
+		}
+		spellcheck(){
+			return true;
+		}
+		autocomplete_native(){
+			return "";
+		}
+		selection_end(){
+			return 0;
+		}
+		selection_start(){
+			return 0;
+		}
+		keyboard(){
+			return "text";
+		}
+		enter(){
+			return "go";
+		}
+		length_max(){
+			return +Infinity;
+		}
+		type(next){
+			if(next !== undefined) return next;
+			return "text";
+		}
+		event_change(next){
+			if(next !== undefined) return next;
+			return null;
+		}
+		submit_with_ctrl(){
+			return false;
+		}
+		submit(next){
+			if(next !== undefined) return next;
+			return null;
+		}
+		Submit(){
+			const obj = new this.$.$mol_hotkey();
+			(obj.mod_ctrl) = () => ((this.submit_with_ctrl()));
+			(obj.key) = () => ({"enter": (next) => (this.submit(next))});
+			return obj;
+		}
+	};
+	($mol_mem(($.$mol_string.prototype), "selection"));
+	($mol_mem(($.$mol_string.prototype), "value"));
+	($mol_mem(($.$mol_string.prototype), "type"));
+	($mol_mem(($.$mol_string.prototype), "event_change"));
+	($mol_mem(($.$mol_string.prototype), "submit"));
+	($mol_mem(($.$mol_string.prototype), "Submit"));
+
+
 ;
 "use strict";
-var $;
-(function ($) {
-    class $mol_string extends $mol_view {
-        dom_name() {
-            return "input";
-        }
-        enabled() {
-            return true;
-        }
-        minimal_height() {
-            return 40;
-        }
-        autocomplete() {
-            return false;
-        }
-        selection(next) {
-            if (next !== undefined)
-                return next;
-            return [
-                0,
-                0
-            ];
-        }
-        auto() {
-            return [
-                this.selection_watcher(),
-                this.error_report()
-            ];
-        }
-        field() {
-            return {
-                ...super.field(),
-                disabled: this.disabled(),
-                value: this.value_changed(),
-                placeholder: this.hint_visible(),
-                spellcheck: this.spellcheck(),
-                autocomplete: this.autocomplete_native(),
-                selectionEnd: this.selection_end(),
-                selectionStart: this.selection_start(),
-                inputMode: this.keyboard(),
-                enterkeyhint: this.enter()
-            };
-        }
-        attr() {
-            return {
-                ...super.attr(),
-                maxlength: this.length_max(),
-                type: this.type()
-            };
-        }
-        event() {
-            return {
-                ...super.event(),
-                input: (event) => this.event_change(event)
-            };
-        }
-        plugins() {
-            return [
-                this.Submit()
-            ];
-        }
-        selection_watcher() {
-            return null;
-        }
-        error_report() {
-            return null;
-        }
-        disabled() {
-            return false;
-        }
-        value(next) {
-            if (next !== undefined)
-                return next;
-            return "";
-        }
-        value_changed(next) {
-            return this.value(next);
-        }
-        hint() {
-            return "";
-        }
-        hint_visible() {
-            return this.hint();
-        }
-        spellcheck() {
-            return true;
-        }
-        autocomplete_native() {
-            return "";
-        }
-        selection_end() {
-            return 0;
-        }
-        selection_start() {
-            return 0;
-        }
-        keyboard() {
-            return "text";
-        }
-        enter() {
-            return "go";
-        }
-        length_max() {
-            return +Infinity;
-        }
-        type(next) {
-            if (next !== undefined)
-                return next;
-            return "text";
-        }
-        event_change(event) {
-            if (event !== undefined)
-                return event;
-            return null;
-        }
-        submit_with_ctrl() {
-            return false;
-        }
-        submit(event) {
-            if (event !== undefined)
-                return event;
-            return null;
-        }
-        Submit() {
-            const obj = new this.$.$mol_hotkey();
-            obj.mod_ctrl = () => this.submit_with_ctrl();
-            obj.key = () => ({
-                enter: (event) => this.submit(event)
-            });
-            return obj;
-        }
-    }
-    __decorate([
-        $mol_mem
-    ], $mol_string.prototype, "selection", null);
-    __decorate([
-        $mol_mem
-    ], $mol_string.prototype, "value", null);
-    __decorate([
-        $mol_mem
-    ], $mol_string.prototype, "type", null);
-    __decorate([
-        $mol_mem
-    ], $mol_string.prototype, "event_change", null);
-    __decorate([
-        $mol_mem
-    ], $mol_string.prototype, "submit", null);
-    __decorate([
-        $mol_mem
-    ], $mol_string.prototype, "Submit", null);
-    $.$mol_string = $mol_string;
-})($ || ($ = {}));
-//mol/string/-view.tree/string.view.tree.ts
+
 ;
 "use strict";
 var $;
@@ -6635,224 +6374,185 @@ var $;
         $$.$mol_string = $mol_string;
     })($$ = $.$$ || ($.$$ = {}));
 })($ || ($ = {}));
-//mol/string/string.view.ts
+
 ;
 "use strict";
 var $;
 (function ($) {
     $mol_style_attach("mol/string/string.view.css", "[mol_string] {\n\tbox-sizing: border-box;\n\toutline-offset: 0;\n\tborder: none;\n\tborder-radius: var(--mol_gap_round);\n\twhite-space: pre-line;\n\toverflow: hidden;\n\ttext-overflow: ellipsis;\n\tpadding: var(--mol_gap_text);\n\ttext-align: left;\n\tposition: relative;\n\tfont: inherit;\n\tflex: 1 1 auto;\n\tbackground: transparent;\n\tmin-width: 0;\n\tcolor: inherit;\n\tbackground: var(--mol_theme_field);\n}\n\n[mol_string]:disabled:not(:placeholder-shown) {\n\tbackground-color: transparent;\n\tcolor: var(--mol_theme_text);\n}\n\n[mol_string]:where(:not(:disabled)) {\n\tbox-shadow: inset 0 0 0 1px var(--mol_theme_line);\n}\n\n[mol_string]:where(:not(:disabled)):hover {\n\tbox-shadow: inset 0 0 0 2px var(--mol_theme_line);\n\tz-index: var(--mol_layer_hover);\n}\n\n[mol_string]:focus {\n\toutline: none;\n\tz-index: var(--mol_layer_focus);\n\tcolor: var(--mol_theme_text);\n\tbox-shadow: inset 0 0 0 1px var(--mol_theme_focus);\n}\n\n[mol_string]::placeholder {\n\tcolor: var(--mol_theme_shade);\n}\n\n[mol_string]::-ms-clear {\n\tdisplay: none;\n}\n");
 })($ || ($ = {}));
-//mol/string/-css/string.view.css.ts
+
+;
+	($.$mol_icon_cross) = class $mol_icon_cross extends ($.$mol_icon) {
+		path(){
+			return "M19 6.41L17.59 5L12 10.59L6.41 5L5 6.41L10.59 12L5 17.59L6.41 19L12 13.41L17.59 19L19 17.59L13.41 12L19 6.41Z";
+		}
+	};
+
+
 ;
 "use strict";
-var $;
-(function ($) {
-    class $mol_icon_cross extends $mol_icon {
-        path() {
-            return "M19 6.41L17.59 5L12 10.59L6.41 5L5 6.41L10.59 12L5 17.59L6.41 19L12 13.41L17.59 19L19 17.59L13.41 12L19 6.41Z";
-        }
-    }
-    $.$mol_icon_cross = $mol_icon_cross;
-})($ || ($ = {}));
-//mol/icon/cross/-view.tree/cross.view.tree.ts
+
+;
+	($.$mol_search) = class $mol_search extends ($.$mol_pop) {
+		query(next){
+			if(next !== undefined) return next;
+			return "";
+		}
+		suggests(){
+			return [];
+		}
+		plugins(){
+			return [
+				...(super.plugins()), 
+				(this.Hotkey()), 
+				(this.Nav())
+			];
+		}
+		showed(next){
+			return (this.suggests_showed(next));
+		}
+		align_hor(){
+			return "right";
+		}
+		Anchor(){
+			const obj = new this.$.$mol_view();
+			(obj.sub) = () => ((this.anchor_content()));
+			return obj;
+		}
+		bubble_content(){
+			return [(this.Menu())];
+		}
+		Suggest(id){
+			const obj = new this.$.$mol_button_minor();
+			(obj.click) = (next) => ((this.suggest_select(id, next)));
+			(obj.sub) = () => ((this.suggest_content(id)));
+			return obj;
+		}
+		clear(next){
+			if(next !== undefined) return next;
+			return null;
+		}
+		Hotkey(){
+			const obj = new this.$.$mol_hotkey();
+			(obj.key) = () => ({"escape": (next) => (this.clear(next))});
+			return obj;
+		}
+		nav_components(){
+			return [];
+		}
+		nav_focused(next){
+			if(next !== undefined) return next;
+			return null;
+		}
+		Nav(){
+			const obj = new this.$.$mol_nav();
+			(obj.keys_y) = () => ((this.nav_components()));
+			(obj.current_y) = (next) => ((this.nav_focused(next)));
+			return obj;
+		}
+		suggests_showed(next){
+			if(next !== undefined) return next;
+			return false;
+		}
+		query(next){
+			if(next !== undefined) return next;
+			return "";
+		}
+		hint(){
+			return (this.$.$mol_locale.text("$mol_search_hint"));
+		}
+		submit(next){
+			if(next !== undefined) return next;
+			return null;
+		}
+		enabled(){
+			return true;
+		}
+		keyboard(){
+			return "search";
+		}
+		enter(){
+			return "search";
+		}
+		bring(){
+			return (this.Query().bring());
+		}
+		Query(){
+			const obj = new this.$.$mol_string();
+			(obj.value) = (next) => ((this.query(next)));
+			(obj.hint) = () => ((this.hint()));
+			(obj.submit) = (next) => ((this.submit(next)));
+			(obj.enabled) = () => ((this.enabled()));
+			(obj.keyboard) = () => ((this.keyboard()));
+			(obj.enter) = () => ((this.enter()));
+			return obj;
+		}
+		clear(next){
+			if(next !== undefined) return next;
+			return null;
+		}
+		Clear_icon(){
+			const obj = new this.$.$mol_icon_cross();
+			return obj;
+		}
+		Clear(){
+			const obj = new this.$.$mol_button_minor();
+			(obj.hint) = () => (this.$.$mol_locale.text("$mol_search_Clear_hint"));
+			(obj.click) = (next) => ((this.clear(next)));
+			(obj.sub) = () => ([(this.Clear_icon())]);
+			return obj;
+		}
+		anchor_content(){
+			return [(this.Query()), (this.Clear())];
+		}
+		menu_items(){
+			return [];
+		}
+		Menu(){
+			const obj = new this.$.$mol_list();
+			(obj.rows) = () => ((this.menu_items()));
+			return obj;
+		}
+		suggest_select(id, next){
+			if(next !== undefined) return next;
+			return null;
+		}
+		suggest_label(id){
+			return "";
+		}
+		Suggest_label(id){
+			const obj = new this.$.$mol_dimmer();
+			(obj.haystack) = () => ((this.suggest_label(id)));
+			(obj.needle) = () => ((this.query()));
+			return obj;
+		}
+		suggest_content(id){
+			return [(this.Suggest_label(id))];
+		}
+	};
+	($mol_mem(($.$mol_search.prototype), "query"));
+	($mol_mem(($.$mol_search.prototype), "Anchor"));
+	($mol_mem_key(($.$mol_search.prototype), "Suggest"));
+	($mol_mem(($.$mol_search.prototype), "clear"));
+	($mol_mem(($.$mol_search.prototype), "Hotkey"));
+	($mol_mem(($.$mol_search.prototype), "nav_focused"));
+	($mol_mem(($.$mol_search.prototype), "Nav"));
+	($mol_mem(($.$mol_search.prototype), "suggests_showed"));
+	($mol_mem(($.$mol_search.prototype), "query"));
+	($mol_mem(($.$mol_search.prototype), "submit"));
+	($mol_mem(($.$mol_search.prototype), "Query"));
+	($mol_mem(($.$mol_search.prototype), "clear"));
+	($mol_mem(($.$mol_search.prototype), "Clear_icon"));
+	($mol_mem(($.$mol_search.prototype), "Clear"));
+	($mol_mem(($.$mol_search.prototype), "Menu"));
+	($mol_mem_key(($.$mol_search.prototype), "suggest_select"));
+	($mol_mem_key(($.$mol_search.prototype), "Suggest_label"));
+
+
 ;
 "use strict";
-var $;
-(function ($) {
-    class $mol_search extends $mol_pop {
-        query(next) {
-            if (next !== undefined)
-                return next;
-            return "";
-        }
-        suggests() {
-            return [];
-        }
-        plugins() {
-            return [
-                ...super.plugins(),
-                this.Hotkey(),
-                this.Nav()
-            ];
-        }
-        showed(next) {
-            return this.suggests_showed(next);
-        }
-        align_hor() {
-            return "right";
-        }
-        Anchor() {
-            const obj = new this.$.$mol_view();
-            obj.sub = () => this.anchor_content();
-            return obj;
-        }
-        bubble_content() {
-            return [
-                this.Menu()
-            ];
-        }
-        Suggest(id) {
-            const obj = new this.$.$mol_button_minor();
-            obj.click = (event) => this.suggest_select(id, event);
-            obj.sub = () => this.suggest_content(id);
-            return obj;
-        }
-        clear(next) {
-            if (next !== undefined)
-                return next;
-            return null;
-        }
-        Hotkey() {
-            const obj = new this.$.$mol_hotkey();
-            obj.key = () => ({
-                escape: (next) => this.clear(next)
-            });
-            return obj;
-        }
-        nav_components() {
-            return [];
-        }
-        nav_focused(component) {
-            if (component !== undefined)
-                return component;
-            return null;
-        }
-        Nav() {
-            const obj = new this.$.$mol_nav();
-            obj.keys_y = () => this.nav_components();
-            obj.current_y = (component) => this.nav_focused(component);
-            return obj;
-        }
-        suggests_showed(next) {
-            if (next !== undefined)
-                return next;
-            return false;
-        }
-        hint() {
-            return this.$.$mol_locale.text('$mol_search_hint');
-        }
-        submit(event) {
-            if (event !== undefined)
-                return event;
-            return null;
-        }
-        enabled() {
-            return true;
-        }
-        keyboard() {
-            return "search";
-        }
-        enter() {
-            return "search";
-        }
-        bring() {
-            return this.Query().bring();
-        }
-        Query() {
-            const obj = new this.$.$mol_string();
-            obj.value = (next) => this.query(next);
-            obj.hint = () => this.hint();
-            obj.submit = (event) => this.submit(event);
-            obj.enabled = () => this.enabled();
-            obj.keyboard = () => this.keyboard();
-            obj.enter = () => this.enter();
-            return obj;
-        }
-        Clear_icon() {
-            const obj = new this.$.$mol_icon_cross();
-            return obj;
-        }
-        Clear() {
-            const obj = new this.$.$mol_button_minor();
-            obj.hint = () => this.$.$mol_locale.text('$mol_search_Clear_hint');
-            obj.click = (event) => this.clear(event);
-            obj.sub = () => [
-                this.Clear_icon()
-            ];
-            return obj;
-        }
-        anchor_content() {
-            return [
-                this.Query(),
-                this.Clear()
-            ];
-        }
-        menu_items() {
-            return [];
-        }
-        Menu() {
-            const obj = new this.$.$mol_list();
-            obj.rows = () => this.menu_items();
-            return obj;
-        }
-        suggest_select(id, event) {
-            if (event !== undefined)
-                return event;
-            return null;
-        }
-        suggest_label(id) {
-            return "";
-        }
-        Suggest_label(id) {
-            const obj = new this.$.$mol_dimmer();
-            obj.haystack = () => this.suggest_label(id);
-            obj.needle = () => this.query();
-            return obj;
-        }
-        suggest_content(id) {
-            return [
-                this.Suggest_label(id)
-            ];
-        }
-    }
-    __decorate([
-        $mol_mem
-    ], $mol_search.prototype, "query", null);
-    __decorate([
-        $mol_mem
-    ], $mol_search.prototype, "Anchor", null);
-    __decorate([
-        $mol_mem_key
-    ], $mol_search.prototype, "Suggest", null);
-    __decorate([
-        $mol_mem
-    ], $mol_search.prototype, "clear", null);
-    __decorate([
-        $mol_mem
-    ], $mol_search.prototype, "Hotkey", null);
-    __decorate([
-        $mol_mem
-    ], $mol_search.prototype, "nav_focused", null);
-    __decorate([
-        $mol_mem
-    ], $mol_search.prototype, "Nav", null);
-    __decorate([
-        $mol_mem
-    ], $mol_search.prototype, "suggests_showed", null);
-    __decorate([
-        $mol_mem
-    ], $mol_search.prototype, "submit", null);
-    __decorate([
-        $mol_mem
-    ], $mol_search.prototype, "Query", null);
-    __decorate([
-        $mol_mem
-    ], $mol_search.prototype, "Clear_icon", null);
-    __decorate([
-        $mol_mem
-    ], $mol_search.prototype, "Clear", null);
-    __decorate([
-        $mol_mem
-    ], $mol_search.prototype, "Menu", null);
-    __decorate([
-        $mol_mem_key
-    ], $mol_search.prototype, "suggest_select", null);
-    __decorate([
-        $mol_mem_key
-    ], $mol_search.prototype, "Suggest_label", null);
-    $.$mol_search = $mol_search;
-})($ || ($ = {}));
-//mol/search/-view.tree/search.view.tree.ts
+
 ;
 "use strict";
 var $;
@@ -6930,656 +6630,478 @@ var $;
         $$.$mol_search = $mol_search;
     })($$ = $.$$ || ($.$$ = {}));
 })($ || ($ = {}));
-//mol/search/search.view.ts
+
 ;
 "use strict";
 var $;
 (function ($) {
     $mol_style_attach("mol/search/search.view.css", "[mol_search] {\n\talign-self: flex-start;\n\tflex: auto;\n}\n\n[mol_search_anchor] {\n\tflex: 1 1 auto;\n}\n\n[mol_search_query] {\n\tflex-grow: 1;\n}\n\n[mol_search_menu] {\n\tmin-height: .75rem;\n\tdisplay: flex;\n}\n\n[mol_search_suggest] {\n\ttext-align: left;\n}\n\n[mol_search_suggest_label_high] {\n\tcolor: var(--mol_theme_shade);\n\ttext-shadow: none;\n}\n");
 })($ || ($ = {}));
-//mol/search/-css/search.view.css.ts
+
 ;
-"use strict";
-var $;
-(function ($) {
-    class $hyoo_fallacy extends $mol_book2 {
-        title() {
-            return "Некорректные доводы";
-        }
-        plugins() {
-            return [
-                this.Theme(),
-                this.Hotkey()
-            ];
-        }
-        pages() {
-            return [
-                this.Menu()
-            ];
-        }
-        Content(id) {
-            const obj = new this.$.$mol_page();
-            obj.title = () => this.content_title(id);
-            obj.tools = () => [
-                this.Search()
-            ];
-            obj.body = () => [
-                this.Cards(id)
-            ];
-            return obj;
-        }
-        Filter(id) {
-            const obj = new this.$.$mol_link();
-            obj.arg = () => this.filter_arg(id);
-            obj.title = () => this.filter_title(id);
-            return obj;
-        }
-        Card(id) {
-            const obj = new this.$.$hyoo_fallacy_card();
-            obj.tags = () => this.tags();
-            obj.selected = (val) => this.fallacy_selected(id, val);
-            obj.fallacy = () => this.fallacy(id);
-            obj.highlight = () => this.search();
-            return obj;
-        }
-        tags() {
-            return {
-                person: {
-                    title: "🤺 Атака через личность"
-                },
-                emotion: {
-                    title: "🎭 Эксплуатация эмоций"
-                },
-                logic: {
-                    title: "🧠 Нарушение логики"
-                },
-                content: {
-                    title: "📊 Манипуляция контентом"
-                },
-                reference: {
-                    title: "🎅 Сомнительная ссылка"
-                }
-            };
-        }
-        fallacies() {
-            return {
-                force: {
-                    tags: [
-                        "person"
-                    ],
-                    title: "💪 Обращение к силе",
-                    descr: "Угрожать оппоненту физической расправой.",
-                    sample: "Наша страна должна вооружиться так, чтобы нас боялись, и тогда мир признает, что мы правы!"
-                },
-                ridicule: {
-                    tags: [
-                        "person"
-                    ],
-                    title: "🤣 Высмеивание",
-                    descr: "Высмеивать аргумент или человека без опровержения самого аргумента.",
-                    sample: "Вы отрицаете очевидное, чтобы попрактиковаться в демагогии? Хватит клоунады, мы тут о серьёзных вещах говорим."
-                },
-                dummy: {
-                    tags: [
-                        "content"
-                    ],
-                    title: "🥊 Соломенное чучело",
-                    descr: "Перевирать доводы оппонента для того, чтобы было легче нападать.",
-                    sample: "Олег поддержал увеличение дотаций на образование и здравоохранение. Павел возмутился: \"Не думал, что ты ненавидишь свою страну настолько, что хочешь оставить её беззащитной, урезав расходы на армию\"."
-                },
-                social: {
-                    tags: [
-                        "person"
-                    ],
-                    title: "🥶 Аргумент к социальной неуспешности",
-                    descr: "Атаковать оппонента за то, что он не имеет социального статуса, который, по мнению атакующего, даёт этому оппоненту какое-либо право иметь критикуемую позицию.",
-                    sample: "Как ты можешь что-либо доказывать, если у тебя нет ни жены, ни детей? Ты до сих пор ещё с родителями живёшь!"
-                },
-                yourself: {
-                    tags: [
-                        "person"
-                    ],
-                    title: "🤳 А сам какой?!",
-                    descr: "Указывать на то, что оппонент сам действует вопреки аргументу.",
-                    sample: "Вася: Курение вредит здоровью, людям не следует курить. Петя: Но ты ведь сам курил пару минут назад. Значит, курить можно."
-                },
-                personality: {
-                    tags: [
-                        "person"
-                    ],
-                    title: "👇 Переход на личности",
-                    descr: "Обращать внимание на личные качества или характер оппонента для того, чтобы победить в споре.",
-                    sample: "Ты утверждаешь, что безбожники - порядочные люди. Но я знаю, что ты бросил жену с детьми."
-                },
-                shape: {
-                    tags: [
-                        "person"
-                    ],
-                    title: "💐 Форма поверх содержания",
-                    descr: "Предоставлять аргумент с акцентом на внешнюю привлекательность, а не на действенность или правильность.",
-                    sample: "У него очень приятный голос, он стильно одевается, фотогеничен и слаженно говорит. Ему можно доверять."
-                },
-                genetics: {
-                    tags: [
-                        "reference"
-                    ],
-                    title: "🧬 Генетическая логическая ошибка",
-                    descr: "Считать что-либо плохим или хорошим, опираясь на его происхождение.",
-                    sample: "Эта картошка точно хуже - посмотри на этикетку, её привезли из Америки."
-                },
-                diversion: {
-                    tags: [
-                        "content"
-                    ],
-                    title: "🕺 Отвлекающий манёвр",
-                    descr: "Предоставление нерелевантного материала к аргументу для отвлечения, чтобы подтолкнуть к другому заключению.",
-                    sample: "Сенатора не нужно штрафовать за нецелевые расходы. В конце концов, есть другие сенаторы, которые делают гораздо более плохие вещи."
-                },
-                question: {
-                    tags: [
-                        "content"
-                    ],
-                    title: "❓ Наводящий вопрос",
-                    descr: "Задавать вопрос, который подразумевает истинность некого утверждения, которое на самом деле ложное или спорное.",
-                    sample: "Как вы считаете, поможет ли снизить заболеваемость недавно опубликованное научное доказательство действенности гомеопатии?"
-                },
-                ambiguity: {
-                    tags: [
-                        "content"
-                    ],
-                    title: "🤞 Двусмысленность",
-                    descr: "Использовать слова и фразы, которые могут быть поняты неоднозначно, чтобы ввести оппонента в заблуждение.",
-                    sample: "Я сейчас делаю вам очень выгодное предложение!"
-                },
-                analogy: {
-                    tags: [
-                        "logic"
-                    ],
-                    title: "🎭 Ложная аналогия",
-                    descr: "Создавать ошибочные аналогии либо метафоры, чтобы перекладывать построенные в них выводы на первоначальную проблему.",
-                    sample: "Капуста не понимает, что существует коза. Так же и человек, как капуста, не может понять Бога."
-                },
-                contradiction: {
-                    tags: [
-                        "logic"
-                    ],
-                    title: "🤯 Противоречие",
-                    descr: "Отстаивать взаимоисключающие положения.",
-                    sample: "Никого нельзя убивать! Давайте повесим преступника."
-                },
-                circle: {
-                    tags: [
-                        "logic"
-                    ],
-                    title: "🔁 Порочный круг",
-                    descr: "Наличие вывода среди причин.",
-                    sample: "Бог есть, потому что так написано в Библии. Библия истинна, потому что она Слово Божье."
-                },
-                matryoshka: {
-                    tags: [
-                        "logic"
-                    ],
-                    title: "🤦‍♂️ Ошибка в ошибке",
-                    descr: "Настаивать на ошибочности всего высказывания только потому, что в одном из аргументов была допущена ошибка.",
-                    sample: "Катя: Необходимо питаться здоровой пищей, так как мой врач сообщил, что сейчас это очень популярно. Маша: Фастфуды более популярны и рекламируются на каждом углу, поэтому надо питаться гамбургерами."
-                },
-                certitude: {
-                    tags: [
-                        "reference"
-                    ],
-                    title: "🤩 Аргумент к уверенности",
-                    descr: "Доказывать верность мнения лишь утверждением его верности. (Круговая аргументация) Позиционировать себя как светоча истинного знания.",
-                    sample: "Это правда потому что я уверен на 100% в своей правоте!"
-                },
-                episode: {
-                    tags: [
-                        "logic"
-                    ],
-                    title: "📝 Случай из жизни",
-                    descr: "Использовать личный опыт или известный случай в качестве аргумента в споре, особенно для опровержения статистики.",
-                    sample: "Да что вы мне рассказываете о вреде курения? Мой прадед курил по две пачки в день, и дожил до 97 лет."
-                },
-                wish: {
-                    tags: [
-                        "emotion"
-                    ],
-                    title: "🌠 Желаемое за действительное",
-                    descr: "Мыслить желаниями: что-либо существует или является правдой лишь потому, что этого хочет утверждающий.",
-                    sample: "После смерти хорошие люди попадут в рай. Потому что я хороший и очень хочу туда попасть."
-                },
-                result: {
-                    tags: [
-                        "emotion"
-                    ],
-                    title: "🏆 Аргумент к последствиям",
-                    descr: "Если что-то приводит к (не)благоприятным последствиям, то оно (не)верно.",
-                    sample: "Если подсудимый будет признан невиновным, то это может побудить других к совершению подобных преступлений, ибо они не будут бояться наказания!"
-                },
-                slip: {
-                    tags: [
-                        "logic"
-                    ],
-                    title: "🎿 Скользкий путь",
-                    descr: "Утверждать, что если случится событие \"A\", оно повлечёт за собой событие \"Z\" (не учитывая промежуточных), поэтому событие \"A\" ни в коем случае нельзя допустить.",
-                    sample: "Если мы разрешим гомосексуальным парам вступать в брак, следующее, с чем мы столкнёмся, будет заключение брака с собственными родителями, машинами и даже обезьянками."
-                },
-                possible: {
-                    tags: [
-                        "logic"
-                    ],
-                    title: "🐘 Аргументация возможностью",
-                    descr: "Допущение, что если что-то может случиться, то оно обязательно случится.",
-                    sample: "На улице в любой момент с крайне малой вероятностью может упасть кирпич на голову. Не выйду сегодня из дома, чтобы не умереть."
-                },
-                after: {
-                    tags: [
-                        "logic"
-                    ],
-                    title: "⏱ После, значит вследствие",
-                    descr: "Если одно событие произошло раньше другого, то первое обязательно стало причиной второго.",
-                    sample: "Петух кукарекает перед восходом Солнца, значит Солнце встаёт из-за петуха."
-                },
-                proofer: {
-                    tags: [
-                        "logic"
-                    ],
-                    title: "🔀 Бремя доказательства",
-                    descr: "Говорить, что свою правоту должен доказывать отрицающий, но не утверждающий. (А должно быть наоборот)",
-                    sample: "Что, не можешь доказать, что невидимого розового единорога не существует? Значит он есть!"
-                },
-                falsifiability: {
-                    tags: [
-                        "logic"
-                    ],
-                    title: "🔮 Нефальсифицируемость",
-                    descr: "Высказывание, которое не может быть опровергнуто из-за того, что нет способа проверить, является оно ложным или нет.",
-                    sample: "После смерти души людей покидают их и перерождаются в новом теле, но ничего не помнят о прошлой жизни."
-                },
-                subjective: {
-                    tags: [
-                        "logic"
-                    ],
-                    title: "👀 Ошибка наблюдателя",
-                    descr: "Делать ложный вывод из-за неизбежной субъективности наблюдателя (или слепо корректировать его под своё убеждение).",
-                    sample: "Все железнодорожные переезды постоянно закрыты, а светофоры на них горят красным светом. Потому что я всегда это наблюдаю, когда еду в поезде."
-                },
-                exception: {
-                    tags: [
-                        "content"
-                    ],
-                    title: "🦄 Специальные требования",
-                    descr: "Внезапно менять правила игры, чтобы создать исключение из правил, и показать, что требования недопустимы.",
-                    sample: "Сергей требовал признать его экстрасенсом, но когда его способности стали проверять, они неожиданно испарились. \"Для того, чтобы увидеть мой дар, необходимо сначала в него поверить\", - не моргнув, объяснил произошедшее Сергей."
-                },
-                crowd: {
-                    tags: [
-                        "reference"
-                    ],
-                    title: "👨‍👩‍👦‍👦 Мнение масс",
-                    descr: "Поддерживать что-либо лишь потому, что многие считают это верным.",
-                    sample: "Миллионы людей согласны с его позицией, значит он прав."
-                },
-                galileo: {
-                    tags: [
-                        "reference"
-                    ],
-                    title: "🔥 Уловка Галилея",
-                    descr: "Утверждать, что идея, отвергаемая некоторым сообществом, обязательно верна.",
-                    sample: "Учёные высмеивают мой проект вечного двигателя, значит они боятся конкуренции, и это подтверждает важность моего проекта."
-                },
-                celeprity: {
-                    tags: [
-                        "reference"
-                    ],
-                    title: "👑 Апелляция к знаменитости",
-                    descr: "Ссылаться на мнение известного лица или представителя власти вместо предоставления настоящего аргумента.",
-                    sample: "Не будет в следующем году кризиса! Сам министр экономики так сказал!"
-                },
-                anonymous: {
-                    tags: [
-                        "reference"
-                    ],
-                    title: "👽 Анонимный авторитет",
-                    descr: "Придавать информации убедительности, ссылаясь на неких неизвестных учёных или авторитетов, не называя их.",
-                    sample: "Науке давно известно, что люди с тёмными волосами умнее, чем люди со светлыми."
-                },
-                complexity: {
-                    tags: [
-                        "reference"
-                    ],
-                    title: "⏰ Аргумент к сложности/невероятности",
-                    descr: "Считать информацию ошибочной из-за того, что она сложна для понимания (по причине личной некомпетентности в обсуждаемом вопросе).",
-                    sample: "Это невозможно, чтобы случайные мутации могли создать такой сложный организм, как у человека."
-                },
-                tradition: {
-                    tags: [
-                        "reference"
-                    ],
-                    title: "🎄 Апелляция к традиции",
-                    descr: "Полагать что-либо верным (или лучше) ввиду своей традиционности.",
-                    sample: "Люди должны работать и зарабатывать, потому что их предки всегда это делали."
-                },
-                novelty: {
-                    tags: [
-                        "reference"
-                    ],
-                    title: "🎁 Аргументация новизной",
-                    descr: "Предположение, что нечто лучше, поскольку оно новее.",
-                    sample: "Последняя версия этой операционной системы сделает мой компьютер быстрее и лучше."
-                },
-                nature: {
-                    tags: [
-                        "reference"
-                    ],
-                    title: "🌳 Апелляция к природе",
-                    descr: "Доказывать, что всё, что естественно - не безобразно, и более того - полезно, оправданно, неизбежно, правильно или идеально.",
-                    sample: "Хищники пожирают друг друга - таков закон природы. То же делают и люди в обществе. Таков закон природы."
-                },
-                emotion: {
-                    tags: [
-                        "emotion"
-                    ],
-                    title: "🤡\tАпелляция к эмоциям",
-                    descr: "Вызывать к эмоциям вместо предоставления логических доводов.",
-                    sample: "В мире столько детей, которые умирают от голода, поэтому радуйся, что можешь есть манную кашу."
-                },
-                binary: {
-                    tags: [
-                        "logic"
-                    ],
-                    title: "👣 Ложная дихотомия",
-                    descr: "Предоставлять два альтернативных результата как единственно возможные тогда как зачастую вариантов куда больше.",
-                    sample: "Или вы со мной, или вы против меня - на стороне моего врага."
-                },
-                compromise: {
-                    tags: [
-                        "emotion"
-                    ],
-                    title: "🤝 Золотая середина",
-                    descr: "Настаивать на том, что в споре \"худой мир лучше доброй войны\" и принимать компромиссную позицию за истину.",
-                    sample: "Спорить о том вызывают ли прививки аутизм можно долго. Давайте сойдёмся на том, что прививки могут вызывать \"немного\" аутизма."
-                },
-                evil: {
-                    tags: [
-                        "emotion"
-                    ],
-                    title: "😈 Два зла образуют добро",
-                    descr: "Утверждать, что одно зло может компенсировать другое и справедливость будет восстановлена.",
-                    sample: "Если мне когда-либо было плохо, значит так же плохо должно быть и другим."
-                },
-                perfect: {
-                    tags: [
-                        "emotion"
-                    ],
-                    title: "✨ Перфекционистское заблуждение",
-                    descr: "Предположение, что единственным приемлемым результатом является идеальный, и отвержение всего, что работает не идеально.",
-                    sample: "Зачем нужна эта кампания против пьянства за рулём? Люди всё равно будут ездить пьяными, несмотря ни на что."
-                },
-                partial: {
-                    tags: [
-                        "logic"
-                    ],
-                    title: "🍕 Часть-целое",
-                    descr: "Неумело сравнивать истинность утверждения для целого и для его частей.",
-                    sample: "Каждое зерно в куче почти ничего не весит. Следовательно, куча также почти ничего не весит."
-                },
-                induction: {
-                    tags: [
-                        "logic"
-                    ],
-                    title: "🌍 Поспешное обобщение",
-                    descr: "Создание обобщённого вывода на основе маленькой выборки.",
-                    sample: "\"Меня только что чуть не сбила женщина за рулём. Женщины не умеют водить."
-                },
-                select: {
-                    tags: [
-                        "content"
-                    ],
-                    title: "👁‍🗨 Ошибка подтверждения",
-                    descr: "Выбор свидетельств в пользу своей идеи и игнорирование опровергающих свидетельств.",
-                    sample: "Американцы не летали на Луну! Посмотри сам, сколько всего не сходится на снимках - на небе нет звёзд, флаг колышется как на ветру, освещение нереалистичное - это точно всё снимали в Голливуде!"
-                },
-                association: {
-                    tags: [
-                        "logic"
-                    ],
-                    title: "💫 Ассоциативная ошибка",
-                    descr: "Утверждать, что свойства одной вещи присущи другой лишь из-за наличия у них общего качества.",
-                    sample: "Ядерное оружия, использует энергию от расщепления атома. Ядерная энергетика использует энергию от расщепления атома. Следовательно, ядерная энергетика плоха."
-                },
-                typical: {
-                    tags: [
-                        "logic"
-                    ],
-                    title: "👨‍🦲 Презумпция типичности",
-                    descr: "Приравнивать понятие к более общей категории, для которой оно не является типичным представителем.",
-                    sample: "Аборт - это убийство, за него надо давать 10 лет тюрьмы!"
-                },
-                bore: {
-                    tags: [
-                        "emotion"
-                    ],
-                    title: "🥱 Обвинение в скучности",
-                    descr: "Обвинять аргументацию или человека в скучности без опровержения аргумента по сути.",
-                    sample: "Твои аргументы такие длинные и скучные. Ты всегда такой зануда?"
-                },
-                purism: {
-                    tags: [
-                        "content"
-                    ],
-                    title: "👓 Ни один истинный шотландец",
-                    descr: "Исключать членов класса с неудобным поведением, чтобы защитить весь класс.",
-                    sample: "Ислам мирная религия. Те, кто устраивают теракты, — ненастоящие мусульмане."
-                },
-                dress: {
-                    tags: [
-                        "emotion"
-                    ],
-                    title: "👗 Платье короля",
-                    descr: "Навешивать негативные ярлыки на идею, утверждение, аргумент или вопрос, чтобы оппонент испугался её поддерживать, приводить аргументы или задавать неудобные вопросы, чтобы этот ярлык не перенёсся на его личность.",
-                    sample: "Евгеника поддерживалась нацистами. Ты что нацист, раз её поддерживаешь?"
-                },
-                sniper: {
-                    tags: [
-                        "content"
-                    ],
-                    title: "🎯 Ошибка техасского стрелка",
-                    descr: "Брать только сходные данные, тогда как отличные от них игнорировать.",
-                    sample: "Из истории про техасца, который сначала стреляет по амбару, а уже потом, в месте, где появилось самое большое количество пробоин, рисует мишень, заявляя о своих якобы удачных попаданиях."
-                },
-                conviction: {
-                    tags: [
-                        "person"
-                    ],
-                    title: "😎 Осуждение уверенности",
-                    descr: "Подчёркивание, что слова оппонента являются лишь его личным мнением, а не истиной в последней инстанции, вместо опровержения приведённых им аргументов.",
-                    sample: "Господин палеонтолог, вы утверждаете, что единорогов никогда не существовало. Но это всего-лишь ваша точка зрения! Что бы вы ни говорили, но законам физики и биологии их существование не противоречит. "
-                }
-            };
-        }
-        Theme() {
-            const obj = new this.$.$mol_theme_auto();
-            return obj;
-        }
-        search_focus(event) {
-            if (event !== undefined)
-                return event;
-            return null;
-        }
-        Hotkey() {
-            const obj = new this.$.$mol_hotkey();
-            obj.mod_ctrl = () => true;
-            obj.key = () => ({
-                F: (event) => this.search_focus(event)
-            });
-            return obj;
-        }
-        Lights() {
-            const obj = new this.$.$mol_lights_toggle();
-            return obj;
-        }
-        Sources() {
-            const obj = new this.$.$mol_link_source();
-            obj.uri = () => "https://github.com/hyoo-ru/fallacy.hyoo.ru";
-            return obj;
-        }
-        All() {
-            const obj = new this.$.$mol_link();
-            obj.arg = () => ({
-                filter: null
-            });
-            obj.title = () => "Все";
-            return obj;
-        }
-        Selected() {
-            const obj = new this.$.$mol_link();
-            obj.arg = () => ({
-                filter: "selected"
-            });
-            obj.title = () => "📌Отобранное";
-            return obj;
-        }
-        filters() {
-            return [
-                this.All(),
-                this.Selected()
-            ];
-        }
-        Filters() {
-            const obj = new this.$.$mol_list();
-            obj.rows = () => this.filters();
-            return obj;
-        }
-        Feedback() {
-            const obj = new this.$.$mol_link();
-            obj.uri = () => "https://github.com/hyoo-ru/fallacy.hyoo.ru/issues";
-            obj.title = () => "Ошибки? Правки? Предложения?";
-            return obj;
-        }
-        Menu() {
-            const obj = new this.$.$mol_page();
-            obj.title = () => "Типы софизмов";
-            obj.tools = () => [
-                this.Lights(),
-                this.Sources()
-            ];
-            obj.body = () => [
-                this.Filters()
-            ];
-            obj.foot = () => [
-                this.Feedback()
-            ];
-            return obj;
-        }
-        content_title(id) {
-            return "";
-        }
-        search(val) {
-            if (val !== undefined)
-                return val;
-            return "";
-        }
-        Search() {
-            const obj = new this.$.$mol_search();
-            obj.query = (val) => this.search(val);
-            return obj;
-        }
-        cards(id) {
-            return [];
-        }
-        empty_label() {
-            return "Заблуждений не найдено";
-        }
-        Cards_empty() {
-            const obj = new this.$.$mol_view();
-            obj.sub = () => [
-                this.empty_label()
-            ];
-            return obj;
-        }
-        Cards(id) {
-            const obj = new this.$.$mol_list();
-            obj.rows = () => this.cards(id);
-            obj.Empty = () => this.Cards_empty();
-            return obj;
-        }
-        filter_arg(id) {
-            return {};
-        }
-        filter_title(id) {
-            return "";
-        }
-        fallacy_selected(id, val) {
-            if (val !== undefined)
-                return val;
-            return false;
-        }
-        fallacy(id) {
-            return {
-                tags: [],
-                title: "",
-                descr: "",
-                sample: ""
-            };
-        }
-    }
-    __decorate([
-        $mol_mem_key
-    ], $hyoo_fallacy.prototype, "Content", null);
-    __decorate([
-        $mol_mem_key
-    ], $hyoo_fallacy.prototype, "Filter", null);
-    __decorate([
-        $mol_mem_key
-    ], $hyoo_fallacy.prototype, "Card", null);
-    __decorate([
-        $mol_mem
-    ], $hyoo_fallacy.prototype, "Theme", null);
-    __decorate([
-        $mol_mem
-    ], $hyoo_fallacy.prototype, "search_focus", null);
-    __decorate([
-        $mol_mem
-    ], $hyoo_fallacy.prototype, "Hotkey", null);
-    __decorate([
-        $mol_mem
-    ], $hyoo_fallacy.prototype, "Lights", null);
-    __decorate([
-        $mol_mem
-    ], $hyoo_fallacy.prototype, "Sources", null);
-    __decorate([
-        $mol_mem
-    ], $hyoo_fallacy.prototype, "All", null);
-    __decorate([
-        $mol_mem
-    ], $hyoo_fallacy.prototype, "Selected", null);
-    __decorate([
-        $mol_mem
-    ], $hyoo_fallacy.prototype, "Filters", null);
-    __decorate([
-        $mol_mem
-    ], $hyoo_fallacy.prototype, "Feedback", null);
-    __decorate([
-        $mol_mem
-    ], $hyoo_fallacy.prototype, "Menu", null);
-    __decorate([
-        $mol_mem
-    ], $hyoo_fallacy.prototype, "search", null);
-    __decorate([
-        $mol_mem
-    ], $hyoo_fallacy.prototype, "Search", null);
-    __decorate([
-        $mol_mem
-    ], $hyoo_fallacy.prototype, "Cards_empty", null);
-    __decorate([
-        $mol_mem_key
-    ], $hyoo_fallacy.prototype, "Cards", null);
-    __decorate([
-        $mol_mem_key
-    ], $hyoo_fallacy.prototype, "fallacy_selected", null);
-    $.$hyoo_fallacy = $hyoo_fallacy;
-})($ || ($ = {}));
-//hyoo/fallacy/-view.tree/fallacy.view.tree.ts
+	($.$hyoo_fallacy) = class $hyoo_fallacy extends ($.$mol_book2) {
+		title(){
+			return "Некорректные доводы";
+		}
+		plugins(){
+			return [(this.Theme()), (this.Hotkey())];
+		}
+		pages(){
+			return [(this.Menu())];
+		}
+		Content(id){
+			const obj = new this.$.$mol_page();
+			(obj.title) = () => ((this.content_title(id)));
+			(obj.tools) = () => ([(this.Search())]);
+			(obj.body) = () => ([(this.Cards(id))]);
+			return obj;
+		}
+		Filter(id){
+			const obj = new this.$.$mol_link();
+			(obj.arg) = () => ((this.filter_arg(id)));
+			(obj.title) = () => ((this.filter_title(id)));
+			return obj;
+		}
+		Card(id){
+			const obj = new this.$.$hyoo_fallacy_card();
+			(obj.tags) = () => ((this.tags()));
+			(obj.selected) = (next) => ((this.fallacy_selected(id, next)));
+			(obj.fallacy) = () => ((this.fallacy(id)));
+			(obj.highlight) = () => ((this.search()));
+			return obj;
+		}
+		tags(){
+			return {
+				"person": {"title": "🤺 Атака через личность"}, 
+				"emotion": {"title": "🎭 Эксплуатация эмоций"}, 
+				"logic": {"title": "🧠 Нарушение логики"}, 
+				"content": {"title": "📊 Манипуляция контентом"}, 
+				"reference": {"title": "🎅 Сомнительная ссылка"}
+			};
+		}
+		fallacies(){
+			return {
+				"force": {
+					"tags": ["person"], 
+					"title": "💪 Обращение к силе", 
+					"descr": "Угрожать оппоненту физической расправой.", 
+					"sample": "Наша страна должна вооружиться так, чтобы нас боялись, и тогда мир признает, что мы правы!"
+				}, 
+				"ridicule": {
+					"tags": ["person"], 
+					"title": "🤣 Высмеивание", 
+					"descr": "Высмеивать аргумент или человека без опровержения самого аргумента.", 
+					"sample": "Вы отрицаете очевидное, чтобы попрактиковаться в демагогии? Хватит клоунады, мы тут о серьёзных вещах говорим."
+				}, 
+				"dummy": {
+					"tags": ["content"], 
+					"title": "🥊 Соломенное чучело", 
+					"descr": "Перевирать доводы оппонента для того, чтобы было легче нападать.", 
+					"sample": "Олег поддержал увеличение дотаций на образование и здравоохранение. Павел возмутился: \"Не думал, что ты ненавидишь свою страну настолько, что хочешь оставить её беззащитной, урезав расходы на армию\"."
+				}, 
+				"social": {
+					"tags": ["person"], 
+					"title": "🥶 Аргумент к социальной неуспешности", 
+					"descr": "Атаковать оппонента за то, что он не имеет социального статуса, который, по мнению атакующего, даёт этому оппоненту какое-либо право иметь критикуемую позицию.", 
+					"sample": "Как ты можешь что-либо доказывать, если у тебя нет ни жены, ни детей? Ты до сих пор ещё с родителями живёшь!"
+				}, 
+				"yourself": {
+					"tags": ["person"], 
+					"title": "🤳 А сам какой?!", 
+					"descr": "Указывать на то, что оппонент сам действует вопреки аргументу.", 
+					"sample": "Вася: Курение вредит здоровью, людям не следует курить. Петя: Но ты ведь сам курил пару минут назад. Значит, курить можно."
+				}, 
+				"personality": {
+					"tags": ["person"], 
+					"title": "👇 Переход на личности", 
+					"descr": "Обращать внимание на личные качества или характер оппонента для того, чтобы победить в споре.", 
+					"sample": "Ты утверждаешь, что безбожники - порядочные люди. Но я знаю, что ты бросил жену с детьми."
+				}, 
+				"shape": {
+					"tags": ["person"], 
+					"title": "💐 Форма поверх содержания", 
+					"descr": "Предоставлять аргумент с акцентом на внешнюю привлекательность, а не на действенность или правильность.", 
+					"sample": "У него очень приятный голос, он стильно одевается, фотогеничен и слаженно говорит. Ему можно доверять."
+				}, 
+				"genetics": {
+					"tags": ["reference"], 
+					"title": "🧬 Генетическая логическая ошибка", 
+					"descr": "Считать что-либо плохим или хорошим, опираясь на его происхождение.", 
+					"sample": "Эта картошка точно хуже - посмотри на этикетку, её привезли из Америки."
+				}, 
+				"diversion": {
+					"tags": ["content"], 
+					"title": "🕺 Отвлекающий манёвр", 
+					"descr": "Предоставление нерелевантного материала к аргументу для отвлечения, чтобы подтолкнуть к другому заключению.", 
+					"sample": "Сенатора не нужно штрафовать за нецелевые расходы. В конце концов, есть другие сенаторы, которые делают гораздо более плохие вещи."
+				}, 
+				"question": {
+					"tags": ["content"], 
+					"title": "❓ Наводящий вопрос", 
+					"descr": "Задавать вопрос, который подразумевает истинность некого утверждения, которое на самом деле ложное или спорное.", 
+					"sample": "Как вы считаете, поможет ли снизить заболеваемость недавно опубликованное научное доказательство действенности гомеопатии?"
+				}, 
+				"ambiguity": {
+					"tags": ["content"], 
+					"title": "🤞 Двусмысленность", 
+					"descr": "Использовать слова и фразы, которые могут быть поняты неоднозначно, чтобы ввести оппонента в заблуждение.", 
+					"sample": "Я сейчас делаю вам очень выгодное предложение!"
+				}, 
+				"analogy": {
+					"tags": ["logic"], 
+					"title": "🎭 Ложная аналогия", 
+					"descr": "Создавать ошибочные аналогии либо метафоры, чтобы перекладывать построенные в них выводы на первоначальную проблему.", 
+					"sample": "Капуста не понимает, что существует коза. Так же и человек, как капуста, не может понять Бога."
+				}, 
+				"contradiction": {
+					"tags": ["logic"], 
+					"title": "🤯 Противоречие", 
+					"descr": "Отстаивать взаимоисключающие положения.", 
+					"sample": "Никого нельзя убивать! Давайте повесим преступника."
+				}, 
+				"circle": {
+					"tags": ["logic"], 
+					"title": "🔁 Порочный круг", 
+					"descr": "Наличие вывода среди причин.", 
+					"sample": "Бог есть, потому что так написано в Библии. Библия истинна, потому что она Слово Божье."
+				}, 
+				"matryoshka": {
+					"tags": ["logic"], 
+					"title": "🤦‍♂️ Ошибка в ошибке", 
+					"descr": "Настаивать на ошибочности всего высказывания только потому, что в одном из аргументов была допущена ошибка.", 
+					"sample": "Катя: Необходимо питаться здоровой пищей, так как мой врач сообщил, что сейчас это очень популярно. Маша: Фастфуды более популярны и рекламируются на каждом углу, поэтому надо питаться гамбургерами."
+				}, 
+				"certitude": {
+					"tags": ["reference"], 
+					"title": "🤩 Аргумент к уверенности", 
+					"descr": "Доказывать верность мнения лишь утверждением его верности. (Круговая аргументация) Позиционировать себя как светоча истинного знания.", 
+					"sample": "Это правда потому что я уверен на 100% в своей правоте!"
+				}, 
+				"episode": {
+					"tags": ["logic"], 
+					"title": "📝 Случай из жизни", 
+					"descr": "Использовать личный опыт или известный случай в качестве аргумента в споре, особенно для опровержения статистики.", 
+					"sample": "Да что вы мне рассказываете о вреде курения? Мой прадед курил по две пачки в день, и дожил до 97 лет."
+				}, 
+				"wish": {
+					"tags": ["emotion"], 
+					"title": "🌠 Желаемое за действительное", 
+					"descr": "Мыслить желаниями: что-либо существует или является правдой лишь потому, что этого хочет утверждающий.", 
+					"sample": "После смерти хорошие люди попадут в рай. Потому что я хороший и очень хочу туда попасть."
+				}, 
+				"result": {
+					"tags": ["emotion"], 
+					"title": "🏆 Аргумент к последствиям", 
+					"descr": "Если что-то приводит к (не)благоприятным последствиям, то оно (не)верно.", 
+					"sample": "Если подсудимый будет признан невиновным, то это может побудить других к совершению подобных преступлений, ибо они не будут бояться наказания!"
+				}, 
+				"slip": {
+					"tags": ["logic"], 
+					"title": "🎿 Скользкий путь", 
+					"descr": "Утверждать, что если случится событие \"A\", оно повлечёт за собой событие \"Z\" (не учитывая промежуточных), поэтому событие \"A\" ни в коем случае нельзя допустить.", 
+					"sample": "Если мы разрешим гомосексуальным парам вступать в брак, следующее, с чем мы столкнёмся, будет заключение брака с собственными родителями, машинами и даже обезьянками."
+				}, 
+				"possible": {
+					"tags": ["logic"], 
+					"title": "🐘 Аргументация возможностью", 
+					"descr": "Допущение, что если что-то может случиться, то оно обязательно случится.", 
+					"sample": "На улице в любой момент с крайне малой вероятностью может упасть кирпич на голову. Не выйду сегодня из дома, чтобы не умереть."
+				}, 
+				"after": {
+					"tags": ["logic"], 
+					"title": "⏱ После, значит вследствие", 
+					"descr": "Если одно событие произошло раньше другого, то первое обязательно стало причиной второго.", 
+					"sample": "Петух кукарекает перед восходом Солнца, значит Солнце встаёт из-за петуха."
+				}, 
+				"proofer": {
+					"tags": ["logic"], 
+					"title": "🔀 Бремя доказательства", 
+					"descr": "Говорить, что свою правоту должен доказывать отрицающий, но не утверждающий. (А должно быть наоборот)", 
+					"sample": "Что, не можешь доказать, что невидимого розового единорога не существует? Значит он есть!"
+				}, 
+				"falsifiability": {
+					"tags": ["logic"], 
+					"title": "🔮 Нефальсифицируемость", 
+					"descr": "Высказывание, которое не может быть опровергнуто из-за того, что нет способа проверить, является оно ложным или нет.", 
+					"sample": "После смерти души людей покидают их и перерождаются в новом теле, но ничего не помнят о прошлой жизни."
+				}, 
+				"subjective": {
+					"tags": ["logic"], 
+					"title": "👀 Ошибка наблюдателя", 
+					"descr": "Делать ложный вывод из-за неизбежной субъективности наблюдателя (или слепо корректировать его под своё убеждение).", 
+					"sample": "Все железнодорожные переезды постоянно закрыты, а светофоры на них горят красным светом. Потому что я всегда это наблюдаю, когда еду в поезде."
+				}, 
+				"exception": {
+					"tags": ["content"], 
+					"title": "🦄 Специальные требования", 
+					"descr": "Внезапно менять правила игры, чтобы создать исключение из правил, и показать, что требования недопустимы.", 
+					"sample": "Сергей требовал признать его экстрасенсом, но когда его способности стали проверять, они неожиданно испарились. \"Для того, чтобы увидеть мой дар, необходимо сначала в него поверить\", - не моргнув, объяснил произошедшее Сергей."
+				}, 
+				"crowd": {
+					"tags": ["reference"], 
+					"title": "👨‍👩‍👦‍👦 Мнение масс", 
+					"descr": "Поддерживать что-либо лишь потому, что многие считают это верным.", 
+					"sample": "Миллионы людей согласны с его позицией, значит он прав."
+				}, 
+				"galileo": {
+					"tags": ["reference"], 
+					"title": "🔥 Уловка Галилея", 
+					"descr": "Утверждать, что идея, отвергаемая некоторым сообществом, обязательно верна.", 
+					"sample": "Учёные высмеивают мой проект вечного двигателя, значит они боятся конкуренции, и это подтверждает важность моего проекта."
+				}, 
+				"celeprity": {
+					"tags": ["reference"], 
+					"title": "👑 Апелляция к знаменитости", 
+					"descr": "Ссылаться на мнение известного лица или представителя власти вместо предоставления настоящего аргумента.", 
+					"sample": "Не будет в следующем году кризиса! Сам министр экономики так сказал!"
+				}, 
+				"anonymous": {
+					"tags": ["reference"], 
+					"title": "👽 Анонимный авторитет", 
+					"descr": "Придавать информации убедительности, ссылаясь на неких неизвестных учёных или авторитетов, не называя их.", 
+					"sample": "Науке давно известно, что люди с тёмными волосами умнее, чем люди со светлыми."
+				}, 
+				"complexity": {
+					"tags": ["reference"], 
+					"title": "⏰ Аргумент к сложности/невероятности", 
+					"descr": "Считать информацию ошибочной из-за того, что она сложна для понимания (по причине личной некомпетентности в обсуждаемом вопросе).", 
+					"sample": "Это невозможно, чтобы случайные мутации могли создать такой сложный организм, как у человека."
+				}, 
+				"tradition": {
+					"tags": ["reference"], 
+					"title": "🎄 Апелляция к традиции", 
+					"descr": "Полагать что-либо верным (или лучше) ввиду своей традиционности.", 
+					"sample": "Люди должны работать и зарабатывать, потому что их предки всегда это делали."
+				}, 
+				"novelty": {
+					"tags": ["reference"], 
+					"title": "🎁 Аргументация новизной", 
+					"descr": "Предположение, что нечто лучше, поскольку оно новее.", 
+					"sample": "Последняя версия этой операционной системы сделает мой компьютер быстрее и лучше."
+				}, 
+				"nature": {
+					"tags": ["reference"], 
+					"title": "🌳 Апелляция к природе", 
+					"descr": "Доказывать, что всё, что естественно - не безобразно, и более того - полезно, оправданно, неизбежно, правильно или идеально.", 
+					"sample": "Хищники пожирают друг друга - таков закон природы. То же делают и люди в обществе. Таков закон природы."
+				}, 
+				"emotion": {
+					"tags": ["emotion"], 
+					"title": "🤡\tАпелляция к эмоциям", 
+					"descr": "Вызывать к эмоциям вместо предоставления логических доводов.", 
+					"sample": "В мире столько детей, которые умирают от голода, поэтому радуйся, что можешь есть манную кашу."
+				}, 
+				"binary": {
+					"tags": ["logic"], 
+					"title": "👣 Ложная дихотомия", 
+					"descr": "Предоставлять два альтернативных результата как единственно возможные тогда как зачастую вариантов куда больше.", 
+					"sample": "Или вы со мной, или вы против меня - на стороне моего врага."
+				}, 
+				"compromise": {
+					"tags": ["emotion"], 
+					"title": "🤝 Золотая середина", 
+					"descr": "Настаивать на том, что в споре \"худой мир лучше доброй войны\" и принимать компромиссную позицию за истину.", 
+					"sample": "Спорить о том вызывают ли прививки аутизм можно долго. Давайте сойдёмся на том, что прививки могут вызывать \"немного\" аутизма."
+				}, 
+				"evil": {
+					"tags": ["emotion"], 
+					"title": "😈 Два зла образуют добро", 
+					"descr": "Утверждать, что одно зло может компенсировать другое и справедливость будет восстановлена.", 
+					"sample": "Если мне когда-либо было плохо, значит так же плохо должно быть и другим."
+				}, 
+				"perfect": {
+					"tags": ["emotion"], 
+					"title": "✨ Перфекционистское заблуждение", 
+					"descr": "Предположение, что единственным приемлемым результатом является идеальный, и отвержение всего, что работает не идеально.", 
+					"sample": "Зачем нужна эта кампания против пьянства за рулём? Люди всё равно будут ездить пьяными, несмотря ни на что."
+				}, 
+				"partial": {
+					"tags": ["logic"], 
+					"title": "🍕 Часть-целое", 
+					"descr": "Неумело сравнивать истинность утверждения для целого и для его частей.", 
+					"sample": "Каждое зерно в куче почти ничего не весит. Следовательно, куча также почти ничего не весит."
+				}, 
+				"induction": {
+					"tags": ["logic"], 
+					"title": "🌍 Поспешное обобщение", 
+					"descr": "Создание обобщённого вывода на основе маленькой выборки.", 
+					"sample": "\"Меня только что чуть не сбила женщина за рулём. Женщины не умеют водить."
+				}, 
+				"select": {
+					"tags": ["content"], 
+					"title": "👁‍🗨 Ошибка подтверждения", 
+					"descr": "Выбор свидетельств в пользу своей идеи и игнорирование опровергающих свидетельств.", 
+					"sample": "Американцы не летали на Луну! Посмотри сам, сколько всего не сходится на снимках - на небе нет звёзд, флаг колышется как на ветру, освещение нереалистичное - это точно всё снимали в Голливуде!"
+				}, 
+				"association": {
+					"tags": ["logic"], 
+					"title": "💫 Ассоциативная ошибка", 
+					"descr": "Утверждать, что свойства одной вещи присущи другой лишь из-за наличия у них общего качества.", 
+					"sample": "Ядерное оружия, использует энергию от расщепления атома. Ядерная энергетика использует энергию от расщепления атома. Следовательно, ядерная энергетика плоха."
+				}, 
+				"typical": {
+					"tags": ["logic"], 
+					"title": "👨‍🦲 Презумпция типичности", 
+					"descr": "Приравнивать понятие к более общей категории, для которой оно не является типичным представителем.", 
+					"sample": "Аборт - это убийство, за него надо давать 10 лет тюрьмы!"
+				}, 
+				"bore": {
+					"tags": ["emotion"], 
+					"title": "🥱 Обвинение в скучности", 
+					"descr": "Обвинять аргументацию или человека в скучности без опровержения аргумента по сути.", 
+					"sample": "Твои аргументы такие длинные и скучные. Ты всегда такой зануда?"
+				}, 
+				"purism": {
+					"tags": ["content"], 
+					"title": "👓 Ни один истинный шотландец", 
+					"descr": "Исключать членов класса с неудобным поведением, чтобы защитить весь класс.", 
+					"sample": "Ислам мирная религия. Те, кто устраивают теракты, — ненастоящие мусульмане."
+				}, 
+				"dress": {
+					"tags": ["emotion"], 
+					"title": "👗 Платье короля", 
+					"descr": "Навешивать негативные ярлыки на идею, утверждение, аргумент или вопрос, чтобы оппонент испугался её поддерживать, приводить аргументы или задавать неудобные вопросы, чтобы этот ярлык не перенёсся на его личность.", 
+					"sample": "Евгеника поддерживалась нацистами. Ты что нацист, раз её поддерживаешь?"
+				}, 
+				"sniper": {
+					"tags": ["content"], 
+					"title": "🎯 Ошибка техасского стрелка", 
+					"descr": "Брать только сходные данные, тогда как отличные от них игнорировать.", 
+					"sample": "Из истории про техасца, который сначала стреляет по амбару, а уже потом, в месте, где появилось самое большое количество пробоин, рисует мишень, заявляя о своих якобы удачных попаданиях."
+				}, 
+				"conviction": {
+					"tags": ["person"], 
+					"title": "😎 Осуждение уверенности", 
+					"descr": "Подчёркивание, что слова оппонента являются лишь его личным мнением, а не истиной в последней инстанции, вместо опровержения приведённых им аргументов.", 
+					"sample": "Господин палеонтолог, вы утверждаете, что единорогов никогда не существовало. Но это всего-лишь ваша точка зрения! Что бы вы ни говорили, но законам физики и биологии их существование не противоречит. "
+				}
+			};
+		}
+		Theme(){
+			const obj = new this.$.$mol_theme_auto();
+			return obj;
+		}
+		search_focus(next){
+			if(next !== undefined) return next;
+			return null;
+		}
+		Hotkey(){
+			const obj = new this.$.$mol_hotkey();
+			(obj.mod_ctrl) = () => (true);
+			(obj.key) = () => ({"F": (next) => (this.search_focus(next))});
+			return obj;
+		}
+		Lights(){
+			const obj = new this.$.$mol_lights_toggle();
+			return obj;
+		}
+		Sources(){
+			const obj = new this.$.$mol_link_source();
+			(obj.uri) = () => ("https://github.com/hyoo-ru/fallacy.hyoo.ru");
+			return obj;
+		}
+		All(){
+			const obj = new this.$.$mol_link();
+			(obj.arg) = () => ({"filter": null});
+			(obj.title) = () => ("Все");
+			return obj;
+		}
+		Selected(){
+			const obj = new this.$.$mol_link();
+			(obj.arg) = () => ({"filter": "selected"});
+			(obj.title) = () => ("📌Отобранное");
+			return obj;
+		}
+		filters(){
+			return [(this.All()), (this.Selected())];
+		}
+		Filters(){
+			const obj = new this.$.$mol_list();
+			(obj.rows) = () => ((this.filters()));
+			return obj;
+		}
+		Feedback(){
+			const obj = new this.$.$mol_link();
+			(obj.uri) = () => ("https://github.com/hyoo-ru/fallacy.hyoo.ru/issues");
+			(obj.title) = () => ("Ошибки? Правки? Предложения?");
+			return obj;
+		}
+		Menu(){
+			const obj = new this.$.$mol_page();
+			(obj.title) = () => ("Типы софизмов");
+			(obj.tools) = () => ([(this.Lights()), (this.Sources())]);
+			(obj.body) = () => ([(this.Filters())]);
+			(obj.foot) = () => ([(this.Feedback())]);
+			return obj;
+		}
+		content_title(id){
+			return "";
+		}
+		search(next){
+			if(next !== undefined) return next;
+			return "";
+		}
+		Search(){
+			const obj = new this.$.$mol_search();
+			(obj.query) = (next) => ((this.search(next)));
+			return obj;
+		}
+		cards(id){
+			return [];
+		}
+		empty_label(){
+			return "Заблуждений не найдено";
+		}
+		Cards_empty(){
+			const obj = new this.$.$mol_view();
+			(obj.sub) = () => ([(this.empty_label())]);
+			return obj;
+		}
+		Cards(id){
+			const obj = new this.$.$mol_list();
+			(obj.rows) = () => ((this.cards(id)));
+			(obj.Empty) = () => ((this.Cards_empty()));
+			return obj;
+		}
+		filter_arg(id){
+			return {};
+		}
+		filter_title(id){
+			return "";
+		}
+		fallacy_selected(id, next){
+			if(next !== undefined) return next;
+			return false;
+		}
+		fallacy(id){
+			return {
+				"tags": [], 
+				"title": "", 
+				"descr": "", 
+				"sample": ""
+			};
+		}
+	};
+	($mol_mem_key(($.$hyoo_fallacy.prototype), "Content"));
+	($mol_mem_key(($.$hyoo_fallacy.prototype), "Filter"));
+	($mol_mem_key(($.$hyoo_fallacy.prototype), "Card"));
+	($mol_mem(($.$hyoo_fallacy.prototype), "Theme"));
+	($mol_mem(($.$hyoo_fallacy.prototype), "search_focus"));
+	($mol_mem(($.$hyoo_fallacy.prototype), "Hotkey"));
+	($mol_mem(($.$hyoo_fallacy.prototype), "Lights"));
+	($mol_mem(($.$hyoo_fallacy.prototype), "Sources"));
+	($mol_mem(($.$hyoo_fallacy.prototype), "All"));
+	($mol_mem(($.$hyoo_fallacy.prototype), "Selected"));
+	($mol_mem(($.$hyoo_fallacy.prototype), "Filters"));
+	($mol_mem(($.$hyoo_fallacy.prototype), "Feedback"));
+	($mol_mem(($.$hyoo_fallacy.prototype), "Menu"));
+	($mol_mem(($.$hyoo_fallacy.prototype), "search"));
+	($mol_mem(($.$hyoo_fallacy.prototype), "Search"));
+	($mol_mem(($.$hyoo_fallacy.prototype), "Cards_empty"));
+	($mol_mem_key(($.$hyoo_fallacy.prototype), "Cards"));
+	($mol_mem_key(($.$hyoo_fallacy.prototype), "fallacy_selected"));
+
+
 ;
 "use strict";
 var $;
@@ -7595,7 +7117,7 @@ var $;
     }
     $.$mol_match_text = $mol_match_text;
 })($ || ($ = {}));
-//mol/match/text.ts
+
 ;
 "use strict";
 var $;
@@ -7603,7 +7125,7 @@ var $;
     function $mol_offline() { }
     $.$mol_offline = $mol_offline;
 })($ || ($ = {}));
-//mol/offline/offline.ts
+
 ;
 "use strict";
 var $;
@@ -7684,7 +7206,7 @@ var $;
     $.$mol_offline_web = $mol_offline_web;
     $.$mol_offline = $mol_offline_web;
 })($ || ($ = {}));
-//mol/offline/offline.web.ts
+
 ;
 "use strict";
 var $;
@@ -7696,7 +7218,13 @@ var $;
         console.error(error);
     }
 })($ || ($ = {}));
-//mol/offline/install/install.ts
+
+;
+"use strict";
+
+;
+"use strict";
+
 ;
 "use strict";
 var $;
@@ -7798,7 +7326,7 @@ var $;
         $$.$hyoo_fallacy = $hyoo_fallacy;
     })($$ = $.$$ || ($.$$ = {}));
 })($ || ($ = {}));
-//hyoo/fallacy/fallacy.view.ts
+
 ;
 var $node = $node || {} ; $node[ "/hyoo/fallacy/fallacy_logo.svg" ] = "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPCFET0NUWVBFIHN2ZyBQVUJMSUMgIi0vL1czQy8vRFREIFNWRyAxLjEvL0VOIiAiaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkIj4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2ZXJzaW9uPSIxLjEiIHdpZHRoPSIyMDBweCIgaGVpZ2h0PSIyMDBweCIgdmlld0JveD0iLTAuNSAtMC41IDIwMCAyMDAiPjxkZWZzLz48Zz48ZWxsaXBzZSBjeD0iMTAwIiBjeT0iMTAwIiByeD0iODAiIHJ5PSI4MCIgZmlsbD0iI2RhZThmYyIgc3Ryb2tlPSIjNmM4ZWJmIiBzdHJva2Utd2lkdGg9IjQwIiBwb2ludGVyLWV2ZW50cz0iYWxsIi8+PGVsbGlwc2UgY3g9IjE0MCIgY3k9IjgwIiByeD0iNDAiIHJ5PSI0MCIgZmlsbD0iI2UxZDVlNyIgc3Ryb2tlPSIjOTY3M2E2IiBzdHJva2Utd2lkdGg9IjQwIiBwb2ludGVyLWV2ZW50cz0iYWxsIi8+PGVsbGlwc2UgY3g9IjYwIiBjeT0iODAiIHJ4PSI0MCIgcnk9IjQwIiBmaWxsPSIjZTFkNWU3IiBzdHJva2U9IiM5NjczYTYiIHN0cm9rZS13aWR0aD0iNDAiIHBvaW50ZXItZXZlbnRzPSJhbGwiLz48L2c+PC9zdmc+"
 
@@ -7829,6 +7357,6 @@ var $;
         });
     })($$ = $.$$ || ($.$$ = {}));
 })($ || ($ = {}));
-//hyoo/fallacy/fallacy.view.css.ts
+
 
 //# sourceMappingURL=web.js.map
