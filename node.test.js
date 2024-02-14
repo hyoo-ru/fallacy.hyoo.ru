@@ -5877,7 +5877,7 @@ var $;
 		Selected(){
 			const obj = new this.$.$mol_check_box();
 			(obj.checked) = (next) => ((this.selected(next)));
-			(obj.hint) = () => (this.$.$mol_locale.text("$hyoo_fallacy_card_Selected_hint"));
+			(obj.hint) = () => ((this.$.$mol_locale.text("$hyoo_fallacy_card_Selected_hint")));
 			return obj;
 		}
 		Main(){
@@ -6904,7 +6904,7 @@ var $;
 		}
 		Clear(){
 			const obj = new this.$.$mol_button_minor();
-			(obj.hint) = () => (this.$.$mol_locale.text("$mol_search_Clear_hint"));
+			(obj.hint) = () => ((this.$.$mol_locale.text("$mol_search_Clear_hint")));
 			(obj.click) = (next) => ((this.clear(next)));
 			(obj.sub) = () => ([(this.Clear_icon())]);
 			return obj;
